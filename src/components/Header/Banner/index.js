@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import Banner from "./Banner";
 
-const Header = () => {
+const Banner = () => {
   return (
-    <main className="header">
+    <main className="banner">
       <section>
-        <Banner />
+        <div className="banner-image"></div>
       </section>
     </main>
   );
 };
 
-export default withRouter(Header);
+export default withRouter(Banner);

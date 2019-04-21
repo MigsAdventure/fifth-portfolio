@@ -1,0 +1,11 @@
+.banner {
+  height: 100vh;
+  width: 100vw;
+  min-height: 600px;
+  min-width: 100%;
+  background: red;
+  .banner-image {
+    background-image: url('http://cdn.migsadventure.com.s3-us-west-1.amazonaws.com/portfolio/images/sequoia-mig.jpg');
+    background-size: cover;
+  }
+}
