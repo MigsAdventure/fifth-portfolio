@@ -3,16 +3,16 @@ module.exports = {
     banner: {
       text: {
         headline: {
-          en: 'Miguel Pardo',
-          es: 'Miguel Pardo',
-          kr: 'Miguel Pardo',
-          jp: 'Miguel Pardo',
+          en: 'Miguel Guzman',
+          es: 'Miguel Guzman',
+          kr: '미구엘 구즈만',
+          jp: 'ミゲル・グズマン',
         },
         sub_headline: {
           en: 'Web Engineer',
           es: 'Web Engineer',
-          kr: 'Web Engineer',
-          jp: 'Web Engineer',
+          kr: '웹 엔지니어',
+          jp: 'U~ebu enjinia',
         },
       }
     }

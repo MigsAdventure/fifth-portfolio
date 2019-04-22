@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 import App from './components/App';
+import NotFound from './components/NotFound';
 import * as serviceWorker from './serviceWorker';
 
 const Index = () => (
   <BrowserRouter basename="/">
-    <App />
+    <Switch>
+    <Route path="/:lang" exact component={App} />
+    <Route component={NotFound} />
+    </Switch>
   </BrowserRouter>
+  
 );
 
 
