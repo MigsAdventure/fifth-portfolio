@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import './banner.scss';
 
-const Banner = () => {
+const Banner = (props) => {
+  const { content } = props;
   return (
     <main className="banner">
-      <section>
         <div className="banner-image"></div>
-      </section>
+        <div className="banner-text">
+          <h1>{content.text.headline.en}</h1>
+          <h3>{content.text.sub_headline.en}</h3>
+        </div>
     </main>
   );
 };

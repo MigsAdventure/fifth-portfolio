@@ -1,11 +1,33 @@
+@import '../../../styles/partials/_settings.scss';
+
 .banner {
-  height: 100vh;
-  width: 100vw;
-  min-height: 600px;
-  min-width: 100%;
-  background: red;
+  position: relative;
   .banner-image {
-    background-image: url('http://cdn.migsadventure.com.s3-us-west-1.amazonaws.com/portfolio/images/sequoia-mig.jpg');
+    background-image: url('http://cdn.migsadventure.com.s3-us-west-1.amazonaws.com/portfolio/images/mobile/m-sequoia-mig.jpg');
     background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    min-height: 600px;
+    min-width: 100%;
+    background-position: right;
+    @media (min-width: $small-desktop-width) {
+      background-image: url('http://cdn.migsadventure.com.s3-us-west-1.amazonaws.com/portfolio/images/desktop/sequoia-mig.jpg');
+    }
+  }
+  .banner-text {
+    h1 {
+      font-size: 58px;
+    }
+    h3 {
+      font-size: 40px;
+    }
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    left: 0;
+    right: 0;
+    text-align: center;
   }
 }

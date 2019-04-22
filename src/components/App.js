@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter, Route } from 'react-router-dom';
-
+import '../styles/base.scss';
 import Header from '../components/Header';
 
 class App extends Component {

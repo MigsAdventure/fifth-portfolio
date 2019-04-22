@@ -1,0 +1,38 @@
+
+/* Site Max Width */
+$min-4k-width: 2400px;
+$largest-site-width: 1920px;
+$extra-large-width: 1600px;
+$site-max-width: 1320px;
+$desktop-odd-width: 1280px; // Breakpoint for 3 column grid
+$small-desktop-width: 1024px;
+$tablet-width: 768px;
+$mobile-width: 480px;
+$small-mobile-width: 414px;
+$extra-small-mobile-width: 375px;
+$tablet-only: "(min-width: #{$mobile-width}) and (max-width: #{$tablet-width})";
+
+/*Colors*/
+
+
+
+
+/*Fonts*/
+$FontAwesome: "Font Awesome 5 Pro";
+$FontAwesomeBrands: "Font Awesome 5 Brands";
+
+/* components */
+
+/* Font Awesome Icons */
+$fa-checkmark: "\f00c";
+$fa-angle-down: '\f107';
+
+/* Animation */
+$fast: 200ms;
+$moderate: 350ms;
+$slow: 500ms;
+$easeOut  :  cubic-bezier(0.23, 1, 0.32, 1);
+$easeIn    : cubic-bezier(0.445, 0.05, 0.795, 0.035);
+$easeInOut : cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+/* Gradients */

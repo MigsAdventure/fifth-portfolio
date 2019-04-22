@@ -1,0 +1,65 @@
+@import './partials/_settings';
+
+* {
+  box-sizing: border-box;
+}
+
+//prevents bounce effect on entire window
+html {
+  //overflow: hidden;
+}
+html,body, #app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  max-width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  background-color: black;
+  @media (min-width: $small-desktop-width) {
+    overflow-x: visible;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  background-color: black;
+  color: black;
+  margin: auto;
+  max-width: $min-4k-width;
+  &.no-nav {
+    #navbar {
+      display: none;
+    }
+  }
+  #main {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    min-height: 100%;
+    min-height: stretch;
+    .page {
+      min-height: 100%;
+    }
+  }
+}
+
+// elements
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+a, button {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+// modifer classes
+.disabled {
+  //color: $disabled;
+  @extend %unselectable;
+}

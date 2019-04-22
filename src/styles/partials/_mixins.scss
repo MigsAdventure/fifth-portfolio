@@ -1,0 +1,58 @@
+@import './_settings';
+
+@mixin background($imgpath, $size: cover, $position: 50% 50%, $repeat: no-repeat) {
+  background-image: url($imgpath);
+  background-position: $position;
+  background-repeat: $repeat;
+  background-size: $size
+}
+
+/*Absolutely centers things with the origin point in the center*/
+@mixin super-center($left: 50%, $top: 50%, $bottom: auto, $x: -50%, $y: -50%) {
+  position: absolute;
+  left: $left;
+  top: $top;
+  bottom: $bottom;
+  -webkit-transform: translate3d($x, $y, 0);
+  transform: translate3d($x, $y, 0);
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+}
+
+@mixin imageTransition ($imagepath1, $imagepath2: "", $size1: contain, $size2: contain, $position1: left bottom, $position2: right bottom ) {
+  background-image:
+    url($imagepath1),
+    url($imagepath2);
+  background-repeat: no-repeat;
+  background-size: $size1, $size2;
+  opacity: 1;
+  background-position: $position1, $position2;
+}
+
+@function assetPath( $filename, $type:'mobile', $page: "global") {
+  @return "/"$type"/"$page"/"$filename;
+}
+
+@mixin box-shadow ($level) {
+  @if $level == 1 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  } @else if $level == 2 {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  } @else if $level == 3 {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  } @else if $level == 4 {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  } @else if $level == 5 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  } @else if $level == 0 {
+    box-shadow: 0 0 0 rgba(0,0,0,0), 0 0 0 rgba(0,0,0,0);
+  }
+}

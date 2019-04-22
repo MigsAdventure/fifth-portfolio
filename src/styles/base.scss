@@ -1,0 +1,12 @@
+// vendor
+@import 'vendor/fa';
+@import 'vendor/normalize';
+@import 'vendor/fonts';
+
+// helpers
+@import 'partials/_settings';
+@import 'partials/_mixins';
+@import 'partials/_placeholders';
+
+// global components
+@import './global';
