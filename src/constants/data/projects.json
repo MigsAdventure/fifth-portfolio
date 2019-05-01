@@ -29,6 +29,10 @@
     {
       "name": "Anime LunchBox",
       "url": "http://anime-lunchbox-app.herokuapp.com/"
+    },
+    {
+      "name": "Goku Hangman",
+      "url": "https://migsadventure.github.io/GokuHangman/"
     }
   ]
 }
