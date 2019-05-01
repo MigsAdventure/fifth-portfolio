@@ -1,0 +1,34 @@
+{
+  "ncsoft": [
+    {
+      "name": "Lineage2",
+      "url": "https://www.lineage2.com"
+    },
+    {
+      "name": "Aion",
+      "url": "https://www.aiononline.com"
+    },
+    {
+      "name": "NCSOFT",
+      "url": "https://www.ncsoft.com"
+    },
+    {
+      "name": "Aion Legions",
+      "url": "https://www.aionlegionsofwar.com"
+    },
+    {
+      "name": "Blade and Soul",
+      "url": "https://www.bladeandsoul.com"
+    },
+    {
+      "name": "Blade and Soul Esports",
+      "url": "https://www.esports.bladeandsoul.com"
+    }
+  ],
+  "personal": [
+    {
+      "name": "Anime LunchBox",
+      "url": "http://anime-lunchbox-app.herokuapp.com/"
+    }
+  ]
+}
