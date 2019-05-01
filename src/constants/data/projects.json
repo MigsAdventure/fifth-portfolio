@@ -1,38 +1,56 @@
-{
-  "ncsoft": [
-    {
-      "name": "Lineage2",
-      "url": "https://www.lineage2.com"
-    },
-    {
-      "name": "Aion",
-      "url": "https://www.aiononline.com"
-    },
-    {
-      "name": "NCSOFT",
-      "url": "https://www.ncsoft.com"
-    },
-    {
-      "name": "Aion Legions",
-      "url": "https://www.aionlegionsofwar.com"
-    },
-    {
-      "name": "Blade and Soul",
-      "url": "https://www.bladeandsoul.com"
-    },
-    {
-      "name": "Blade and Soul Esports",
-      "url": "https://www.esports.bladeandsoul.com"
-    }
-  ],
-  "personal": [
-    {
-      "name": "Anime LunchBox",
-      "url": "http://anime-lunchbox-app.herokuapp.com/"
-    },
-    {
-      "name": "Goku Hangman",
-      "url": "https://migsadventure.github.io/GokuHangman/"
-    }
-  ]
-}
+[
+  {
+    "name": "Lineage2",
+    "url": "https://www.lineage2.com",
+    "type": "ncsoft",
+    "year": "2019"
+  },
+  {
+    "name": "Aion",
+    "url": "https://www.aiononline.com",
+    "type": "ncsoft",
+    "year": "2019"
+  },
+  {
+    "name": "NCSOFT",
+    "url": "https://www.ncsoft.com",
+    "type": "ncsoft",
+    "year": "2019"
+  },
+  {
+    "name": "Aion Legions",
+    "url": "https://www.aionlegionsofwar.com",
+    "type": "ncsoft",
+    "year": "2018"
+  },
+  {
+    "name": "Blade and Soul",
+    "url": "https://www.bladeandsoul.com",
+    "type": "ncsoft",
+    "year": "2017"
+  },
+  {
+    "name": "Blade and Soul Esports",
+    "url": "https://www.esports.bladeandsoul.com",
+    "type": "ncsoft",
+    "year": "2017"
+  },
+  {
+    "name": "Anime LunchBox",
+    "url": "http://anime-lunchbox-app.herokuapp.com/",
+    "type": "personal",
+    "year": "2017"
+  },
+  {
+    "name": "Goku Hangman",
+    "url": "https://migsadventure.github.io/GokuHangman/",
+    "type": "personal",
+    "year": "2016"
+  },
+  {
+    "name": "PokedexGo",
+    "url": "https://migsadventure.github.io/pokedexgo/",
+    "type": "personal",
+    "year": "2016"
+  }
+]
