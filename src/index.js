@@ -8,7 +8,8 @@ import * as serviceWorker from './serviceWorker';
 const Index = () => (
   <BrowserRouter basename="/">
     <Switch>
-    <Route path="/:lang" exact component={App} />
+    <Route path={`/:lang?/`} exact component={App} />
+    {/*<Route path="/" exact component={App} />*/}
     <Route component={NotFound} />
     </Switch>
   </BrowserRouter>

@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 import {withRouter, Route, BrowserRouter, Redirect} from 'react-router-dom';
 import '../styles/base.scss';
 import Header from '../components/Header';
+const lang = window.location.pathname.substring(1, 3) || 'en';
 
 class App extends Component {
   constructor () {
     super();
-    const lang = window.location.pathname.substring(1, 3);
+    // defaults lang to en if there is no lang match
   }
+  
 
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header lang={lang}/>
       </div>
     );
   }

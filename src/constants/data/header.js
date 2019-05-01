@@ -3,7 +3,7 @@ module.exports = {
     banner: {
       text: {
         headline: {
-          en: 'Miguel Guzman',
+          en: 'Mig',
           es: 'Miguel Guzman',
           kr: '미구엘 구즈만',
           jp: 'ミゲル・グズマン',

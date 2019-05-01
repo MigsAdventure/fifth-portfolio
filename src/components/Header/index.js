@@ -4,11 +4,11 @@ import Banner from "./Banner";
 import { header } from '../../constants/data/header.js';
 
 
-const Header = () => {
+const Header = ({lang}) => {
   return (
     <main className="header">
       <section>
-        <Banner content={header.banner}/>
+        <Banner lang={lang} content={header.banner}/>
       </section>
     </main>
   );
