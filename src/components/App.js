@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {withRouter, Route, BrowserRouter, Redirect} from 'react-router-dom';
 import '../styles/base.scss';
 import Header from '../components/Header';
+import Projects from '../components/Projects';
 const lang = window.location.pathname.substring(1, 3) || 'en';
 
 class App extends Component {
@@ -14,7 +15,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header lang={lang}/>
+        <Header lang={lang} />
+        <Projects lang={lang} />
       </div>
     );
   }
