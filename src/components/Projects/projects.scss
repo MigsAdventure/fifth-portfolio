@@ -1,3 +1,10 @@
-.not-found {
-  background: red;
+.projects {
+  color: white;
+  text-align: center;
+  .header {
+    text-align: left;
+    .title {
+      margin-left: 30px;
+    }
+  }
 }

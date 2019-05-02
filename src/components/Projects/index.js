@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { withRouter } from 'react-router-dom';
 import ProjectCard from "../_global/ProjectCard";
 import _projects from '../../constants/data/projects.json';
+import './projects.scss';
 
 
 const Projects = ({lang}) => {
@@ -12,8 +13,10 @@ const Projects = ({lang}) => {
   );
   return (
     <main className="projects">
-      <section>
-      <h1>Projects page</h1>
+      <section className="header">
+        <h1 className="title">Projects</h1>
+      </section>
+      <section className="projects-wrapper">
         {renderProjects}
       </section>
     </main>
