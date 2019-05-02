@@ -3,54 +3,72 @@
     "name": "Lineage2",
     "url": "https://www.lineage2.com",
     "type": "ncsoft",
-    "year": "2019"
+    "year": "2019",
+    "tech": ["react", "sass"],
+    "api": ["internal"]
   },
   {
     "name": "Aion",
     "url": "https://www.aiononline.com",
     "type": "ncsoft",
-    "year": "2019"
+    "year": "2019",
+    "tech": ["react", "sass"],
+    "api": ["internal"]
   },
   {
     "name": "NCSOFT",
     "url": "https://www.ncsoft.com",
     "type": "ncsoft",
-    "year": "2019"
+    "year": "2019",
+    "tech": ["react", "sass"],
+    "api": ["internal"]
   },
   {
     "name": "Aion Legions",
     "url": "https://www.aionlegionsofwar.com",
     "type": "ncsoft",
-    "year": "2018"
+    "year": "2018",
+    "tech": ["react", "sass"],
+    "api": ["internal"]
   },
   {
     "name": "Blade and Soul",
     "url": "https://www.bladeandsoul.com",
     "type": "ncsoft",
-    "year": "2017"
+    "year": "2017",
+    "tech": ["react", "sass"],
+    "api": ["internal"]
   },
   {
     "name": "Blade and Soul Esports",
     "url": "https://www.esports.bladeandsoul.com",
     "type": "ncsoft",
-    "year": "2017"
+    "year": "2017",
+    "tech": ["react", "sass"],
+    "api": ["internal"]
   },
   {
     "name": "Anime LunchBox",
     "url": "http://anime-lunchbox-app.herokuapp.com/",
     "type": "personal",
-    "year": "2017"
+    "year": "2017",
+    "tech": ["react", "sass"],
+    "api": ["kitsu"]
   },
   {
     "name": "Goku Hangman",
     "url": "https://migsadventure.github.io/GokuHangman/",
     "type": "personal",
-    "year": "2016"
+    "year": "2016",
+    "tech": ["jQuery"],
+    "api": null
   },
   {
     "name": "PokedexGo",
     "url": "https://migsadventure.github.io/pokedexgo/",
     "type": "personal",
-    "year": "2016"
+    "year": "2016",
+    "tech": ["jQuery"],
+    "api": null
   }
 ]

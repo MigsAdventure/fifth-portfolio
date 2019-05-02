@@ -3,11 +3,18 @@ import { withRouter } from 'react-router-dom';
 import './project-card.scss';
 
 
-const ProjectCard = ({lang}) => {
+const ProjectCard = ({content}) => {
+  const {name, url, type, year, tech, api} = content;
+  console.log(content);
   return (
     <main className="project-card">
       <section>
-        this is a card
+        <h1>{name}</h1>
+        <div className="info">
+          <p>{year}</p>
+          <p>{tech}</p>
+          <p>{api}</p>
+        </div>
       </section>
     </main>
   );

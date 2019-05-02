@@ -7,13 +7,14 @@ import _projects from '../../constants/data/projects.json';
 const Projects = ({lang}) => {
   const renderProjects = (
     _projects.map(item => {
-    
+      return <ProjectCard content={item} />
     })
   );
   return (
     <main className="projects">
       <section>
       <h1>Projects page</h1>
+        {renderProjects}
       </section>
     </main>
   );
