@@ -11,6 +11,7 @@ const ProjectCard = ({content}) => {
       <section>
         <h1>{name}</h1>
         <div className="info">
+          <p>{type}</p>
           <p>{year}</p>
           <p>{tech}</p>
           <p>{api}</p>
