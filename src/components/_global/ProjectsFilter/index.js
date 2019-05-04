@@ -9,7 +9,7 @@ const ProjectsFilter = ({content}) => {
   return (
     <main className="project-card">
       <section>
-        
+      
       </section>
     </main>
   );
