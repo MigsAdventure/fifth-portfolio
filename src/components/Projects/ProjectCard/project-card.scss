@@ -1,0 +1,21 @@
+@import '../../../styles/partials/settings';
+@import '../../../styles/partials/mixins';
+
+.project-card {
+  color: white;
+  display: inline-block;
+  border-radius: 5px;
+  width: 100%;
+  background-image: url('https://s3-us-west-1.amazonaws.com/cdn.migsadventure.com/portfolio/images/global/card-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 10px;
+  vertical-align: top;
+  min-height: 280px;
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
+  @media(min-width: $small-desktop-width) {
+    width: 25%;
+  }
+}

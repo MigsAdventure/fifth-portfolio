@@ -7,7 +7,7 @@ const ProjectsFilter = ({content}) => {
   const {name, url, type, year, tech, api} = content;
   console.log(content);
   return (
-    <main className="project-card">
+    <main className="project-preview">
       <section>
       
       </section>

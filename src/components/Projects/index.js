@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import ProjectCard from "../_global/ProjectCard";
+import ProjectCard from "./ProjectCard";
 import _projects from '../../constants/data/projects.json';
 import './projects.scss';
 
