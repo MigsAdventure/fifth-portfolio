@@ -7,8 +7,8 @@ const ProjectCard = ({content}) => {
   const {name, url, type, year, tech, api} = content;
   console.log(content);
   return (
-    <main className="project-card">
-      <section>
+    <div className="project-card">
+      <div>
         <h1>{name}</h1>
         <div className="info">
           <p>{type}</p>
@@ -16,8 +16,8 @@ const ProjectCard = ({content}) => {
           <p>{tech}</p>
           <p>{api}</p>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
   );
 };
 

@@ -1,6 +1,6 @@
 @import './partials/_settings';
 
-* {
+*, *:before, *:after {
   box-sizing: border-box;
 }
 
