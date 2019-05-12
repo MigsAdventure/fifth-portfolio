@@ -1,4 +1,23 @@
 .projects-filter {
-  color: white;
-  border: solid white 1px;
+  background: blue;
+  border-radius: 5px;
+  display: inline-block;
+  .nav-items {
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+    background: #d5d5d5;
+    &.active {
+      background: red;
+    }
+    .nav-item {
+      cursor: pointer;
+    }
+  }
+  &:hover {
+    .nav-items {
+      max-height: 500px;
+      transition: max-height 0.25s ease-in;
+    }
+  }
 }

@@ -5,10 +5,9 @@ import './project-card.scss';
 
 const ProjectCard = ({content}) => {
   const {name, url, type, year, tech, api} = content;
-  console.log(content);
   return (
-    <div className="project-card">
-      <div>
+    <main key={name} className="project-card">
+      <section>
         <h1>{name}</h1>
         <div className="info">
           <p>{type}</p>
@@ -16,8 +15,8 @@ const ProjectCard = ({content}) => {
           <p>{tech}</p>
           <p>{api}</p>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 
