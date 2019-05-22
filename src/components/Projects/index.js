@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 import _projects from '../../constants/data/projects.json';
 import ProjectsFilter from "./ProjectsFilter";
 import './projects.scss';
-import { projects_filter } from '../../constants/data/global';
+import {projects_filter} from '../../constants/data/global';
 import classnames from 'classnames';
 import ProjectPreview from "./ProjectPreview";
 
@@ -20,15 +20,12 @@ class Projects extends Component {
   
   renderProjects() {
     const current_filter = this.state.current_filter;
-    console.log('render');
-    return _projects.map(item => {
-      console.log('item: ', item.year);
-      console.log('current: ', current_filter);
-      return current_filter == (item.year) && <ProjectCard content={item}/>
-    })
+      return _projects.map(item => (current_filter === item.year || current_filter === item.type) &&
+        <ProjectCard content={item}/>);
   }
   
-   handleFilterChange = (new_filter) => {
+  
+  handleFilterChange = (new_filter) => {
     this.setState({
       current_filter: new_filter
     });
@@ -39,13 +36,13 @@ class Projects extends Component {
     return (
       <main className="projects">
         <section className='project-preview-wrapper'>
-          <ProjectPreview />
+          <ProjectPreview/>
         </section>
         <section className="header">
           <h1 className="title">Projects</h1>
         </section>
         <section className="projects-wrapper">
-          <ProjectsFilter currentFilter={current_filter} changeFilterCB={this.handleFilterChange} />
+          <ProjectsFilter currentFilter={current_filter} changeFilterCB={this.handleFilterChange}/>
           {this.renderProjects()}
         </section>
       </main>

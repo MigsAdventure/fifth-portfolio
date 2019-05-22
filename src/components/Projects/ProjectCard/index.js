@@ -4,6 +4,7 @@ import './project-card.scss';
 
 
 const ProjectCard = ({content}) => {
+  console.log(content);
   const {name, url, type, year, tech, api} = content;
   return (
     <main key={name} className="project-card">

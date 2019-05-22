@@ -1,8 +1,13 @@
+@import '../../../styles/partials/settings';
+
 .projects-filter {
   background: blue;
   border-radius: 5px;
   display: inline-block;
   cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
   .nav-filter-items {
     max-height: 0;
     transition: max-height 0.15s ease-out;

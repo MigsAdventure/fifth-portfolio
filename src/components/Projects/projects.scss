@@ -1,6 +1,13 @@
+@import '../../styles/partials/settings';
+
 .projects {
   color: white;
   text-align: center;
+  position: relative;
+  min-height: 500px;
+  @media (min-width: $small-desktop-width) {
+    min-height: 800px;
+  }
   .header {
     text-align: left;
     .title {
