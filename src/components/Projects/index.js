@@ -32,13 +32,15 @@ class Projects extends Component {
   
   handleFilterChange = (new_filter) => {
     this.setState({
-      current_filter: new_filter
+      current_filter: new_filter,
+      preview_open: false,
     });
   };
   
   handleSelectedProject = (new_selected_project) => {
     this.setState({
-      selected_project: new_selected_project
+      selected_project: new_selected_project,
+      preview_open: true
     });
   };
   

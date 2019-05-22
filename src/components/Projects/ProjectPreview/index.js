@@ -3,9 +3,9 @@ import { withRouter } from 'react-router-dom';
 import classnames from 'classnames';
 import './project-preview.scss';
 
-
-const ProjectPreview = ({content, previewOpen, selectedProject}) => {
+const ProjectPreview = ({content, previewOpen}) => {
   console.log(content);
+  console.log('previewOPen: ', previewOpen);
   const {year, name} = content;
   return (
      <main className={classnames('project-preview', {'preview-open': previewOpen})}>
