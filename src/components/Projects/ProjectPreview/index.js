@@ -1,10 +1,9 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import './projects-filter.scss';
+import './project-preview.scss';
 
 
-const ProjectsFilter = ({content}) => {
-  const {name, url, type, year, tech, api} = content;
+const ProjectPreview = ({content}) => {
   console.log(content);
   return (
     <main className="project-preview">
@@ -15,4 +14,4 @@ const ProjectsFilter = ({content}) => {
   );
 };
 
-export default withRouter(ProjectsFilter);
+export default withRouter(ProjectPreview);
