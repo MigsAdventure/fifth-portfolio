@@ -13,17 +13,22 @@ class Projects extends Component {
     super(props);
     this.state = {
       current_filter: '2019',
+      preview_open: false,
+      selected_project: null
     };
     this.renderProjects = this.renderProjects.bind(this);
     this.handleFilterChange = this.handleFilterChange.bind(this);
+    this.handleSelectedProject = this.handleSelectedProject.bind(this);
   }
   
   renderProjects() {
     const current_filter = this.state.current_filter;
-      return _projects.map(item => (current_filter === item.year || current_filter === item.type) &&
-        <ProjectCard content={item}/>);
+    if (current_filter === 'all') {
+      return _projects.map((item, i) => <ProjectCard content={{...item, 'id': i}} selectedProjectCB={this.handleSelectedProject} />);
+    }
+    return _projects.map((item, i) => (current_filter === item.year || current_filter === item.type) &&
+      <ProjectCard content={{...item, 'id': i}} selectedProjectCB={this.handleSelectedProject} />);
   }
-  
   
   handleFilterChange = (new_filter) => {
     this.setState({
@@ -31,12 +36,20 @@ class Projects extends Component {
     });
   };
   
+  handleSelectedProject = (new_selected_project) => {
+    this.setState({
+      selected_project: new_selected_project
+    });
+  };
+  
   render() {
-    const { current_filter } = this.state;
+    const {current_filter, selected_project, preview_open} = this.state;
     return (
       <main className="projects">
         <section className='project-preview-wrapper'>
-          <ProjectPreview/>
+          {
+            selected_project && <ProjectPreview previewOpen={preview_open} content={selected_project}/>
+          }
         </section>
         <section className="header">
           <h1 className="title">Projects</h1>

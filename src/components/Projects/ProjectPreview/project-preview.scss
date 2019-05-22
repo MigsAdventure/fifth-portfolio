@@ -1,5 +1,13 @@
 @import '../../../styles/partials/settings';
 
 .project-preview {
-
+  max-height: 0;
+  transition: max-height 0.15s ease-out;
+  overflow: hidden;
+  min-height: 500px;
+  background: blue;
+  &.preview-open {
+    max-height: 500px;
+    transition: max-height 0.15s ease-out;
+  }
 }
