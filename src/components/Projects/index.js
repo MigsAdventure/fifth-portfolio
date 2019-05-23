@@ -4,8 +4,6 @@ import ProjectCard from "./ProjectCard";
 import _projects from '../../constants/data/projects.json';
 import ProjectsFilter from "./ProjectsFilter";
 import './projects.scss';
-import {projects_filter} from '../../constants/data/global';
-import classnames from 'classnames';
 import ProjectPreview from "./ProjectPreview";
 
 class Projects extends Component {
@@ -13,7 +11,7 @@ class Projects extends Component {
     super(props);
     this.state = {
       current_filter: '2019',
-      preview_open: false,
+      preview_open: -1,
       selected_project: null
     };
     this.renderProjects = this.renderProjects.bind(this);
@@ -22,12 +20,20 @@ class Projects extends Component {
   }
   
   renderProjects() {
-    const current_filter = this.state.current_filter;
+    const {current_filter, preview_open} = this.state;
+    let renderCards = _projects.map((item, i) => {
+      let renderPreview = window.innerWidth <= 768 && (
+        <ProjectPreview previewOpen={preview_open} content={{...item, 'id': i}}/>);
+      return (current_filter === item.year || current_filter === item.type) &&
+        ([<ProjectCard content={{...item, 'id': i}} selectedProjectCB={this.handleSelectedProject}/>,
+          renderPreview
+        ]);
+    });
     if (current_filter === 'all') {
-      return _projects.map((item, i) => <ProjectCard content={{...item, 'id': i}} selectedProjectCB={this.handleSelectedProject} />);
+      renderCards = _projects.map((item, i) => ([<ProjectCard content={{...item, 'id': i}}
+                                                              selectedProjectCB={this.handleSelectedProject}/>]));
     }
-    return _projects.map((item, i) => (current_filter === item.year || current_filter === item.type) &&
-      <ProjectCard content={{...item, 'id': i}} selectedProjectCB={this.handleSelectedProject} />);
+    return renderCards
   }
   
   handleFilterChange = (new_filter) => {
@@ -40,7 +46,7 @@ class Projects extends Component {
   handleSelectedProject = (new_selected_project) => {
     this.setState({
       selected_project: new_selected_project,
-      preview_open: true
+      preview_open: new_selected_project.id
     });
   };
   
@@ -50,7 +56,8 @@ class Projects extends Component {
       <main className="projects">
         <section className='project-preview-wrapper'>
           {
-            selected_project && <ProjectPreview previewOpen={preview_open} content={selected_project}/>
+            window.innerWidth > 768 && selected_project &&
+            <ProjectPreview previewOpen={preview_open} content={selected_project}/>
           }
         </section>
         <section className="header">
