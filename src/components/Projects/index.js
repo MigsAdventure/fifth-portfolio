@@ -30,8 +30,7 @@ class Projects extends Component {
         ]);
     });
     if (current_filter === 'all') {
-      renderCards = _projects.map((item, i) => ([<ProjectCard content={{...item, 'id': i}}
-                                                              selectedProjectCB={this.handleSelectedProject}/>]));
+      renderCards = _projects.map((item, i) => (<ProjectCard content={{...item, 'id': i}} selectedProjectCB={this.handleSelectedProject}/>));
     }
     return renderCards
   }
@@ -46,7 +45,7 @@ class Projects extends Component {
   handleSelectedProject = (new_selected_project) => {
     this.setState({
       selected_project: new_selected_project,
-      preview_open: new_selected_project.id
+      preview_open: this.state.preview_open === new_selected_project.id ? -1 : new_selected_project.id
     });
   };
   
