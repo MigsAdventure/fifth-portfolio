@@ -3,10 +3,12 @@
 .projects {
   color: white;
   text-align: center;
-  position: relative;
   min-height: 500px;
   @media (min-width: $small-desktop-width) {
     min-height: 800px;
+  }
+  .projects-wrapper {
+    position: relative;
   }
   .header {
     text-align: left;
