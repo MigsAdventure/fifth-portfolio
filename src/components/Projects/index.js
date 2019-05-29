@@ -23,14 +23,14 @@ class Projects extends Component {
     const {current_filter, preview_open} = this.state;
     let renderCards = _projects.map((item, i) => {
       let renderPreview = window.innerWidth <= 768 && (
-        <ProjectPreview previewOpen={preview_open} content={{...item, 'id': i}}/>);
+        <ProjectPreview previewOpen={preview_open} content={{...item, 'number': i}}/>);
       return (current_filter === item.year || current_filter === item.type) &&
-        ([<ProjectCard content={{...item, 'id': i}} selectedProjectCB={this.handleSelectedProject}/>,
+        ([<ProjectCard content={{...item, 'number': i}} selectedProjectCB={this.handleSelectedProject}/>,
           renderPreview
         ]);
     });
     if (current_filter === 'all') {
-      renderCards = _projects.map((item, i) => (<ProjectCard content={{...item, 'id': i}} selectedProjectCB={this.handleSelectedProject}/>));
+      renderCards = _projects.map((item, i) => (<ProjectCard content={{...item, 'number': i}} selectedProjectCB={this.handleSelectedProject}/>));
     }
     return renderCards
   }

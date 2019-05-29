@@ -5,7 +5,8 @@
     "type": "ncsoft",
     "year": "2019",
     "tech": ["react", "sass"],
-    "api": ["internal"]
+    "api": ["internal"],
+    "id": "lineage2"
   },
   {
     "name": "Aion",
@@ -13,7 +14,8 @@
     "type": "ncsoft",
     "year": "2019",
     "tech": ["react", "sass"],
-    "api": ["internal"]
+    "api": ["internal"],
+    "id": "aion"
   },
   {
     "name": "NCSOFT",
@@ -21,7 +23,8 @@
     "type": "ncsoft",
     "year": "2019",
     "tech": ["react", "sass"],
-    "api": ["internal"]
+    "api": ["internal"],
+    "id": "ncsoft"
   },
   {
     "name": "Aion Legions",
@@ -29,7 +32,9 @@
     "type": "ncsoft",
     "year": "2018",
     "tech": ["react", "sass"],
-    "api": ["internal"]
+    "api": ["internal"],
+    "id": "aion-legions"
+
   },
   {
     "name": "Blade and Soul",
@@ -37,7 +42,8 @@
     "type": "ncsoft",
     "year": "2017",
     "tech": ["react", "sass"],
-    "api": ["internal"]
+    "api": ["internal"],
+    "id": "bns"
   },
   {
     "name": "Blade and Soul Esports",
@@ -45,7 +51,8 @@
     "type": "ncsoft",
     "year": "2017",
     "tech": ["react", "sass"],
-    "api": ["internal"]
+    "api": ["internal"],
+    "id": "bns-esports"
   },
   {
     "name": "Anime LunchBox",
@@ -53,7 +60,8 @@
     "type": "personal",
     "year": "2017",
     "tech": ["react", "sass"],
-    "api": ["kitsu"]
+    "api": ["kitsu"],
+    "id": "lunch-box"
   },
   {
     "name": "Goku Hangman",
@@ -61,7 +69,8 @@
     "type": "personal",
     "year": "2016",
     "tech": ["jQuery"],
-    "api": null
+    "api": null,
+    "id": "hangman"
   },
   {
     "name": "PokedexGo",
@@ -69,6 +78,7 @@
     "type": "personal",
     "year": "2016",
     "tech": ["jQuery"],
-    "api": null
+    "api": null,
+    "id": "pokedex"
   }
 ]
