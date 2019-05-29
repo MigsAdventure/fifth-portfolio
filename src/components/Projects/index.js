@@ -21,18 +21,21 @@ class Projects extends Component {
   
   renderProjects() {
     const {current_filter, preview_open} = this.state;
-    let renderCards = _projects.map((item, i) => {
+    let renderProjects = _projects.map((item, i) => {
       let renderPreview = window.innerWidth <= 768 && (
         <ProjectPreview previewOpen={preview_open} content={{...item, 'number': i}}/>);
-      return (current_filter === item.year || current_filter === item.type) &&
-        ([<ProjectCard content={{...item, 'number': i}} selectedProjectCB={this.handleSelectedProject}/>,
+      if (current_filter === item.year || current_filter === item.type) {
+        return ([<ProjectCard content={{...item, 'number': i}} selectedProjectCB={this.handleSelectedProject}/>,
           renderPreview
         ]);
+      } else if (current_filter === 'all') {
+        return ([<ProjectCard content={{...item, 'number': i}} selectedProjectCB={this.handleSelectedProject}/>,
+          renderPreview
+        ]);
+      }
+      return null;
     });
-    if (current_filter === 'all') {
-      renderCards = _projects.map((item, i) => (<ProjectCard content={{...item, 'number': i}} selectedProjectCB={this.handleSelectedProject}/>));
-    }
-    return renderCards
+      return renderProjects
   }
   
   handleFilterChange = (new_filter) => {

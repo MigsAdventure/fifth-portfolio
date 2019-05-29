@@ -4,14 +4,13 @@ import './project-card.scss';
 import { CDN_URL } from '../../../constants/config';
 
 const ProjectCard = ({content, selectedProjectCB}) => {
-  console.log(content);
   const {name, url, type, year, tech, api, id} = content;
   return (
     <main
-      key={name}
+      key={content.number}
       className="project-card"
       onClick={selectedProjectCB.bind(this, content)}
-      style={{backgroundImage: `url(${CDN_URL}global/${id}-site-card-logo.jpeg)`}}
+      // style={{backgroundImage: `url(${CDN_URL}global/${id}-site-card-logo.jpeg)`}}
     >
       <section>
         <h1>{name}</h1>

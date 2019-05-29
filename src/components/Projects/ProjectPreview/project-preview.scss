@@ -1,13 +1,38 @@
 @import '../../../styles/partials/settings';
 
-.project-preview {
-  max-height: 0;
-  transition: max-height 0.15s ease-out;
-  overflow: hidden;
-  background: blue;
-  &.preview-open {
-    max-height: 500px;
-    height: 500px;
+  .project-preview {
+    max-height: 0;
     transition: max-height 0.15s ease-out;
-  }
+    overflow: hidden;
+    background-repeat: no-repeat;
+    @media(min-width: $small-desktop-width) {
+      background-size: 50%;
+    }
+    .project-preview-image {
+      width: 100%;
+      @media(min-width: $small-desktop-width) {
+        width: 50%;
+        float: left;
+      }
+      img {
+        width: 100%;
+        &:hover {
+          opacity: 0.8;
+          padding: 10px;
+        }
+      }
+    }
+    .project-info {
+      display: inline-block;
+      float: right;
+      width: 100%;
+      @media(min-width: $small-desktop-width) {
+        width: 50%;
+      }
+    }
+    &.preview-open {
+      max-height: 500px;
+      height: 500px;
+      transition: max-height 0.15s ease-out;
+    }
 }

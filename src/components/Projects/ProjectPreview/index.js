@@ -5,15 +5,15 @@ import './project-preview.scss';
 import {CDN_URL} from "../../../constants/config";
 
 const ProjectPreview = ({content, previewOpen}) => {
-  console.log(content);
-  console.log('previewOPen: ', previewOpen);
-  const {year, name, id} = content;
+  const {year, name, id, url} = content;
   return (
      <main
        className={classnames('project-preview', {'preview-open': previewOpen === id})}
-       style={{backgroundImage: `url(${CDN_URL}desktop/${id}-site.jpeg)`}}
      >
-      <section>
+       <a className='project-preview-image' href={url}>
+         <img src={`${CDN_URL}desktop/${id}-site.jpeg`} alt={content.name}/>
+       </a>
+      <section className='project-info'>
       <h1>{year}</h1>
       <h1>{name}</h1>
       </section>

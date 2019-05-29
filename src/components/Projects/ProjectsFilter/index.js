@@ -25,7 +25,7 @@ const ProjectsFilter = ({currentFilter, changeFilterCB}) => {
   return (
     <main className="projects-filter">
       <section>
-        <div>{currentFilter}</div>
+        <div className='current-filter-item'>{currentFilter} <i className="fa fa-chevron-down"></i></div>
         {renderNavItems()}
       </section>
     </main>
