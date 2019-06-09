@@ -9,7 +9,34 @@
   2015: "2015",
   };
 
+ const contact_form = {
+   name: {
+     en: "Name",
+     es: "Nombre",
+     jp: "Name",
+     kr: "Name",
+   },
+   email: {
+     en: "Email",
+     es: "Email",
+     jp: "Email",
+     kr: "Email",
+   },
+   message: {
+     en: "Message",
+     es: "Mensaje",
+     jp: "Message",
+     kr: "Message",
+   }
+ };
+ 
+const footer =  {
+  copyright: "Miguel Guzman"
+ };
+
 export {
-  projects_filter
+  projects_filter,
+  contact_form,
+  footer
 }
 

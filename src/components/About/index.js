@@ -55,13 +55,7 @@ class Projects extends Component {
   render() {
     const {current_filter, selected_project, preview_open} = this.state;
     return (
-      <main className="projects">
-        <section className='project-preview-wrapper'>
-          {
-            window.innerWidth > 768 && selected_project &&
-            <ProjectPreview previewOpen={preview_open} content={selected_project}/>
-          }
-        </section>
+      <main className="about">
         <section className="header">
           <h1 className="title">Projects</h1>
         </section>

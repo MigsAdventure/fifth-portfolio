@@ -3,7 +3,7 @@
     "name": "Lineage2",
     "url": "https://www.lineage2.com",
     "type": "ncsoft",
-    "year": "2019",
+    "year": ["2019", "2018"],
     "tech": ["react", "sass"],
     "api": ["internal"],
     "id": "lineage2"
@@ -12,7 +12,7 @@
     "name": "Aion",
     "url": "https://www.aiononline.com",
     "type": "ncsoft",
-    "year": "2019",
+    "year": ["2019", "2018"],
     "tech": ["react", "sass"],
     "api": ["internal"],
     "id": "aion"
@@ -21,16 +21,25 @@
     "name": "NCSOFT",
     "url": "https://www.ncsoft.com",
     "type": "ncsoft",
-    "year": "2019",
+    "year": ["2019", "2018", "2017"],
     "tech": ["react", "sass"],
     "api": ["internal"],
     "id": "ncsoft"
   },
   {
+    "name": "Launcher SignUp",
+    "url": "https://www.web.ncsoft.com/signup",
+    "type": "ncsoft",
+    "year": ["2019"],
+    "tech": ["react", "sass"],
+    "api": null,
+    "id": "launcher-signup"
+  },
+  {
     "name": "Aion Legions",
     "url": "https://www.aionlegionsofwar.com",
     "type": "ncsoft",
-    "year": "2018",
+    "year": ["2019"],
     "tech": ["react", "sass"],
     "api": ["internal"],
     "id": "aion-legions"
@@ -40,7 +49,7 @@
     "name": "Blade and Soul",
     "url": "https://www.bladeandsoul.com",
     "type": "ncsoft",
-    "year": "2017",
+    "year": ["2019", "2018", "2017"],
     "tech": ["react", "sass"],
     "api": ["internal"],
     "id": "bns"
@@ -49,16 +58,52 @@
     "name": "Blade and Soul Esports",
     "url": "https://www.esports.bladeandsoul.com",
     "type": "ncsoft",
-    "year": "2017",
+    "year": ["2018", "2017"],
     "tech": ["react", "sass"],
     "api": ["internal"],
     "id": "bns-esports"
   },
   {
+    "name": "Blade and Soul Forums",
+    "url": "https://forums.bladeandsoul.com",
+    "type": "ncsoft",
+    "year": ["2018", "2017"],
+    "tech": ["react", "sass"],
+    "api": null,
+    "id": "bns-forums"
+  },
+  {
+    "name": "Aion Forums",
+    "url": "https://forums.aiononline.com",
+    "type": "ncsoft",
+    "year": ["2017"],
+    "tech": ["react", "sass"],
+    "api": ["internal"],
+    "id": "aion-forums"
+  },
+  {
+    "name": "Lineage2 Forums",
+    "url": "https://forums.lineage2.com",
+    "type": "ncsoft",
+    "year": ["2018"],
+    "tech": ["react", "sass"],
+    "api": ["internal"],
+    "id": "lineage2-forums"
+  },
+  {
+    "name": "Aion Legions Forums",
+    "url": "https://forums.aionlegionsofwar.com",
+    "type": "ncsoft",
+    "year": ["2018", "2019"],
+    "tech": ["react", "sass"],
+    "api": ["internal"],
+    "id": "aion-legions-forums"
+  },
+  {
     "name": "Anime LunchBox",
     "url": "http://anime-lunchbox-app.herokuapp.com/",
     "type": "personal",
-    "year": "2017",
+    "year": ["2016"],
     "tech": ["react", "sass"],
     "api": ["kitsu"],
     "id": "lunch-box"
@@ -67,7 +112,7 @@
     "name": "Goku Hangman",
     "url": "https://migsadventure.github.io/GokuHangman/",
     "type": "personal",
-    "year": "2016",
+    "year": ["2016"],
     "tech": ["jQuery"],
     "api": null,
     "id": "hangman"
@@ -76,7 +121,7 @@
     "name": "PokedexGo",
     "url": "https://migsadventure.github.io/pokedexgo/",
     "type": "personal",
-    "year": "2016",
+    "year": ["2016"],
     "tech": ["jQuery"],
     "api": null,
     "id": "pokedex"

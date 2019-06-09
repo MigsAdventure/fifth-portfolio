@@ -5,8 +5,10 @@
     transition: max-height 0.15s ease-out;
     overflow: hidden;
     background-repeat: no-repeat;
+    background-image: url('https://s3-us-west-1.amazonaws.com/cdn.migsadventure.com/portfolio/images/mobile/m-sunset-city.jpeg');
+    background-size: cover;
     @media(min-width: $small-desktop-width) {
-      background-size: 50%;
+      //background-size: 50%;
     }
     .project-preview-image {
       width: 100%;
@@ -31,8 +33,8 @@
       }
     }
     &.preview-open {
-      max-height: 500px;
-      height: 500px;
+      max-height: 700px;
+      height: 700px;
       transition: max-height 0.15s ease-out;
     }
 }
