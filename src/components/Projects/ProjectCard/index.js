@@ -1,17 +1,13 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
 import './project-card.scss';
-import { assetPath } from "../../../utils/url";
 
 
 const ProjectCard = ({content, selectedProjectCB}) => {
-  
-  const importImage = (baseURL, path) => {
+  const importImage = (path) => {
     try {
-      const exists = require( './assets/images/global/' + path);
-      return exists;
+      return require('../../../assets/images/global/' + path);
     } catch (err) {
-      console.log(err);
       return require( '../../../assets/images/global/' + `aion-site-card-logo.jpeg`);
     }
   };
@@ -21,8 +17,7 @@ const ProjectCard = ({content, selectedProjectCB}) => {
       key={content.number}
       className="project-card"
       onClick={selectedProjectCB.bind(this, content)}
-      style={{backgroundImage: `url(${importImage('../../../assets/images/global/', `${id}-site-card-logo.jpeg`)})`}}
-      // style={{backgroundImage: `url(${assortedComponents[`${id}-site-card-logo.jpeg`]})`}}
+      style={{backgroundImage: `url(${importImage( `${id}-site-card-logo.jpeg`)})`}}
     >
       <section>
         <h1>{name}</h1>
