@@ -5,6 +5,7 @@ import _projects from '../../constants/data/projects.json';
 import ProjectsFilter from "./ProjectsFilter";
 import './projects.scss';
 import ProjectPreview from "./ProjectPreview";
+import { isMobile } from "../../utils/screen";
 
 class Projects extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class Projects extends Component {
     const {current_filter, preview_open} = this.state;
     let renderProjects = _projects.map((item, i) => {
       let renderPreview = window.innerWidth <= 768 && (
-        <ProjectPreview previewOpen={preview_open} content={{...item, 'number': i}}/>);
+        <ProjectPreview previewOpen={preview_open} content={{...item, 'number': i}} isMobile={isMobile()} />);
       if (item.year.includes(current_filter) || current_filter === item.type) {
         return ([<ProjectCard content={{...item, 'number': i}} selectedProjectCB={this.handleSelectedProject}/>,
           renderPreview
@@ -58,7 +59,7 @@ class Projects extends Component {
       <main className="projects">
         <section className='project-preview-wrapper'>
           {
-            window.innerWidth > 768 && selected_project &&
+            !isMobile() && selected_project &&
             <ProjectPreview previewOpen={preview_open} content={selected_project}/>
           }
         </section>

@@ -316,13 +316,24 @@ module.exports = function(webpackEnv) {
             // "url" loader works like "file" loader except that it embeds assets
             // smaller than specified limit in bytes as data URLs to avoid requests.
             // A missing `test` is equivalent to a match.
+            // {
+            //   test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+            //   loader: require.resolve('url-loader'),
+            //   options: {
+            //     limit: 8,
+            //     context: './src/',
+            //     name: '[path][name].[ext].[hash]',
+            //   },
+            // },
             {
               test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-              loader: require.resolve('url-loader'),
+              loader: 'file-loader',
               options: {
-                limit: 10000,
-                name: 'static/media/[name].[hash:8].[ext]',
-              },
+                context: './src/assets/images/',
+                name: '[path][name].[ext]',
+                publicPath: 'assets/images/',
+                outputPath: 'static/assets/images/'
+              }
             },
             // Process application JS with Babel.
             // The preset includes JSX, Flow, TypeScript, and some ESnext features.
@@ -450,17 +461,17 @@ module.exports = function(webpackEnv) {
             // In production, they would get copied to the `build` folder.
             // This loader doesn't use a "test" so it will catch all modules
             // that fall through the other loaders.
-            {
-              loader: require.resolve('file-loader'),
-              // Exclude `js` files to keep "css" loader working as it injects
-              // its runtime that would otherwise be processed through "file" loader.
-              // Also exclude `html` and `json` extensions so they get processed
-              // by webpacks internal loaders.
-              exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
-              options: {
-                name: 'static/media/[name].[hash:8].[ext]',
-              },
-            },
+            // {
+            //   loader: require.resolve('file-loader'),
+            //   // Exclude `js` files to keep "css" loader working as it injects
+            //   // its runtime that would otherwise be processed through "file" loader.
+            //   // Also exclude `html` and `json` extensions so they get processed
+            //   // by webpacks internal loaders.
+            //   exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
+            //   options: {
+            //     name: 'static/media/[name].[hash:8].[ext]',
+            //   },
+            // },
             // ** STOP ** Are you adding a new loader?
             // Make sure to add the new loader(s) before the "file" loader.
           ],

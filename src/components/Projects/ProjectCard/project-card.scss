@@ -1,11 +1,15 @@
 @import '../../../styles/partials/settings';
+$image-path: '../../../assets/images/';
+$mobile-path: $image-path + 'mobile/';
+$desktop-path: $image-path + 'desktop/';
+$global-path: $image-path + 'global/';
 
 .project-card {
   color: white;
   display: inline-block;
   border-radius: 5px;
   width: 100%;
-  background-image: url('https://s3-us-west-1.amazonaws.com/cdn.migsadventure.com/portfolio/images/global/card-bg.jpg');
+  background-image: url($global-path + 'ncsoft-site-card-logo.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   margin: 10px auto;
