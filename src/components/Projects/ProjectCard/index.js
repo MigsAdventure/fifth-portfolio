@@ -20,7 +20,9 @@ const ProjectCard = ({content, selectedProjectCB}) => {
       style={{backgroundImage: `url(${importImage( `${id}-site-card-logo.jpeg`)})`}}
     >
       <section>
-        <h1>{name}</h1>
+        <div className="title-wrapper">
+          <h1>{name}</h1>
+        </div>
         <div className="info">
           <p>{type}</p>
           <p>{year}</p>

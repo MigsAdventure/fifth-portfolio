@@ -8,13 +8,13 @@ $global-path: $image-path + 'global/';
   color: white;
   display: inline-block;
   border-radius: 5px;
-  width: 100%;
+  width: 90%;
   background-image: url($global-path + 'ncsoft-site-card-logo.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   margin: 10px auto;
   vertical-align: top;
-  min-height: 280px;
+  min-height: 240px;
   cursor: pointer;
   &:hover {
     opacity: 0.8;
