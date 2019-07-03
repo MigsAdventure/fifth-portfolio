@@ -3,7 +3,6 @@ import {withRouter} from 'react-router-dom';
 import './project-card.scss';
 import classnames from 'classnames';
 
-
 const ProjectCard = ({content, selectedProjectCB, previewOpen}) => {
   const importImage = (path) => {
     try {
@@ -17,9 +16,8 @@ const ProjectCard = ({content, selectedProjectCB, previewOpen}) => {
   return (
     <main
       key={content.number}
-      // className="project-card"
       onClick={selectedProjectCB.bind(this, content)}
-      className={classnames('project-card',  {'active': previewOpen === id})}
+      className={classnames('project-card',  {'active': previewOpen === id}, {'inactive': previewOpen !== id && previewOpen !== -1})}
       style={{backgroundImage: `url(${importImage( `${id}-site-card-logo.jpeg`)})`}}
     >
       <section>

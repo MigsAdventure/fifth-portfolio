@@ -4,16 +4,13 @@
     max-height: 0;
     transition: max-height 0.15s ease-out;
     overflow: hidden;
-    background-repeat: no-repeat;
-    background-image: url('https://s3-us-west-1.amazonaws.com/cdn.migsadventure.com/portfolio/images/desktop/glass-city.jpeg');
-    background-size: cover;
     @media(min-width: $small-desktop-width) {
       //background-size: 50%;
     }
     .project-preview-image {
       //width: 100%;
       display: none;
-      @media(min-width: $small-desktop-width) {
+      @media(min-width: $tablet-width) {
         display: inline-block;
         width: 50%;
         float: left;
@@ -30,7 +27,7 @@
       display: inline-block;
       float: right;
       width: 100%;
-      @media(min-width: $small-desktop-width) {
+      @media(min-width: $tablet-width) {
         width: 50%;
       }
     }

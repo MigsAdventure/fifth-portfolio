@@ -3,9 +3,13 @@
 .projects {
   color: white;
   text-align: center;
-  min-height: 500px;
+  //min-height: 500px;
+  //background-image: url();
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
   @media (min-width: $small-desktop-width) {
-    min-height: 800px;
+    //min-height: 800px;
   }
   .projects-wrapper {
     position: relative;

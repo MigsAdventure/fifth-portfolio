@@ -21,8 +21,8 @@ const ProjectPreview = ({content, previewOpen, isMobile}) => {
          <img src={importImage(`${screenSize}/${id}-site.jpeg`)} alt={content.name}/>
        </a>
       <section className='project-info'>
-      <h1>{year}</h1>
       <h1>{name}</h1>
+        <a href={url}>Go To Site</a>
       </section>
     </main>
   );

@@ -15,10 +15,23 @@
         background: rgba(255,255,255,.1);
         outline: none;
         border: rgba(255,255,255,.2) 1px solid;
+        padding: 10px;
         & textarea {
           background: red !important;
           height: 200px;
         }
+      }
+    }
+    .submit-btn {
+      color: white;
+      background: black;
+      border: solid 1px rgba(255,255,255, 0.4);
+      padding: 10px 20px;
+      border-radius: 5px;
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: all;
       }
     }
   }

@@ -57,7 +57,7 @@ class Contact extends Component {
               <label htmlFor="message">Message</label>
               <textarea name="message" className="form-input message" type="text" required/>
             </div>
-            <button disabled={!form_valid} type="submit">Send Message!</button>
+            <button className='submit-btn' disabled={!form_valid} type="submit">Send Message!</button>
           </form>
         </section>
       </main>

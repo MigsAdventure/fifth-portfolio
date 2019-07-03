@@ -7,6 +7,7 @@ $global-path: $image-path + 'global/';
 .project-card {
   color: white;
   display: inline-block;
+  text-align: center;
   border-radius: 5px;
   width: 90%;
   background-image: url($global-path + 'ncsoft-site-card-logo.jpeg');
@@ -17,6 +18,8 @@ $global-path: $image-path + 'global/';
   min-height: 240px;
   cursor: pointer;
   position: relative;
+  max-width: 500px;
+  background-position: center;
   @media (min-width: $tablet-width) {
     width: calc(50% - 20px);
     margin: 10px;
@@ -27,7 +30,7 @@ $global-path: $image-path + 'global/';
       opacity: 0.8;
     }
   }
-  &.active {
+  &.inactive {
     filter: sepia(80%);
   }
   .title-wrapper {
@@ -40,6 +43,7 @@ $global-path: $image-path + 'global/';
     > h1 {
       font-size: 26px;
       text-shadow: black 1px 1px 2px;
+      letter-spacing: 3px;
     }
   }
   .info {
