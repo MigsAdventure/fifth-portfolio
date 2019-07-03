@@ -26,11 +26,11 @@ class Projects extends Component {
       let renderPreview = window.innerWidth <= 768 && (
         <ProjectPreview previewOpen={preview_open} content={{...item, 'number': i}} isMobile={isMobile()} />);
       if (item.year.includes(current_filter) || current_filter === item.type) {
-        return ([<ProjectCard content={{...item, 'number': i}} selectedProjectCB={this.handleSelectedProject}/>,
+        return ([<ProjectCard content={{...item, 'number': i}} previewOpen={preview_open} selectedProjectCB={this.handleSelectedProject}/>,
           renderPreview
         ]);
       } else if (current_filter === 'all') {
-        return ([<ProjectCard content={{...item, 'number': i}} selectedProjectCB={this.handleSelectedProject}/>,
+        return ([<ProjectCard content={{...item, 'number': i}} previewOpen={preview_open} selectedProjectCB={this.handleSelectedProject}/>,
           renderPreview
         ]);
       }
