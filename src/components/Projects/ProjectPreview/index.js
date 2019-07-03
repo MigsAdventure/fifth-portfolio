@@ -18,7 +18,7 @@ const ProjectPreview = ({content, previewOpen, isMobile}) => {
        className={classnames('project-preview', {'preview-open': previewOpen === id})}
      >
        <a className='project-preview-image' href={url}>
-         <img src={importImage(`${screenSize}/${id}-site.jpeg`)} alt={content.name}/>
+         <img src={importImage(`${screenSize}/screenshots/${id}-site.jpeg`)} alt={content.name}/>
        </a>
       <section className='project-info'>
       <h1>{name}</h1>

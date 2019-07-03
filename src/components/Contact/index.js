@@ -43,6 +43,13 @@ class Contact extends Component {
     const {name, email, message, form_valid} = this.state;
     return (
       <main className="contact">
+        <section className="contact-header">
+          <div>
+            <h1>
+              Contact Me
+            </h1>
+          </div>
+        </section>
         <section className="contact-form-wrapper">
           <form onChange={this.submitForm}>
             <div className="input-wrapper">
