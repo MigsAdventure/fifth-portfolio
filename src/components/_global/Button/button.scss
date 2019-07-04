@@ -1,0 +1,39 @@
+@import '../../../styles/partials/_settings';
+@import '../../../styles/partials/_mixins';
+
+a.btn, div.btn > a {
+  padding: 15px 40px;
+  display: inline-block;
+  color: white;
+  &.arrow-left { padding-left: 50px; }
+  &.arrow-right { padding-right: 50px; }
+}
+div.btn.no-url:not(.text) {
+  padding: 15px 40px;
+}
+.btn {
+  border: 1px solid white;
+  border-radius: 5px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  background: rgba(0,0,0,0.3);
+  &:hover, &.active {
+
+  }
+  > .btn-arrow {
+    @include super-center(30px);
+    font-size: 18px;
+    color: inherit;
+    &:not(.fa-angle-left) {
+      left: auto;
+      right: 30px;
+    }
+    &.fa-angle-left {
+      left: 30px;
+    }
+  }
+}
