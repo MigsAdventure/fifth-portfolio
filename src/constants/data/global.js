@@ -33,7 +33,7 @@
 const footer =  {
   copyright: "Miguel Guzman",
   social: {
-    resume: '/assets/pdf/resume.pdf',
+    resume: 'assets/pdf/resume.pdf',
     github: 'https://github.com/migsadventure',
     linkedin: 'https://www.linkedin.com/in/migsadventure/',
   }

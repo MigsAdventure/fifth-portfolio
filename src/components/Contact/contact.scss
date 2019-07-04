@@ -10,6 +10,9 @@
     }
   }
   .contact-form-wrapper {
+    padding: 20px;
+    max-width: 550px;
+    margin: auto;
     .input-wrapper {
       margin: 10px auto;
       color: white;
@@ -22,10 +25,16 @@
         outline: none;
         border: rgba(255,255,255,.2) 1px solid;
         padding: 10px;
-        & textarea {
-          background: red !important;
-          height: 200px;
-        }
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      textarea {
+        min-height: 100px;
+        max-height: 450px;
+        height: auto;
+        overflow: hidden;
+        width: 100%;
+        resize: vertical;
       }
     }
     .submit-btn {

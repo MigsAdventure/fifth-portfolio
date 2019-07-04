@@ -9,8 +9,8 @@ const Footer = ({lang}) => {
   return (
     <main className="footer">
       <section className="social-icons">
-        <a className="social-icon resume" target="_blank" rel="noopener noreferrer" href={social.resume}><i className="far fa-file" /></a>
-        <a className="social-icon github" target="_blank" rel="noopener noreferrer" href={social.github}><i className="fab fa-github-alt" /></a>
+        <a className="social-icon resume" target="_blank" rel="noopener noreferrer" href={require(`../../${social.resume}`)}><i className="far fa-file" /></a>
+        <a className="social-icon github" target="_blank" rel="noopener noreferrer" href={social.github}><i className="fab fa-github-square"></i></a>
         <a className="social-icon linkedin" target="_blank" rel="noopener noreferrer" href={social.linkedin}><i className="fab fa-linkedin" /></a>
       </section>
       <section className="copyright">
