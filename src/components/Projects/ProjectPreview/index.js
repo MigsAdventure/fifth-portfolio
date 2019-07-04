@@ -7,7 +7,7 @@ import { projects } from "../../../constants/data/global";
 
 const ProjectPreview = ({content, previewOpen, isMobile, lang}) => {
   console.log(lang);
-  const {year, name, id, url, tech, responsibilities, additional_info} = content;
+  const {id, url, tech, responsibilities, description} = content;
   const {btn, headers} = projects;
   const screenSize = isMobile ? 'desktop' : 'mobile';
   const importImage = (path) => {
@@ -25,6 +25,10 @@ const ProjectPreview = ({content, previewOpen, isMobile, lang}) => {
          <img src={importImage(`${screenSize}/screenshots/${id}-site.jpeg`)} alt={content.name}/>
        </a>
       <section className='project-info'>
+        <div className="description">
+          <h3>Description</h3>
+          <p>{description}</p>
+        </div>
         <div className='responsibilities'>
           <h3>{headers.resp[lang]}</h3>
           <ul className="resp-list">

@@ -11,7 +11,7 @@
       "Content Updates",
       "Bug Fixes"
       ],
-    "additional_info": "The official site for the Lineage 2 PC Game."
+    "description": "The official site for the Lineage 2 PC Game."
   },
   {
     "name": "Aion",
@@ -26,7 +26,7 @@
       "Content Updates",
       "Bug Fixes"
       ],
-    "additional_info": "The official site for the Aion PC Game."
+    "description": "The official site for the Aion PC Game."
   },
   {
     "name": "NcSoft",
@@ -41,7 +41,7 @@
       "Content Updates",
       "Bug Fixes"
       ],
-    "additional_info": "The official corporate site for NcSoft."
+    "description": "The official corporate site for NcSoft."
   },
   {
     "name": "Launcher SignUp",
@@ -58,7 +58,7 @@
       "Content Updates",
       "Bug Fixes"
       ],
-    "additional_info": "The launcher sign up page for NcSoft PC Games."
+    "description": "The launcher sign up page for NcSoft PC Games."
   },
   {
     "name": "Aion Legions",
@@ -74,7 +74,7 @@
       "Bug Fixes",
       "Special Events"
     ],
-    "additional_info": "The official site for the Aion: Legions of War Mobile Game."
+    "description": "The official site for the Aion: Legions of War Mobile Game."
   },
   {
     "name": "Blade and Soul",
@@ -89,7 +89,7 @@
       "Bug Fixes",
       "Special Events"
     ],
-    "additional_info": "The official site for the Blade and Soul PC Game."
+    "description": "The official site for the Blade and Soul PC Game."
   },
   {
     "name": "Blade and Soul Esports",
@@ -106,7 +106,7 @@
       "Bug Fixes",
       "Special Events"
     ],
-    "additional_info": "The official site for Blade and Soul eSports."
+    "description": "The official site for Blade and Soul eSports."
   },
   {
     "name": "Blade and Soul Forums",
@@ -120,7 +120,7 @@
       "Main Developer",
       "Implemented Design and front-end structure"
     ],
-    "additional_info": "The official forums for the Blade and Soul PC Game."
+    "description": "The official forums for the Blade and Soul PC Game."
   },
   {
     "name": "Aion Forums",
@@ -134,7 +134,7 @@
       "Main Developer",
       "Implemented Design and front-end structure"
     ],
-    "additional_info": "The official forums for the Aion PC Game."
+    "description": "The official forums for the Aion PC Game."
   },
   {
     "name": "Lineage II Forums",
@@ -148,7 +148,7 @@
       "Main Developer",
       "Implemented Design and front-end structure"
     ],
-    "additional_info": "The official forums for the Lineage II PC Game."
+    "description": "The official forums for the Lineage II PC Game."
   },
   {
     "name": "Aion Legions Forums",
@@ -162,7 +162,7 @@
       "Main Developer",
       "Implemented front-end structure for development"
     ],
-    "additional_info": "The official forums for the Aion: Legions of War Mobile Game."
+    "description": "The official forums for the Aion: Legions of War Mobile Game."
   },
   {
     "name": "Anime LunchBox",
@@ -176,7 +176,7 @@
       "Main Developer",
       "Designed and Implemented project"
     ],
-    "additional_info": "Anime web app that helps us search, favorite, and add anime to our watchlist!"
+    "description": "Anime web app that helps us search, favorite, and add anime to our watchlist!"
   },
   {
     "name": "Goku Hangman",
@@ -190,7 +190,7 @@
       "Sole Developer",
       "Designed and Implemented project"
     ],
-    "additional_info": "Simple Goku Hangman game that has a large array words with one free hint."
+    "description": "Simple Goku Hangman game that has a large array words with one free hint."
   },
   {
     "name": "PokedexGo",
@@ -204,6 +204,6 @@
       "Sole Developer",
       "Designed and Implemented project"
     ],
-    "additional_info": "Inspired by the PokemonGO game. Listen to the original pokemon sounds, search pokemon, and use the CP calculator."
+    "description": "Inspired by the PokemonGO game. Listen to the original pokemon sounds, search pokemon, and use the CP calculator."
   }
 ]
