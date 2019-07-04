@@ -4,126 +4,189 @@
     "url": "https://www.lineage2.com",
     "type": "ncsoft",
     "year": ["2019", "2018"],
-    "tech": ["react", "sass"],
+    "tech": "react, sass",
     "api": ["internal"],
-    "id": "lineage2"
+    "id": "lineage2",
+    "responsibilities": [
+      "Content Updates",
+      "Bug Fixes"
   },
   {
     "name": "Aion",
     "url": "https://www.aiononline.com",
     "type": "ncsoft",
     "year": ["2019", "2018"],
-    "tech": ["react", "sass"],
+    "tech": "react, sass",
     "api": ["internal"],
-    "id": "aion"
+    "id": "aion",
+    "responsibilities":  [
+      "Main Developer",
+      "Content Updates",
+      "Bug Fixes"
   },
   {
-    "name": "NCSOFT",
+    "name": "NcSoft",
     "url": "https://www.ncsoft.com",
     "type": "ncsoft",
     "year": ["2019", "2018", "2017"],
-    "tech": ["react", "sass"],
+    "tech": "react, sass",
     "api": ["internal"],
-    "id": "ncsoft"
+    "id": "ncsoft",
+    "responsibilities":  [
+      "Main Developer",
+      "Content Updates",
+      "Bug Fixes"
   },
   {
     "name": "Launcher SignUp",
     "url": "https://www.web.ncsoft.com/signup",
     "type": "ncsoft",
     "year": ["2019"],
-    "tech": ["react", "sass"],
+    "tech": "react, sass",
     "api": null,
-    "id": "launcher-signup"
+    "id": "launcher-signup",
+    "responsibilities":
+    [
+      "Main Developer",
+      "Built from scratch",
+      "Content Updates",
+      "Bug Fixes",
+      "Maintenance"
   },
   {
     "name": "Aion Legions",
     "url": "https://www.aionlegionsofwar.com",
     "type": "ncsoft",
     "year": ["2019"],
-    "tech": ["react", "sass"],
+    "tech": "react, sass",
     "api": ["internal"],
-    "id": "aion-legions"
-
+    "id": "aion-legions",
+    "responsibilities":  [
+      "Main Developer(2018, 2019)",
+      "Content Updates",
+      "Bug Fixes",
+      "Special Events"
+    ]
   },
   {
     "name": "Blade and Soul",
     "url": "https://www.bladeandsoul.com",
     "type": "ncsoft",
     "year": ["2019", "2018", "2017"],
-    "tech": ["react", "sass"],
+    "tech": "react, sass",
     "api": ["internal"],
-    "id": "bns"
+    "id": "bns",
+    "responsibilities": [
+      "Content Updates",
+      "Bug Fixes",
+      "Special Events"
+    ]
   },
   {
     "name": "Blade and Soul Esports",
     "url": "https://www.esports.bladeandsoul.com",
     "type": "ncsoft",
     "year": ["2018", "2017"],
-    "tech": ["react", "sass"],
+    "tech": "react, sass",
     "api": ["internal"],
-    "id": "bns-esports"
+    "id": "bns-esports",
+    "responsibilities":  [
+      "Main Developer(2017)",
+      "Built from scratch",
+      "Content Updates",
+      "Bug Fixes",
+      "Special Events"
+    ]
   },
   {
     "name": "Blade and Soul Forums",
     "url": "https://forums.bladeandsoul.com",
     "type": "ncsoft",
     "year": ["2018", "2017"],
-    "tech": ["react", "sass"],
+    "tech": "react, sass",
     "api": null,
-    "id": "bns-forums"
+    "id": "bns-forums",
+    "responsibilities":  [
+      "Main Developer",
+      "Implemented Design and front-end structure"
+    ]
   },
   {
     "name": "Aion Forums",
     "url": "https://forums.aiononline.com",
     "type": "ncsoft",
     "year": ["2017"],
-    "tech": ["react", "sass"],
+    "tech": "react, sass",
     "api": ["internal"],
-    "id": "aion-forums"
+    "id": "aion-forums",
+    "responsibilities":  [
+      "Main Developer",
+      "Implemented Design and front-end structure"
+    ]
   },
   {
     "name": "Lineage2 Forums",
     "url": "https://forums.lineage2.com",
     "type": "ncsoft",
     "year": ["2018"],
-    "tech": ["react", "sass"],
+    "tech": "react, sass",
     "api": ["internal"],
-    "id": "lineage2-forums"
+    "id": "lineage2-forums",
+    "responsibilities":  [
+      "Main Developer",
+      "Implemented Design and front-end structure"
+    ]
   },
   {
     "name": "Aion Legions Forums",
     "url": "https://forums.aionlegionsofwar.com",
     "type": "ncsoft",
     "year": ["2018", "2019"],
-    "tech": ["react", "sass"],
+    "tech": "react, sass",
     "api": ["internal"],
-    "id": "aion-legions-forums"
+    "id": "aion-legions-forums",
+    "responsibilities":  [
+      "Main Developer",
+      "Implemented front-end structure for development"
+    ]
   },
   {
     "name": "Anime LunchBox",
     "url": "http://anime-lunchbox-app.herokuapp.com/",
     "type": "personal",
     "year": ["2016"],
-    "tech": ["react", "sass"],
+    "tech": "react, sass",
     "api": ["kitsu"],
-    "id": "lunch-box"
+    "id": "lunch-box",
+    "responsibilities":  [
+      "Main Developer",
+      "Designed and Implemented project"
+    ]
   },
   {
     "name": "Goku Hangman",
     "url": "https://migsadventure.github.io/GokuHangman/",
     "type": "personal",
     "year": ["2016"],
-    "tech": ["jQuery"],
+    "tech": "jQuery",
     "api": null,
-    "id": "hangman"
+    "id": "hangman",
+    "responsibilities":  [
+      "Sole Developer",
+      "Designed and Implemented project"
+    ]
   },
   {
     "name": "PokedexGo",
     "url": "https://migsadventure.github.io/pokedexgo/",
     "type": "personal",
     "year": ["2016"],
-    "tech": ["jQuery"],
+    "tech": "jQuery",
     "api": null,
-    "id": "pokedex"
+    "id": "pokedex",
+    "responsibilities":  [
+      "Sole Developer",
+      "Designed and Implemented project"
+    ]
   }
 ]

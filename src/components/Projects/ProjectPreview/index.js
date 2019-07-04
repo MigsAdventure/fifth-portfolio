@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import './project-preview.scss';
 
 const ProjectPreview = ({content, previewOpen, isMobile}) => {
-  const {year, name, id, url} = content;
+  const {year, name, id, url, tech} = content;
   const screenSize = isMobile ? 'desktop' : 'mobile';
   const importImage = (path) => {
     try {
@@ -21,8 +21,16 @@ const ProjectPreview = ({content, previewOpen, isMobile}) => {
          <img src={importImage(`${screenSize}/screenshots/${id}-site.jpeg`)} alt={content.name}/>
        </a>
       <section className='project-info'>
-      <h1>{name}</h1>
-        <a href={url}>Go To Site</a>
+          <ul className="responsibilites">
+            {/*<li className="type">{type}</li>*/}
+            {/*<li className="year">{project_years}</li>*/}
+          </ul>
+          <div className="tech">
+            <p>{tech}</p>
+          </div>
+        <div className="cta">
+          <a href={url}>Go To Site</a>
+        </div>
       </section>
     </main>
   );
