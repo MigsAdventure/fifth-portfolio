@@ -31,7 +31,12 @@
  };
  
 const footer =  {
-  copyright: "Miguel Guzman"
+  copyright: "Miguel Guzman",
+  social: {
+    resume: '/assets/pdf/resume.pdf',
+    github: 'https://github.com/migsadventure',
+    linkedin: 'https://www.linkedin.com/in/migsadventure/',
+  }
  };
 
 export {
