@@ -4,7 +4,7 @@
     "url": "https://www.lineage2.com",
     "type": "ncsoft",
     "year": ["2019", "2018"],
-    "tech": "React, Scss, Internal CMS, WebPack, NPM, GraphQL",
+    "tech": "React, Scss, Internal CMS, WebPack, NPM, GraphQL, AWS",
     "api": ["internal"],
     "id": "lineage2",
     "responsibilities": [
@@ -18,7 +18,7 @@
     "url": "https://www.aiononline.com",
     "type": "ncsoft",
     "year": ["2019", "2018"],
-    "tech": "React, Scss, Internal CMS",
+    "tech": "React, Scss, Internal CMS, WebPack, NPM, GraphQL, AWS",
     "api": ["internal"],
     "id": "aion",
     "responsibilities":  [
@@ -33,7 +33,7 @@
     "url": "https://www.ncsoft.com",
     "type": "ncsoft",
     "year": ["2019", "2018", "2017"],
-    "tech": "React, Scss, MT5",
+    "tech": "jQuery, Scss, Grunt, NPM, MT5",
     "api": ["internal"],
     "id": "ncsoft",
     "responsibilities":  [
@@ -48,7 +48,7 @@
     "url": "https://www.web.ncsoft.com/signup",
     "type": "ncsoft",
     "year": ["2019"],
-    "tech": "React, Scss, Gatsby",
+    "tech": "React, Scss, Gatsby, AWS, NPM, WebPack, GraphQL",
     "api": null,
     "id": "launcher-signup",
     "responsibilities":
@@ -65,7 +65,7 @@
     "url": "https://www.aionlegionsofwar.com",
     "type": "ncsoft",
     "year": ["2019"],
-    "tech": "React, Scss",
+    "tech": "React, Scss, NPM, Webpack, AWS, GraphQL",
     "api": ["internal"],
     "id": "aion-legions",
     "responsibilities":  [
@@ -81,7 +81,7 @@
     "url": "https://www.bladeandsoul.com",
     "type": "ncsoft",
     "year": ["2019", "2018", "2017"],
-    "tech": "React, Scss",
+    "tech": "React, Scss, jQuery, NPM, Bower, Grunt, Jekyll, GraphQL, Internal CMS",
     "api": ["internal"],
     "id": "bns",
     "responsibilities": [
@@ -96,7 +96,7 @@
     "url": "https://www.esports.bladeandsoul.com",
     "type": "ncsoft",
     "year": ["2018", "2017"],
-    "tech": "React, Scss",
+    "tech": "React, Scss, NPM, GraphQL, Internal CMS",
     "api": ["internal"],
     "id": "bns-esports",
     "responsibilities":  [
@@ -113,7 +113,7 @@
     "url": "https://forums.bladeandsoul.com",
     "type": "ncsoft",
     "year": ["2018", "2017"],
-    "tech": "React, Scss",
+    "tech": "Scss, IPBoard, PHP, Compass, NPM",
     "api": null,
     "id": "bns-forums",
     "responsibilities":  [
@@ -127,7 +127,7 @@
     "url": "https://forums.aiononline.com",
     "type": "ncsoft",
     "year": ["2017"],
-    "tech": "React, Scss",
+    "tech": "Scss, IPBoard, PHP, Compass, NPM",
     "api": ["internal"],
     "id": "aion-forums",
     "responsibilities":  [
@@ -141,7 +141,7 @@
     "url": "https://forums.lineage2.com",
     "type": "ncsoft",
     "year": ["2018"],
-    "tech": "React, Scss",
+    "tech": "Scss, IPBoard, PHP, Compass, NPM",
     "api": ["internal"],
     "id": "lineage2-forums",
     "responsibilities":  [
@@ -155,7 +155,7 @@
     "url": "https://forums.aionlegionsofwar.com",
     "type": "ncsoft",
     "year": ["2018", "2019"],
-    "tech": "React, Scss",
+    "tech": "Scss, IPBoard, PHP, Compass, NPM",
     "api": ["internal"],
     "id": "aion-legions-forums",
     "responsibilities":  [
@@ -169,14 +169,14 @@
     "url": "http://anime-lunchbox-app.herokuapp.com/",
     "type": "personal",
     "year": ["2016"],
-    "tech": "React, Scss",
+    "tech": "React, Scss, NPM, WebPack, Node, Express, Firebase",
     "api": ["kitsu"],
     "id": "lunch-box",
     "responsibilities":  [
       "Main Developer",
       "Designed and Implemented project"
     ],
-    "additional_info": "Anime web app that helps us search, favorite, and add animes' to our watchlist! "
+    "additional_info": "Anime web app that helps us search, favorite, and add anime to our watchlist!"
   },
   {
     "name": "Goku Hangman",
