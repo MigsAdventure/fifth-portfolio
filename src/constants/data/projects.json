@@ -4,48 +4,51 @@
     "url": "https://www.lineage2.com",
     "type": "ncsoft",
     "year": ["2019", "2018"],
-    "tech": "react, sass",
+    "tech": "React, Scss, Internal CMS, WebPack, NPM, GraphQL",
     "api": ["internal"],
     "id": "lineage2",
     "responsibilities": [
       "Content Updates",
       "Bug Fixes"
-      ]
+      ],
+    "additional_info": "The official site for the Lineage 2 PC Game."
   },
   {
     "name": "Aion",
     "url": "https://www.aiononline.com",
     "type": "ncsoft",
     "year": ["2019", "2018"],
-    "tech": "react, sass",
+    "tech": "React, Scss, Internal CMS",
     "api": ["internal"],
     "id": "aion",
     "responsibilities":  [
       "Main Developer",
       "Content Updates",
       "Bug Fixes"
-      ]
+      ],
+    "additional_info": "The official site for the Aion PC Game."
   },
   {
     "name": "NcSoft",
     "url": "https://www.ncsoft.com",
     "type": "ncsoft",
     "year": ["2019", "2018", "2017"],
-    "tech": "react, sass",
+    "tech": "React, Scss, MT5",
     "api": ["internal"],
     "id": "ncsoft",
     "responsibilities":  [
       "Main Developer",
       "Content Updates",
       "Bug Fixes"
-      ]
+      ],
+    "additional_info": "The official corporate site for NcSoft."
   },
   {
     "name": "Launcher SignUp",
     "url": "https://www.web.ncsoft.com/signup",
     "type": "ncsoft",
     "year": ["2019"],
-    "tech": "react, sass",
+    "tech": "React, Scss, Gatsby",
     "api": null,
     "id": "launcher-signup",
     "responsibilities":
@@ -54,14 +57,15 @@
       "Built from scratch",
       "Content Updates",
       "Bug Fixes"
-      ]
+      ],
+    "additional_info": "The launcher sign up page for NcSoft PC Games."
   },
   {
     "name": "Aion Legions",
     "url": "https://www.aionlegionsofwar.com",
     "type": "ncsoft",
     "year": ["2019"],
-    "tech": "react, sass",
+    "tech": "React, Scss",
     "api": ["internal"],
     "id": "aion-legions",
     "responsibilities":  [
@@ -69,28 +73,30 @@
       "Content Updates",
       "Bug Fixes",
       "Special Events"
-    ]
+    ],
+    "additional_info": "The official site for the Aion: Legions of War Mobile Game."
   },
   {
     "name": "Blade and Soul",
     "url": "https://www.bladeandsoul.com",
     "type": "ncsoft",
     "year": ["2019", "2018", "2017"],
-    "tech": "react, sass",
+    "tech": "React, Scss",
     "api": ["internal"],
     "id": "bns",
     "responsibilities": [
       "Content Updates",
       "Bug Fixes",
       "Special Events"
-    ]
+    ],
+    "additional_info": "The official site for the Blade and Soul PC Game."
   },
   {
     "name": "Blade and Soul Esports",
     "url": "https://www.esports.bladeandsoul.com",
     "type": "ncsoft",
     "year": ["2018", "2017"],
-    "tech": "react, sass",
+    "tech": "React, Scss",
     "api": ["internal"],
     "id": "bns-esports",
     "responsibilities":  [
@@ -99,66 +105,71 @@
       "Content Updates",
       "Bug Fixes",
       "Special Events"
-    ]
+    ],
+    "additional_info": "The official site for Blade and Soul eSports."
   },
   {
     "name": "Blade and Soul Forums",
     "url": "https://forums.bladeandsoul.com",
     "type": "ncsoft",
     "year": ["2018", "2017"],
-    "tech": "react, sass",
+    "tech": "React, Scss",
     "api": null,
     "id": "bns-forums",
     "responsibilities":  [
       "Main Developer",
       "Implemented Design and front-end structure"
-    ]
+    ],
+    "additional_info": "The official forums for the Blade and Soul PC Game."
   },
   {
     "name": "Aion Forums",
     "url": "https://forums.aiononline.com",
     "type": "ncsoft",
     "year": ["2017"],
-    "tech": "react, sass",
+    "tech": "React, Scss",
     "api": ["internal"],
     "id": "aion-forums",
     "responsibilities":  [
       "Main Developer",
       "Implemented Design and front-end structure"
-    ]
+    ],
+    "additional_info": "The official forums for the Aion PC Game."
   },
   {
-    "name": "Lineage2 Forums",
+    "name": "Lineage II Forums",
     "url": "https://forums.lineage2.com",
     "type": "ncsoft",
     "year": ["2018"],
-    "tech": "react, sass",
+    "tech": "React, Scss",
     "api": ["internal"],
     "id": "lineage2-forums",
     "responsibilities":  [
       "Main Developer",
       "Implemented Design and front-end structure"
-    ]
+    ],
+    "additional_info": "The official forums for the Lineage II PC Game."
   },
   {
     "name": "Aion Legions Forums",
     "url": "https://forums.aionlegionsofwar.com",
     "type": "ncsoft",
     "year": ["2018", "2019"],
-    "tech": "react, sass",
+    "tech": "React, Scss",
     "api": ["internal"],
     "id": "aion-legions-forums",
     "responsibilities":  [
       "Main Developer",
       "Implemented front-end structure for development"
-    ]
+    ],
+    "additional_info": "The official forums for the Aion: Legions of War Mobile Game."
   },
   {
     "name": "Anime LunchBox",
     "url": "http://anime-lunchbox-app.herokuapp.com/",
     "type": "personal",
     "year": ["2016"],
-    "tech": "react, sass",
+    "tech": "React, Scss",
     "api": ["kitsu"],
     "id": "lunch-box",
     "responsibilities":  [
