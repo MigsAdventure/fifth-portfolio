@@ -175,7 +175,8 @@
     "responsibilities":  [
       "Main Developer",
       "Designed and Implemented project"
-    ]
+    ],
+    "additional_info": "Anime web app that helps us search, favorite, and add animes' to our watchlist! "
   },
   {
     "name": "Goku Hangman",
@@ -188,7 +189,8 @@
     "responsibilities":  [
       "Sole Developer",
       "Designed and Implemented project"
-    ]
+    ],
+    "additional_info": "Simple Goku Hangman game that has a large array words with one free hint."
   },
   {
     "name": "PokedexGo",
@@ -201,6 +203,7 @@
     "responsibilities":  [
       "Sole Developer",
       "Designed and Implemented project"
-    ]
+    ],
+    "additional_info": "Inspired by the PokemonGO game. Listen to the original pokemon sounds, search pokemon, and use the CP calculator."
   }
 ]
