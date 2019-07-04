@@ -11,6 +11,20 @@ const projects_filter = {
   };
 
 const projects = {
+  headers: {
+    resp: {
+      en: "Responsibilities",
+      es: "Responsibilities",
+      jp: "Responsibilities",
+      kr: "Responsibilities",
+    },
+    tech: {
+      en: "Technologies",
+      es: "Technologies",
+      jp: "Technologies",
+      kr: "Technologies",
+    },
+  },
   btn: {
     en: "Go To Site",
     es: "Ir al Sitio",

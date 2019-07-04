@@ -7,7 +7,8 @@ import { projects } from "../../../constants/data/global";
 
 const ProjectPreview = ({content, previewOpen, isMobile, lang}) => {
   console.log(lang);
-  const {year, name, id, url, tech} = content;
+  const {year, name, id, url, tech, responsibilities, additional_info} = content;
+  const {btn, headers} = projects;
   const screenSize = isMobile ? 'desktop' : 'mobile';
   const importImage = (path) => {
     try {
@@ -24,17 +25,24 @@ const ProjectPreview = ({content, previewOpen, isMobile, lang}) => {
          <img src={importImage(`${screenSize}/screenshots/${id}-site.jpeg`)} alt={content.name}/>
        </a>
       <section className='project-info'>
-          <ul className="responsibilites">
-            {/*<li className="type">{type}</li>*/}
-            {/*<li className="year">{project_years}</li>*/}
+        <div className='responsibilities'>
+          <h3>{headers.resp[lang]}</h3>
+          <ul className="resp-list">
+            {
+              responsibilities.map((item, i) => {
+                return <li key={i} className="resp-item">{item}</li>
+              })
+            }
           </ul>
+        </div>
           <div className="tech">
+            <h3>{headers.tech[lang]}</h3>
             <p>{tech}</p>
           </div>
         <div className="cta">
           <Button
             type="btn"
-            text={projects.btn[lang]}
+            text={btn[lang]}
             url={url}
             isExternal={true}
             arrow='right'

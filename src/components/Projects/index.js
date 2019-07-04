@@ -43,7 +43,7 @@ class Projects extends Component {
   handleFilterChange = (new_filter) => {
     this.setState({
       current_filter: new_filter,
-      preview_open: false,
+      preview_open: -1,
     });
   };
   
