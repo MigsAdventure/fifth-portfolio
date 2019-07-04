@@ -61,7 +61,7 @@ class Projects extends Component {
     const {current_filter, selected_project, preview_open} = this.state;
     const { lang } = this.props;
     return (
-      <main className="projects">
+      <main className="projects main-section">
         <section className='project-preview-wrapper'>
           {
             !isMobile() && selected_project &&

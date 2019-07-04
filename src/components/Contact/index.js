@@ -15,10 +15,27 @@ class Contact extends Component {
     this.submitForm = this.submitForm.bind(this);
     this.validateForm = this.validateForm.bind(this);
     this.validateEmail = this.validateEmail.bind(this);
+    this.validateInputs = this.validateInputs.bind(this);
   }
   
   submitForm(e) {
     e.preventDefault();
+    const { name, email, message, form_valid } = this.state;
+    const data = {
+      name,
+      email,
+      message
+    }
+    console.log(data);
+    console.log(form_valid);
+  }
+  
+  validateEmail(email) {
+    const regExp = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return regExp.test(email);
+  }
+  
+  validateInputs (e) {
     const currentInput = e.target;
     this.setState({
       [currentInput.name]: currentInput.value,
@@ -29,11 +46,6 @@ class Contact extends Component {
     });
   }
   
-  validateEmail(email) {
-    const regExp = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-    return regExp.test(email);
-  }
-  
   validateForm() {
     const {name, email, message} = this.state;
     return !!(name !== "" && email !== "" && message !== "" && this.validateEmail(email));
@@ -42,7 +54,7 @@ class Contact extends Component {
   render() {
     const {name, email, message, form_valid} = this.state;
     return (
-      <main className="contact">
+      <main className="contact main-section">
         <section className="contact-header">
           <div>
             <h1>
@@ -51,7 +63,7 @@ class Contact extends Component {
           </div>
         </section>
         <section className="contact-form-wrapper">
-          <form onChange={this.submitForm}>
+          <form onChange={this.validateInputs} onSubmit={this.submitForm}>
             <div className="input-wrapper">
               <label htmlFor="name">Name</label>
               <input name="name" className="form-input name" type="text" required/>
