@@ -1,4 +1,5 @@
- const projects_filter = {
+
+const projects_filter = {
   all: "All Projects",
   ncsoft: "NcSoft",
   personal: "Personal",
@@ -8,6 +9,15 @@
   2016: "2016",
   2015: "2015",
   };
+
+const projects = {
+  btn: {
+    en: "Go To Site",
+    es: "Ir al Sitio",
+    jp: "サイトへ",
+    kr: "사이트로 이동",
+  },
+};
 
  const contact_form = {
    name: {
@@ -41,6 +51,7 @@ const footer =  {
 
 export {
   projects_filter,
+  projects,
   contact_form,
   footer
 }

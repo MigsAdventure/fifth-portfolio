@@ -24,7 +24,7 @@ const Button = ({
   });
 
   const renderArrow = () => {
-    return <i className={classnames('btn-arrow','far',`fa-angle-${arrow}`)} />;
+    return <i className={classnames('btn-arrow','fas',`fa-arrow-${arrow}`)} />;
   };
 
   if (isExternal) {

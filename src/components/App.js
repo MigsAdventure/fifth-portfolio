@@ -6,6 +6,7 @@ import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 const lang = window.location.pathname.substring(1, 3) || 'en';
+console.log(lang);
 
 class App extends Component {
   constructor () {

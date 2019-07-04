@@ -2,8 +2,11 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import classnames from 'classnames';
 import './project-preview.scss';
+import Button from "../../_global/Button";
+import { projects } from "../../../constants/data/global";
 
-const ProjectPreview = ({content, previewOpen, isMobile}) => {
+const ProjectPreview = ({content, previewOpen, isMobile, lang}) => {
+  console.log(lang);
   const {year, name, id, url, tech} = content;
   const screenSize = isMobile ? 'desktop' : 'mobile';
   const importImage = (path) => {
@@ -29,7 +32,13 @@ const ProjectPreview = ({content, previewOpen, isMobile}) => {
             <p>{tech}</p>
           </div>
         <div className="cta">
-          <a href={url}>Go To Site</a>
+          <Button
+            type="btn"
+            text={projects.btn[lang]}
+            url={url}
+            isExternal={true}
+            arrow='right'
+          />
         </div>
       </section>
     </main>
