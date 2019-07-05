@@ -3,6 +3,7 @@
 .projects {
   color: white;
   text-align: center;
+  position: relative;
   //min-height: 500px;
   //background-image: url();
   @media (min-width: $tablet-width) {
@@ -11,8 +12,29 @@
   @media (min-width: $small-desktop-width) {
     //min-height: 800px;
   }
+  .project-preview-desktop-wrapper {
+    .scroll-projects-active {
+      padding-bottom: 220px;
+    }
+  }
   .projects-wrapper {
     position: relative;
+    &.scroll-projects {
+      width: 100%;
+      height: auto;
+      overflow: auto;
+      position: absolute;
+      bottom: 0;
+      .project-cards {
+        width: max-content;
+        max-width: 5000px;
+        .project-card {
+          width: 240px;
+          height: auto;
+          display: inline-block;
+        }
+      }
+    }
   }
   .header {
     text-align: left;

@@ -12,7 +12,7 @@ class Contact extends Component {
       message: '',
       form_valid: false,
       is_loading: false,
-      form_success: false
+      form_success: ''
     };
     this.submitForm = this.submitForm.bind(this);
     this.validateForm = this.validateForm.bind(this);

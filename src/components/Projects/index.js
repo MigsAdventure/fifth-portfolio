@@ -6,6 +6,7 @@ import ProjectsFilter from "./ProjectsFilter";
 import './projects.scss';
 import ProjectPreview from "./ProjectPreview";
 import { isMobile } from "../../utils/screen";
+import classnames from 'classnames';
 
 class Projects extends Component {
   constructor(props) {
@@ -62,7 +63,7 @@ class Projects extends Component {
     const { lang } = this.props;
     return (
       <main className="projects main-section">
-        <section className='project-preview-wrapper'>
+        <section className='project-preview-desktop-wrapper'>
           {
             !isMobile() && selected_project &&
             <ProjectPreview lang={lang} previewOpen={preview_open} content={selected_project} />
@@ -71,9 +72,11 @@ class Projects extends Component {
         <section className="header">
           <h1 className="title">Projects</h1>
         </section>
-        <section className="projects-wrapper">
+        <section className={classnames('projects-wrapper', {'scroll-projects': preview_open !== -1 && !isMobile()})}>
           <ProjectsFilter currentFilter={current_filter} changeFilterCB={this.handleFilterChange}/>
-          {this.renderProjects()}
+          <div className="project-cards">
+            {this.renderProjects()}
+          </div>
         </section>
       </main>
     );
