@@ -11,6 +11,8 @@ class Contact extends Component {
       email: '',
       message: '',
       form_valid: false,
+      is_loading: false,
+      form_success: false
     };
     this.submitForm = this.submitForm.bind(this);
     this.validateForm = this.validateForm.bind(this);
@@ -25,9 +27,17 @@ class Contact extends Component {
       name,
       email,
       message
+    };
+    const emailStatus = (myData) => {
+      return this.setState({
+        form_success: myData,
+        is_loading: false
+      })
+    };
+    if (form_valid) {
+      this.setState({is_loading: true});
+      sendEmail(data, emailStatus);
     }
-    console.log(data);
-    console.log(form_valid);
   }
   
   validateEmail(email) {
@@ -52,9 +62,14 @@ class Contact extends Component {
   }
   
   render() {
-    const {name, email, message, form_valid} = this.state;
+    console.log(this.state);
+    const {name, email, message, form_valid, is_loading, form_success} = this.state;
     return (
       <main className="contact main-section">
+        {
+          [form_success && form_success === 'success' &&  alert('It works!!!'),
+          form_success && form_success === 'error' &&  alert('Sorry! There was an error')]
+        }
         <section className="contact-header">
           <div>
             <h1>
@@ -63,6 +78,7 @@ class Contact extends Component {
           </div>
         </section>
         <section className="contact-form-wrapper">
+          {is_loading && <div><h1  style={{color: 'white'}} color={'white'}>...Is Loading</h1></div>}
           <form onChange={this.validateInputs} onSubmit={this.submitForm}>
             <div className="input-wrapper">
               <label htmlFor="name">Name</label>
