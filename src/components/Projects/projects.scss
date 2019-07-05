@@ -19,6 +19,7 @@
   }
   .projects-wrapper {
     position: relative;
+    z-index: 1;
     &.scroll-projects {
       width: 100%;
       height: auto;

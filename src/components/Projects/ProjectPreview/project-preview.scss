@@ -8,9 +8,9 @@
     background-size: cover;
     background-attachment: fixed;
     @media(min-width: $tablet-width) {
+      position: relative;
       background-image: url('../../../assets/images/desktop/speedway-night.jpeg');
       padding: 0 20px;
-      min-height: 95vh;
     }
     .project-preview-image {
       display: none;
@@ -100,9 +100,12 @@
     &.preview-open {
       max-height: 470px;
       height: auto;
-      transition: max-height 0.15s ease-out;
+      transition: min-height 0.15s ease-out;
       @media(min-width: $tablet-width) {
-        max-height: 730px;
+        max-height: 910px;
+      }
+      @media(min-width: $site-max-width) {
+        min-height: 93vh;
       }
     }
   }
