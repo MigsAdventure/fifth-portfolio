@@ -20,6 +20,9 @@ $global-path: $image-path + 'global/';
   position: relative;
   max-width: 500px;
   background-position: center;
+  &.inactive {
+    filter: sepia(80%);
+  }
   @media (min-width: $tablet-width) {
     width: calc(50% - 20px);
     margin: 10px;
@@ -27,11 +30,8 @@ $global-path: $image-path + 'global/';
   @media(min-width: $small-desktop-width) {
     width: calc(25% - 20px);
     &:hover {
-      opacity: 0.8;
+      filter: brightness(130%);
     }
-  }
-  &.inactive {
-    filter: sepia(80%);
   }
   .title-wrapper {
     position: absolute;
