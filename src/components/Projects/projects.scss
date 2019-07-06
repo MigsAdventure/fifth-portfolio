@@ -23,16 +23,19 @@
     &.scroll-projects {
       width: 100%;
       height: auto;
-      overflow: auto;
+      //overflow: auto;
       position: absolute;
       bottom: 0;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
       .project-cards {
-        width: max-content;
         max-width: 5000px;
         .project-card {
           width: 240px;
           height: auto;
           display: inline-block;
+          white-space: normal;
         }
       }
     }

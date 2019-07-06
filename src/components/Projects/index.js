@@ -7,6 +7,7 @@ import './projects.scss';
 import ProjectPreview from "./ProjectPreview";
 import { isMobile } from "../../utils/screen";
 import classnames from 'classnames';
+import { scrollTo } from "../../utils/dom";
 
 class Projects extends Component {
   constructor(props) {
@@ -14,22 +15,38 @@ class Projects extends Component {
     this.state = {
       current_filter: '2019',
       preview_open: -1,
-      selected_project: null
+      selected_project: null,
+      mobile_view: isMobile()
     };
     this.renderProjects = this.renderProjects.bind(this);
     this.handleFilterChange = this.handleFilterChange.bind(this);
     this.handleSelectedProject = this.handleSelectedProject.bind(this);
+    this.checkIfMobile = this.checkIfMobile.bind(this);
+  }
+  
+  checkIfMobile() {
+    this.setState({
+      mobile_view: isMobile()
+    });
+  }
+  
+  componentDidMount() {
+    window.addEventListener('resize', this.checkIfMobile)
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.checkIfMobile)
   }
   
   renderProjects() {
-    const {current_filter, preview_open, selected_project} = this.state;
+    const {current_filter, preview_open, selected_project, mobile_view} = this.state;
     const {lang} = this.props;
     const selected_project_id = selected_project && selected_project.id && preview_open || -1;
     console.log(selected_project);
     console.log(preview_open);
     let renderProjects = _projects.map((item, i) => {
       let renderPreview = window.innerWidth <= 768 && selected_project_id && (
-        <ProjectPreview lang={lang} previewOpen={preview_open} content={{...item, 'number': i}} isMobile={isMobile()} />);
+        <ProjectPreview lang={lang} previewOpen={preview_open} content={{...item, 'number': i}} isMobile={mobile_view} />);
       if (item.year.includes(current_filter) || current_filter === item.type) {
         return ([<ProjectCard content={{...item, 'number': i}} previewOpen={preview_open} selectedProjectCB={this.handleSelectedProject}/>,
           renderPreview
@@ -56,23 +73,28 @@ class Projects extends Component {
       selected_project: new_selected_project,
       preview_open: this.state.preview_open === new_selected_project.id ? -1 : new_selected_project.id
     });
+    const containerOffSet = document.getElementById('projects').offsetTop;
+    scrollTo(document.body, containerOffSet, 50);
   };
   
   render() {
-    const {current_filter, selected_project, preview_open} = this.state;
+    const {current_filter, selected_project, preview_open, mobile_view} = this.state;
     const { lang } = this.props;
     return (
-      <main className="projects main-section">
+      <main id='projects' className="projects main-section">
         <section className='project-preview-desktop-wrapper'>
           {
-            !isMobile() && selected_project &&
+            !mobile_view && selected_project &&
             <ProjectPreview lang={lang} previewOpen={preview_open} content={selected_project} />
           }
         </section>
-        <section className="header">
-          <h1 className="title">Projects</h1>
-        </section>
-        <section className={classnames('projects-wrapper', {'scroll-projects': preview_open !== -1 && !isMobile()})}>
+        {
+          preview_open !== -1 && !mobile_view &&
+          <section className="header">
+            <h1 className="title">Projects</h1>
+          </section>
+        }
+        <section className={classnames('projects-wrapper', {'scroll-projects': preview_open !== -1 && !mobile_view})}>
           <ProjectsFilter currentFilter={current_filter} changeFilterCB={this.handleFilterChange}/>
           <div className="project-cards">
             {this.renderProjects()}
