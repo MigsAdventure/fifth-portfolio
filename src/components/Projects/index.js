@@ -69,15 +69,19 @@ class Projects extends Component {
   
   handleSelectedProject = (element, new_selected_project) => {
    const {preview_open} = this.state;
-   const myElement = element.target;
+   const currElement = element.target;
+   
     this.setState({
       selected_project: new_selected_project,
       preview_open: preview_open === new_selected_project.id ? -1 : new_selected_project.id
-    });
-    setTimeout(function() {
+    },function() {
       preview_open === -1 &&
-      myElement.scrollIntoView({block: "end", behavior: "smooth"})
-    }, 300);
+        setTimeout(function() {
+          currElement && currElement.scrollIntoView({block: "end"});
+        }, 300);
+    });
+    
+
     if (!this.state.mobile_view) {
       const containerOffSet = document.getElementById('projects').offsetTop;
       scrollTo(document.body, containerOffSet, 50);
