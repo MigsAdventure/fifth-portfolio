@@ -73,15 +73,19 @@ class Projects extends Component {
       selected_project: new_selected_project,
       preview_open: this.state.preview_open === new_selected_project.id ? -1 : new_selected_project.id
     });
-    const containerOffSet = document.getElementById('projects').offsetTop;
-    scrollTo(document.body, containerOffSet, 50);
+    if (!this.state.mobile_view) {
+      const containerOffSet = document.getElementById('projects').offsetTop;
+      scrollTo(document.body, containerOffSet, 50);
+    }
   };
   
   render() {
     const {current_filter, selected_project, preview_open, mobile_view} = this.state;
     const { lang } = this.props;
+    console.log('preview: ', preview_open);
+    console.log('mobile_view: ', mobile_view);
     return (
-      <main id='projects' className="projects main-section">
+      <main id='projects' className={classnames('projects main-section', {'mobile': mobile_view})}>
         <section className='project-preview-desktop-wrapper'>
           {
             !mobile_view && selected_project &&
@@ -89,13 +93,16 @@ class Projects extends Component {
           }
         </section>
         {
-          preview_open !== -1 && !mobile_view &&
+          (mobile_view || (preview_open === -1)) &&
           <section className="header">
             <h1 className="title">Projects</h1>
           </section>
         }
         <section className={classnames('projects-wrapper', {'scroll-projects': preview_open !== -1 && !mobile_view})}>
-          <ProjectsFilter currentFilter={current_filter} changeFilterCB={this.handleFilterChange}/>
+          {
+            (mobile_view || (preview_open === -1)) &&
+            <ProjectsFilter currentFilter={current_filter} changeFilterCB={this.handleFilterChange}/>
+          }
           <div className="project-cards">
             {this.renderProjects()}
           </div>

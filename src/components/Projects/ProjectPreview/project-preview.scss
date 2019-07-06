@@ -4,9 +4,6 @@
     max-height: 0;
     transition: max-height 0.15s ease-out;
     overflow: hidden;
-    background-image: url('../../../assets/images/mobile/speedway-night.jpeg');
-    background-size: cover;
-    background-attachment: fixed;
     @media(min-width: $tablet-width) {
       position: relative;
       background-image: url('../../../assets/images/desktop/speedway-night.jpeg');
@@ -30,15 +27,16 @@
     }
     .project-info {
       display: inline-block;
-      float: right;
       width: 100%;
       text-align: left;
-      padding: 0 20px 30px;
+      padding: 20px 20px 30px;
       background-color: rgba(0,0,0,.7);
+      max-width: 500px;
+      margin: auto;
       @media(min-width: $tablet-width) {
+        float: right;
         position: relative;
         margin-top: 10px;
-        float: right;
         width: 45%;
         border: solid 1px rgba(255,255,255, 0.2);
         border-radius: 10px;
