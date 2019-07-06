@@ -20,7 +20,6 @@ class Projects extends Component {
     };
     this.renderProjects = this.renderProjects.bind(this);
     this.handleFilterChange = this.handleFilterChange.bind(this);
-    this.handleSelectedProject = this.handleSelectedProject.bind(this);
     this.checkIfMobile = this.checkIfMobile.bind(this);
   }
   
@@ -68,11 +67,17 @@ class Projects extends Component {
     });
   };
   
-  handleSelectedProject = (new_selected_project) => {
+  handleSelectedProject = (element, new_selected_project) => {
+   const {preview_open} = this.state;
+   const myElement = element.target;
     this.setState({
       selected_project: new_selected_project,
-      preview_open: this.state.preview_open === new_selected_project.id ? -1 : new_selected_project.id
+      preview_open: preview_open === new_selected_project.id ? -1 : new_selected_project.id
     });
+    setTimeout(function() {
+      preview_open === -1 &&
+      myElement.scrollIntoView({block: "end", behavior: "smooth"})
+    }, 300);
     if (!this.state.mobile_view) {
       const containerOffSet = document.getElementById('projects').offsetTop;
       scrollTo(document.body, containerOffSet, 50);
