@@ -6,7 +6,6 @@
     overflow: hidden;
     @media(min-width: $tablet-width) {
       position: relative;
-      background-image: url('../../../assets/images/desktop/speedway-night.jpeg');
       padding: 0 20px;
     }
     .project-preview-image {
@@ -42,6 +41,7 @@
         border-radius: 10px;
         min-height: 500px;
         padding: 0 20px 20px;
+        max-width: 900px;
       }
       @media(min-width: $small-desktop-width) {
         min-height: 480px;

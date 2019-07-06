@@ -66,6 +66,7 @@ class Contact extends Component {
     const {name, email, message, form_valid, is_loading, form_success} = this.state;
     return (
       <main className="contact main-section">
+        <div className="contact-bg" />
         {
           [form_success && form_success === 'success' &&  alert('It works!!!'),
           form_success && form_success === 'error' &&  alert('Sorry! There was an error')]

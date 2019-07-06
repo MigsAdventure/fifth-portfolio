@@ -12,10 +12,20 @@
   @media (min-width: $small-desktop-width) {
     //min-height: 800px;
   }
-  &.mobile {
-    background-image: url('../../assets/images/mobile/speedway-night.jpeg');
-    background-size: 768px;
-    background-repeat: repeat-y;
+  .projects-bg {
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    &.mobile {
+      background-image: url('../../assets/images/mobile/speedway-night.jpeg');
+      background-size: 768px;
+      background-repeat: repeat-y;
+    }
+    &.desktop {
+      background-image: url('../../assets/images/desktop/speedway-night.jpeg');
+    }
   }
   .project-preview-desktop-wrapper {
     .scroll-projects-active {
