@@ -5,17 +5,16 @@ import Header from '../components/Header';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-const lang = window.location.pathname.substring(1, 3) || 'en';
-console.log(lang);
 
 class App extends Component {
-  constructor () {
-    super();
+  constructor (props) {
+    super(props);
+    console.log('props: ', props);
     // defaults lang to en if there is no lang match
   }
   
-
   render() {
+    const lang = this.props.match.params.lang;
     return (
       <div className="App">
         <Header lang={lang} />

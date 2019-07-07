@@ -20,8 +20,9 @@ $global-path: $image-path + 'global/';
   position: relative;
   max-width: 500px;
   background-position: center;
+  transition: all 0.2s;
   &.inactive {
-    filter: sepia(80%);
+    filter: sepia(65%);
   }
   @media (min-width: $tablet-width) {
     width: calc(50% - 20px);

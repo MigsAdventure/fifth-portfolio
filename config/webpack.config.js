@@ -51,7 +51,7 @@ module.exports = function(webpackEnv) {
   // In development, we always serve from the root. This makes config easier.
   const publicPath = isEnvProduction
     ? paths.servedPath
-    : isEnvDevelopment && '/';
+    : isEnvDevelopment && './';
   // Some apps do not use client-side routing with pushState.
   // For these, "homepage" can be set to "." to enable relative asset paths.
   const shouldUseRelativeAssetPaths = publicPath === './';
@@ -73,7 +73,7 @@ module.exports = function(webpackEnv) {
         loader: MiniCssExtractPlugin.loader,
         options: Object.assign(
           {},
-          shouldUseRelativeAssetPaths ? { publicPath: '../../' } : undefined
+          shouldUseRelativeAssetPaths ? { publicPath: './' } : undefined
         ),
       },
       {
@@ -322,16 +322,16 @@ module.exports = function(webpackEnv) {
               options: {
                 limit: 8000,
                 name: '[path][name].[ext].[hash]',
-                publicPath: '/'
+                publicPath: './'
               },
             },
             {
               test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
               loader: 'file-loader',
               options: {
-                context: './src/assets/images/',
-                name: '[path][name].[ext]',
-                outputPath: 'assets/images/',
+                name: '[path][name].[ext].[hash]',
+                publicPath: './',
+                outputPath: '/assets/images/',
               }
             },
             // Process application JS with Babel.
@@ -468,7 +468,7 @@ module.exports = function(webpackEnv) {
               // by webpacks internal loaders.
               exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
               options: {
-                name: 'static/media/[name].[hash:8].[ext]',
+                name: '[name].[hash:8].[ext]',
               },
             },
             // ** STOP ** Are you adding a new loader?
@@ -541,8 +541,8 @@ module.exports = function(webpackEnv) {
         new MiniCssExtractPlugin({
           // Options similar to the same options in webpackOptions.output
           // both options are optional
-          filename: 'static/css/[name].[contenthash:8].css',
-          chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
+          filename: '/[name].[contenthash:8].css',
+          chunkFilename: '/[name].[contenthash:8].chunk.css',
         }),
       // Generate a manifest file which contains a mapping of all asset filenames
       // to their corresponding output file so that tools can pick it up without

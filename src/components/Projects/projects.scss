@@ -13,18 +13,18 @@
     //min-height: 800px;
   }
   .projects-bg {
-    opacity: 0.5;
+    opacity: 0.3;
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
     &.mobile {
-      background-image: url('../../assets/images/mobile/speedway-night.jpeg');
+      background-image: url('./../../assets/images/mobile/speedway-night.jpeg');
       background-size: 768px;
       background-repeat: repeat-y;
     }
     &.desktop {
-      background-image: url('../../assets/images/desktop/speedway-night.jpeg');
+      background-image: url('./../../assets/images/desktop/speedway-night.jpeg');
     }
   }
   .project-preview-desktop-wrapper {
@@ -58,6 +58,11 @@
           display: inline-block;
           white-space: normal;
           scroll-snap-align: start;
+          &.active {
+              bottom: 10px;
+              width: 280px;
+              height: 240px;
+          }
         }
       }
     }
