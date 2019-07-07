@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "425b4764a13fc7aa0633",
+    "revision": "e10bca45ad9291db5e03",
     "url": "/fifth-portfolio/static/css/main.2c0351ca.chunk.css"
   },
   {
-    "revision": "425b4764a13fc7aa0633",
-    "url": "/fifth-portfolio/static/js/main.a43af86b.chunk.js"
+    "revision": "e10bca45ad9291db5e03",
+    "url": "/fifth-portfolio/static/js/main.05a72f1a.chunk.js"
   },
   {
     "revision": "db48712118e39a4a0924",
@@ -122,14 +122,14 @@ self.__precacheManifest = [
   },
   {
     "revision": "d5a58c849f8a0d8401f4da211d64106c",
-    "url": "/fifth-portfolio/static/media/resume.d5a58c84.pdf"
+    "url": "/fifth-portfolio/static/assets/resume.d5a58c84.pdf"
   },
   {
     "revision": "5d5d9eefa31e5e13a6610d9fa7a283bb",
-    "url": "/fifth-portfolio/static/media/logo.5d5d9eef.svg"
+    "url": "/fifth-portfolio/static/assets/logo.5d5d9eef.svg"
   },
   {
-    "revision": "83dc6f77f6b7a719cc7902b0ffd5133a",
+    "revision": "92875857517ed7f2d64dbe1499ffd0c0",
     "url": "/fifth-portfolio/index.html"
   }
 ];
