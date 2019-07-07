@@ -1,5 +1,5 @@
 {
-  "main.css": "/fifth-portfolio/static/css/main.2c0351ca.chunk.css",
+  "main.css": "/fifth-portfolio/static/assets/main.050d67f1.chunk.css",
   "main.js": "/fifth-portfolio/static/js/main.05a72f1a.chunk.js",
   "main.js.map": "/fifth-portfolio/static/js/main.05a72f1a.chunk.js.map",
   "runtime~main.js": "/fifth-portfolio/static/js/runtime~main.c04dabe6.js",
@@ -7,7 +7,7 @@
   "static/js/2.ea3b0474.chunk.js": "/fifth-portfolio/static/js/2.ea3b0474.chunk.js",
   "static/js/2.ea3b0474.chunk.js.map": "/fifth-portfolio/static/js/2.ea3b0474.chunk.js.map",
   "index.html": "/fifth-portfolio/index.html",
-  "precache-manifest.318b06e85c05abaee0c84333ddbc2bdc.js": "/fifth-portfolio/precache-manifest.318b06e85c05abaee0c84333ddbc2bdc.js",
+  "precache-manifest.eeeddaf7dd004d14140060d93feb94ba.js": "/fifth-portfolio/precache-manifest.eeeddaf7dd004d14140060d93feb94ba.js",
   "service-worker.js": "/fifth-portfolio/service-worker.js",
   "src/assets/images/desktop/screenshots/aion-forums-site.jpeg": "/fifth-portfolio/src/assets/images/desktop/screenshots/aion-forums-site.jpeg.b060cea6b24230359883e01d058aa80e",
   "src/assets/images/desktop/screenshots/aion-legacy-site.jpeg": "/fifth-portfolio/src/assets/images/desktop/screenshots/aion-legacy-site.jpeg.b608853db6b4858792413650fe964d76",
@@ -45,6 +45,6 @@
   "src/assets/images/mobile/screenshots/ncsoft-site.jpeg": "/fifth-portfolio/src/assets/images/mobile/screenshots/ncsoft-site.jpeg.a7c6c82e7779f88ac3f8de7f88bd2885",
   "src/assets/images/mobile/speedway-night.jpeg": "/fifth-portfolio/src/assets/images/mobile/speedway-night.jpeg.37aabb61638e52d0bca50d2b4609f22b",
   "static/assets/logo.svg": "/fifth-portfolio/static/assets/logo.5d5d9eef.svg",
-  "static/assets/resume.pdf": "/fifth-portfolio/static/assets/resume.d5a58c84.pdf",
-  "static/css/main.2c0351ca.chunk.css.map": "/fifth-portfolio/static/css/main.2c0351ca.chunk.css.map"
+  "static/assets/main.050d67f1.chunk.css.map": "/fifth-portfolio/static/assets/main.050d67f1.chunk.css.map",
+  "static/assets/resume.pdf": "/fifth-portfolio/static/assets/resume.d5a58c84.pdf"
 }

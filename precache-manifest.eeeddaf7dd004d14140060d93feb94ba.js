@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "e10bca45ad9291db5e03",
-    "url": "/fifth-portfolio/static/css/main.2c0351ca.chunk.css"
+    "revision": "9b536096d05cb3e95394",
+    "url": "/fifth-portfolio/static/assets/main.050d67f1.chunk.css"
   },
   {
-    "revision": "e10bca45ad9291db5e03",
+    "revision": "9b536096d05cb3e95394",
     "url": "/fifth-portfolio/static/js/main.05a72f1a.chunk.js"
   },
   {
@@ -129,7 +129,7 @@ self.__precacheManifest = [
     "url": "/fifth-portfolio/static/assets/logo.5d5d9eef.svg"
   },
   {
-    "revision": "92875857517ed7f2d64dbe1499ffd0c0",
+    "revision": "2f74c0390d36d71e0eca4d8f71de5c18",
     "url": "/fifth-portfolio/index.html"
   }
 ];
