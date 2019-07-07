@@ -31,7 +31,11 @@ class Contact extends Component {
     const emailStatus = (myData) => {
       return this.setState({
         form_success: myData,
-        is_loading: false
+        is_loading: false,
+        name: '',
+        email: '',
+        message: '',
+        form_valid: false
       })
     };
     if (form_valid) {
@@ -62,7 +66,6 @@ class Contact extends Component {
   }
   
   render() {
-    console.log(this.state);
     const {name, email, message, form_valid, is_loading, form_success} = this.state;
     return (
       <main className="contact main-section">

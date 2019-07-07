@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const sendEmail = (form_data, emailResponse) => {
-  axios.post('http://localhost:8000/api/email/portfolio-contact', form_data)
+  axios.post('https://still-spire-83012.herokuapp.com/api/email/portfolio-contact', form_data)
   .then(response => {
     return response.data.accepted && emailResponse('success');
   })

@@ -41,8 +41,6 @@ class Projects extends Component {
     const {current_filter, preview_open, selected_project, mobile_view} = this.state;
     const {lang} = this.props;
     const selected_project_id = selected_project && selected_project.id && preview_open || -1;
-    console.log(selected_project);
-    console.log(preview_open);
     let renderProjects = _projects.map((item, i) => {
       let renderPreview = window.innerWidth <= 768 && selected_project_id && (
         <ProjectPreview lang={lang} previewOpen={preview_open} content={{...item, 'number': i}} isMobile={mobile_view} />);

@@ -15,8 +15,8 @@ const Index = () => (
       userRedirect() && <Redirect to="/en"/>
     }
     <Switch>
-      <Route path={`/:lang`}  component={App} />
-      <Route path='*' component={NotFound} />
+      <Route exact path={`/:lang(en|es|jp|kr)`}  component={App} />
+      <Route exact path='*' component={NotFound} />
     </Switch>
   </HashRouter>
 );

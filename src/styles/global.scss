@@ -19,11 +19,11 @@ html,body, #app {
   position: relative;
   overflow-x: hidden;
   background-color: black;
+  color: white;
   @media (min-width: $small-desktop-width) {
     overflow-x: visible;
   }
 }
-
 body {
   overflow-x: hidden;
   background-color: black;
