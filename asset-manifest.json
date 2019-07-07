@@ -1,14 +1,15 @@
 {
-  "main.css": "./static/css/main.050d67f1.chunk.css",
+  "main.css": ".//main.050d67f1.chunk.css",
   "main.js": "./static/js/main.dfa6d036.chunk.js",
   "main.js.map": "./static/js/main.dfa6d036.chunk.js.map",
   "runtime~main.js": "./static/js/runtime~main.d653cc00.js",
   "runtime~main.js.map": "./static/js/runtime~main.d653cc00.js.map",
   "static/js/2.ea3b0474.chunk.js": "./static/js/2.ea3b0474.chunk.js",
   "static/js/2.ea3b0474.chunk.js.map": "./static/js/2.ea3b0474.chunk.js.map",
+  "/main.050d67f1.chunk.css.map": ".//main.050d67f1.chunk.css.map",
   "index.html": "./index.html",
   "logo.svg": "./logo.5d5d9eef.svg",
-  "precache-manifest.1c1a17ee0445e60df067fbbf1df645d0.js": "./precache-manifest.1c1a17ee0445e60df067fbbf1df645d0.js",
+  "precache-manifest.9635e30a56cdd313cd19f75aef8370f7.js": "./precache-manifest.9635e30a56cdd313cd19f75aef8370f7.js",
   "resume.pdf": "./resume.d5a58c84.pdf",
   "service-worker.js": "./service-worker.js",
   "src/assets/images/desktop/screenshots/aion-forums-site.jpeg": "./src/assets/images/desktop/screenshots/aion-forums-site.jpeg.b060cea6b24230359883e01d058aa80e",
@@ -45,6 +46,5 @@
   "src/assets/images/mobile/screenshots/lineage2-legacy-site.jpeg": "./src/assets/images/mobile/screenshots/lineage2-legacy-site.jpeg.132d89bd5902c3f2727d022d163fb772",
   "src/assets/images/mobile/screenshots/lineage2-site.jpeg": "./src/assets/images/mobile/screenshots/lineage2-site.jpeg.72445e7093bf9ff859f02ff9e6171bc6",
   "src/assets/images/mobile/screenshots/ncsoft-site.jpeg": "./src/assets/images/mobile/screenshots/ncsoft-site.jpeg.a7c6c82e7779f88ac3f8de7f88bd2885",
-  "src/assets/images/mobile/speedway-night.jpeg": "./src/assets/images/mobile/speedway-night.jpeg.37aabb61638e52d0bca50d2b4609f22b",
-  "static/css/main.050d67f1.chunk.css.map": "./static/css/main.050d67f1.chunk.css.map"
+  "src/assets/images/mobile/speedway-night.jpeg": "./src/assets/images/mobile/speedway-night.jpeg.37aabb61638e52d0bca50d2b4609f22b"
 }

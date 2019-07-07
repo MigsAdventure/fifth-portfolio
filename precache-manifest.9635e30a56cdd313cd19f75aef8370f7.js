@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
     "revision": "c935fab8a45a58de61af",
-    "url": "./static/css/main.050d67f1.chunk.css"
+    "url": ".//main.050d67f1.chunk.css"
   },
   {
     "revision": "c935fab8a45a58de61af",
@@ -129,7 +129,7 @@ self.__precacheManifest = [
     "url": "./logo.5d5d9eef.svg"
   },
   {
-    "revision": "f2f523819feb4676232ba48dc6ed0640",
+    "revision": "3c8f4ce7492b8766dab0e928f948ff57",
     "url": "./index.html"
   }
 ];
