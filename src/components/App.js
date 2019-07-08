@@ -8,15 +8,12 @@ import Footer from '../components/Footer';
 import About from "./About";
 
 class App extends Component {
-  constructor (props) {
-    super(props);
-  }
   
   render() {
     // defaults lang to en if there is no lang match
     const langRegex = /en\b|kr\b|jp\b|es\b/;
     const params_lang = this.props.match.params.lang;
-    const lang = (params_lang && params_lang.match(langRegex)) || 'en';
+    const lang = (params_lang && params_lang.match(langRegex) && params_lang) || 'en';
     return (
       <div className="App">
         <Header lang={lang} />

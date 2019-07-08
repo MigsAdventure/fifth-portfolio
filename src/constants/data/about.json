@@ -1,0 +1,75 @@
+{
+  "about": {
+    "title": {
+      "en" : "About Me",
+      "es" : "About Me",
+      "jp" : "About Me",
+      "kr" : "About Me"
+    },
+    "paragraphs": [
+      {
+        "en" : "I grew up fixing computers in Long Beach, CA. I'm now living in Irvine, CA and working as a Web Engineer at the video game company NCSOFT. The work I do include building web applications, internal tools, npm packages, and bug fixing. Most of my free time is spent in coffee shops improving my skills in web development and recently mobile app development.",
+        "es" : "I grew up fixing computers in Long Beach, CA. I'm now living in Irvine, CA and working as a Web Engineer at the video game company NCSOFT. The work I do include building web applications, internal tools, npm packages, and bug fixing. Most of my free time is spent in coffee shops improving my skills in web development and recently mobile app development.",
+        "jp" : "I grew up fixing computers in Long Beach, CA. I'm now living in Irvine, CA and working as a Web Engineer at the video game company NCSOFT. The work I do include building web applications, internal tools, npm packages, and bug fixing. Most of my free time is spent in coffee shops improving my skills in web development and recently mobile app development.",
+        "kr" : "I grew up fixing computers in Long Beach, CA. I'm now living in Irvine, CA and working as a Web Engineer at the video game company NCSOFT. The work I do include building web applications, internal tools, npm packages, and bug fixing. Most of my free time is spent in coffee shops improving my skills in web development and recently mobile app development."
+      },
+      {
+        "en" : "When I'm not coding, you'll find me hiking, exploring a new city, at a brewery, gaming, biking or skating.",
+        "es" : "When I'm not coding, you'll find me hiking, exploring a new city, at a brewery, gaming, biking or skating.",
+        "jp" : "When I'm not coding, you'll find me hiking, exploring a new city, at a brewery, gaming, biking or skating.",
+        "kr" : "When I'm not coding, you'll find me hiking, exploring a new city, at a brewery, gaming, biking or skating."
+      }
+    ]
+  },
+  "skills": {
+    "title": {
+      "en" : "Skills",
+      "es" : "Skills",
+      "jp" : "Skills",
+      "kr" : "Skills"
+    },
+    "paragraphs": [
+      {
+        "en" : "I've worked with many different technologies over the last few years. Below is a list of technologies I've used over the years.",
+        "es" : "I've worked with many different technologies over the last few years. Below is a list of technologies I've used over the years.",
+        "jp" : "I've worked with many different technologies over the last few years. Below is a list of technologies I've used over the years.",
+        "kr" : "I've worked with many different technologies over the last few years. Below is a list of technologies I've used over the years."
+      }
+    ],
+    "technologies": [
+      "JavaScript",
+      "CSS3",
+      "HTML",
+      "Node.js",
+      "React.js",
+      "Storybook.js",
+      "Gatsby",
+      "Babel",
+      "GraphQL",
+      "REST",
+      "MongoDB",
+      "Sass",
+      "Redux",
+      "Flux",
+      "Webpack",
+      "NPM",
+      "Git",
+      "PHP",
+      "Magento",
+      "MySQL",
+      "Mocha",
+      "Chai",
+      "Grunt",
+      "Bash",
+      "jQuery",
+      "ES6",
+      "Express",
+      "Jekyll",
+      "IPBoard",
+      "ZenDesk",
+      "AWS",
+      "Heroku",
+      "FireBase"
+    ]
+  }
+}
