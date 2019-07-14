@@ -100,10 +100,7 @@
       height: auto;
       transition: min-height 0.15s ease-out;
       @media(min-width: $tablet-width) {
-        max-height: 910px;
-      }
-      @media(min-width: $site-max-width) {
-        min-height: 93vh;
+        max-height: 100vh;
       }
     }
   }

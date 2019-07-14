@@ -2,42 +2,57 @@
 
 .about {
   text-align: center;
-  padding: 0 20px 20px;
-  max-width: 1200px;
-  margin: auto;
-  min-height: 480px;
-  .about-me, .skills {
-    text-align: left;
-    width: 100%;
-    max-width: 500px;
-    display: inline-block;
+  position: relative;
+  .about-bg {
+    //background-image: url('../../assets/images/global/IMG_20190708_233931__01.jpg');
+    background-image: url('../../assets/images/global/IMG_20190708_233942.jpg');
+    opacity: 0.2;
+  }
+  .inner-wrapper {
+    max-width: 1200px;
+    padding: 20px;
+    margin: auto;
+    min-height: 520px;
     @media(min-width: $tablet-width) {
-      width: 49%;
+      min-height: 800px;
+      padding-top: 150px;
     }
-    h1 {
-      margin-top: 40px;
-      text-align: center;
+    @media(min-width: $small-desktop-width) {
+      min-height: 94vh;
     }
-    &.about-me {
+    .about-me, .skills {
+      text-align: left;
+      width: 100%;
+      max-width: 500px;
+      display: inline-block;
       @media(min-width: $tablet-width) {
-        float: left;
+        width: 49%;
       }
-    }
-    &.skills {
-      @media(min-width: $tablet-width) {
-        float: right;
+      h1 {
+        margin-top: 40px;
+        text-align: center;
       }
-      .skills-list {
-        padding: 0;
-        .slideIn {
-          display: inline-block;
-          animation: slideIn 3s forwards;
-          transform: translate3d(4000 + px, 0, 100px);
-          padding: 10px;
-          border: 1px solid rgba(255,255,255,0.3);
-          @for $i from 1 through 33 {
-            &:nth-child(#{$i}n) {
-              animation-delay: #{$i * 0.1}s;
+      &.about-me {
+        @media(min-width: $tablet-width) {
+          float: left;
+        }
+      }
+      &.skills {
+        @media(min-width: $tablet-width) {
+          float: right;
+        }
+        .skills-list {
+          padding: 0;
+          .slideIn {
+            display: inline-block;
+            animation: slideIn 3s forwards;
+            transform: translate3d(4000 + px, 0, 100px);
+            padding: 10px;
+            border: 1px solid rgba(255,255,255,0.3);
+            @for $i from 1 through 33 {
+              &:nth-child(#{$i}n) {
+                animation-delay: #{$i * 0.1}s;
+              }
             }
           }
         }

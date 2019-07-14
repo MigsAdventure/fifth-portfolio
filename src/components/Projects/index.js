@@ -68,7 +68,7 @@ class Projects extends Component {
   handleSelectedProject = (element, new_selected_project) => {
    const {preview_open, mobile_view} = this.state;
    const currElement = element.target;
-   
+    
     this.setState({
       selected_project: new_selected_project,
       preview_open: preview_open === new_selected_project.id ? -1 : new_selected_project.id
@@ -90,7 +90,7 @@ class Projects extends Component {
     const { lang } = this.props;
     return (
       <main id='projects' className={classnames('projects main-section', {'mobile': mobile_view})}>
-        <div className={classnames('projects-bg', {'mobile': mobile_view, 'desktop': preview_open !== -1})} />
+        <div className={classnames('projects-bg', 'section-bg', {'mobile': mobile_view, 'desktop': preview_open !== -1})} />
         <section className='project-preview-desktop-wrapper'>
           {
             !mobile_view && selected_project &&
