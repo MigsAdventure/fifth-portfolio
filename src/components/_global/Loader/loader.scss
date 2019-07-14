@@ -1,0 +1,27 @@
+@import '../../../styles/partials/_settings';
+@import '../../../styles/partials/_mixins';
+
+.loader {
+  @include super-center();
+  position: fixed;
+  z-index: 999;
+  .fas {
+    font-size: 50px;
+    animation: spin infinite;
+    animation-duration: 1s;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    color: black;
+  }
+  50% {
+    color: white;
+  }
+  100% {
+    transform: rotate(360deg);
+    color: dodgerblue;
+  }
+}

@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import './contact.scss';
 import {sendEmail} from "../../Api/contact";
+import classnames from 'classnames';
+import Loader from "../_global/Loader";
 
 class Contact extends Component {
   constructor(props) {
@@ -82,7 +84,7 @@ class Contact extends Component {
           </div>
         </section>
         <section className="contact-form-wrapper">
-          {is_loading && <div><h1  style={{color: 'white'}} color={'white'}>...Is Loading</h1></div>}
+          <Loader isVisible={is_loading} />
           <form onChange={this.validateInputs} onSubmit={this.submitForm}>
             <div className="input-wrapper">
               <label htmlFor="name">Name</label>
