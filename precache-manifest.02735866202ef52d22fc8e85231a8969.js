@@ -1,22 +1,28 @@
 self.__precacheManifest = [
   {
-    "revision": "e0f9671096a9a8d30d62",
-    "url": ".//main.83a8ae06.chunk.css"
+    "revision": "e78cd0b4393c8b590cd0",
+    "url": ".//main.bf139797.chunk.css"
   },
   {
-    "revision": "e0f9671096a9a8d30d62",
-    "url": "./static/js/main.f9eccd35.chunk.js"
+    "revision": "e78cd0b4393c8b590cd0",
+    "url": "./static/js/main.550e45c1.chunk.js"
   },
   {
     "revision": "8c97409f0ee389fe75da",
     "url": "./static/js/runtime~main.d653cc00.js"
   },
   {
-    "revision": "1e35ffee659dc37e63c1",
-    "url": "./static/js/2.c4ed9eac.chunk.js"
+    "revision": "133f0cba02ff1cc2ac43",
+    "url": "./static/js/2.1cf92364.chunk.js"
   },
   {
     "url": "./src/assets/images/global/aion-site-card-logo.jpeg.3c8476a324a9969fbe6fd227878d52a1"
+  },
+  {
+    "url": "./src/assets/images/global/IMG_20190708_233931__01.jpg.5f5836943562023893d889f707feb751"
+  },
+  {
+    "url": "./src/assets/images/global/IMG_20190708_233942.jpg.31f43b5d6cc295c0bfe57553d8386310"
   },
   {
     "url": "./src/assets/images/global/aion-forums-site-card-logo.jpeg.553522cbf3990a764f9fc01a41615112"
@@ -129,7 +135,7 @@ self.__precacheManifest = [
     "url": "./logo.5d5d9eef.svg"
   },
   {
-    "revision": "6eeb51151b66ce61a1d071ad6dc5c944",
+    "revision": "1bb6b1d5c009c18c26b690a2e04cba12",
     "url": "./index.html"
   }
 ];
