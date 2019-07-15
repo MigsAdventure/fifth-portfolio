@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "378153a64d4b6bf58ead",
-    "url": ".//main.497d3fad.chunk.css"
+    "revision": "77655be2fc13d50d9773",
+    "url": ".//main.05762114.chunk.css"
   },
   {
-    "revision": "378153a64d4b6bf58ead",
-    "url": "./static/js/main.89ba7d65.chunk.js"
+    "revision": "77655be2fc13d50d9773",
+    "url": "./static/js/main.26bfbc04.chunk.js"
   },
   {
     "revision": "8c97409f0ee389fe75da",
     "url": "./static/js/runtime~main.d653cc00.js"
   },
   {
-    "revision": "e24fb37643398b6695b1",
-    "url": "./static/js/2.6ed85142.chunk.js"
+    "revision": "f9df9a1a44b0bdb1d0ff",
+    "url": "./static/js/2.b46db9cb.chunk.js"
   },
   {
     "url": "./src/assets/images/global/aion-site-card-logo.jpeg.3c8476a324a9969fbe6fd227878d52a1"
@@ -59,6 +59,9 @@ self.__precacheManifest = [
   },
   {
     "url": "./src/assets/images/global/pokedex-site-card-logo.jpeg.d5eddd889731f3d1b51e62f74effb44d"
+  },
+  {
+    "url": "./src/assets/images/global/subi2.gif.5266de56d48fac2692f166c5604b1d32"
   },
   {
     "url": "./src/assets/images/mobile/speedway-night.jpeg.37aabb61638e52d0bca50d2b4609f22b"
@@ -147,7 +150,7 @@ self.__precacheManifest = [
     "url": "./logo.5d5d9eef.svg"
   },
   {
-    "revision": "9dbbbe711f31e2deec242006f1fe5f53",
+    "revision": "c9d57efb9802feab43c84fc25747ec98",
     "url": "./index.html"
   }
 ];
