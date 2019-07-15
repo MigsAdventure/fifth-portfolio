@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './loader.scss';
+import classnames from 'classnames';
 
 const Loader = ({
   isVisible,
-  icon
+  icon,
+  fullBG
 }) => {
   return (
     isVisible &&
-    <div className='loader'><i className="fas fa-circle-notch"></i></div>
+    <div className={classnames('loader', {'full-bg': fullBG})}><i className="fas fa-circle-notch"></i></div>
     );
 };
 

@@ -30,8 +30,7 @@ class Projects extends Component {
   }
   
   componentDidMount() {
-    window.addEventListener('resize', this.checkIfMobile)
-    console.log('mounted');
+    window.addEventListener('resize', this.checkIfMobile);
   }
   
   componentWillUnmount() {

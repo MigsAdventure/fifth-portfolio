@@ -8,13 +8,14 @@
 }
 
 /*Absolutely centers things with the origin point in the center*/
-@mixin super-center($left: 50%, $top: 50%, $bottom: auto, $x: -50%, $y: -50%) {
-  position: absolute;
+@mixin super-center($left: 0, $right: 0, $top: 50%, $bottom: auto, $x: 0, $y: -50%, $position: absolute) {
+  position: $position;
   left: $left;
+  right: $right;
   top: $top;
   bottom: $bottom;
-  -webkit-transform: translate3d($x, $y, 0);
   transform: translate3d($x, $y, 0);
+  margin: auto;
 }
 
 @mixin aspect-ratio($width, $height) {

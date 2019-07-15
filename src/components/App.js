@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import '../styles/base.scss';
 import Header from '../components/Header';
@@ -16,8 +16,14 @@ class App extends Component {
     }
   }
   
-  componentDidUpdate(prevProps, prevState, snapshot) {
-    // this.setState({loaded: true})
+  componentDidUpdate() {
+    if (!this.state.loaded) {
+      setTimeout(() => {
+        this.setState({
+          loaded: true
+        })
+      }, 2000);
+    }
   }
   
   render() {
@@ -27,12 +33,12 @@ class App extends Component {
     const lang = (params_lang && params_lang.match(langRegex) && params_lang) || 'en';
     return (
       <div className="App">
-        <Loader isVisible={!this.state.loaded} />
-        <Header lang={lang} />
-        <About lang={lang} />
-        <Projects lang={lang} />
-        <Contact lang={lang} />
-        <Footer lang={lang} />
+        <Loader fullBG={true} isVisible={!this.state.loaded} />
+        <Header lang={lang}/>
+        <About lang={lang}/>
+        <Projects lang={lang}/>
+        <Contact lang={lang}/>
+        <Footer lang={lang}/>
       </div>
     );
   }

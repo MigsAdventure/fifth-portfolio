@@ -2,16 +2,30 @@
 @import '../../../styles/partials/_mixins';
 
 .loader {
-  @include super-center();
+  @include super-center($position: fixed);
   position: fixed;
   z-index: 999;
+  // covers full screen with a bg color
+  &.full-bg {
+    background: black;
+    transition: all 0.3s;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    min-height: 102vh;
+    min-width: 102vw;
+  }
   .fas {
     font-size: 50px;
     animation: spin infinite;
     animation-duration: 1s;
+    @include super-center($position: fixed);
+    display: inline-block;
+    margin: auto;
   }
 }
 
+//animation
 @keyframes spin {
   0% {
     transform: rotate(0deg);
