@@ -10,10 +10,10 @@
     min-height: 94vh;
   }
   .contact-bg {
-    background-image: url('http://cdn.migsadventure.com.s3-us-west-1.amazonaws.com/portfolio/images/mobile/sequoia-mig.jpg');
+    background-image: url('../../assets/images/global/magic-mountains.jpg');
     opacity: 0.2;
     @media(min-width: $tablet-width) {
-      background-image: url('http://cdn.migsadventure.com.s3-us-west-1.amazonaws.com/portfolio/images/desktop/sequoia-mig.jpg');
+      //background-image: url('magic-mountains.jpg');
     }
   }
   .contact-header {
