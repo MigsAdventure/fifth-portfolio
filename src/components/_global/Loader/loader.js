@@ -10,7 +10,11 @@ const Loader = ({
 }) => {
   return (
     isVisible &&
-    <div className={classnames('loader', {'full-bg': fullBG})}><i className="fas fa-circle-notch"></i></div>
+    <div className={classnames('loader', {'full-bg': fullBG})}>
+      {
+       icon ? <img className='loader-icon' src={require(`../../../${icon}`)} alt="loader-icon" /> : <i className="fas fa-circle-notch"></i>
+      }
+    </div>
     );
 };
 

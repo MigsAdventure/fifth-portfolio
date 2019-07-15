@@ -5,6 +5,9 @@
   @include super-center($position: fixed);
   position: fixed;
   z-index: 999;
+  > .loader-icon {
+    @include super-center($position: fixed);
+  }
   // covers full screen with a bg color
   &.full-bg {
     background: black;

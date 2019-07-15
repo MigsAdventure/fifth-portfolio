@@ -22,7 +22,7 @@ class App extends Component {
         this.setState({
           loaded: true
         })
-      }, 2000);
+      }, 3000);
     }
   }
   
@@ -33,7 +33,7 @@ class App extends Component {
     const lang = (params_lang && params_lang.match(langRegex) && params_lang) || 'en';
     return (
       <div className="App">
-        <Loader fullBG={true} isVisible={!this.state.loaded} />
+        <Loader icon={'assets/images/global/subi2.gif'} fullBG={true} isVisible={!this.state.loaded} />
         <Header lang={lang}/>
         <About lang={lang}/>
         <Projects lang={lang}/>
