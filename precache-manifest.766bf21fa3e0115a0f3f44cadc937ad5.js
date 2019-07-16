@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "77655be2fc13d50d9773",
-    "url": ".//main.05762114.chunk.css"
+    "revision": "a3acee0415a25f77e9ab",
+    "url": ".//main.c24c6f60.chunk.css"
   },
   {
-    "revision": "77655be2fc13d50d9773",
-    "url": "./static/js/main.26bfbc04.chunk.js"
+    "revision": "a3acee0415a25f77e9ab",
+    "url": "./static/js/main.a55efda3.chunk.js"
   },
   {
     "revision": "8c97409f0ee389fe75da",
     "url": "./static/js/runtime~main.d653cc00.js"
   },
   {
-    "revision": "f9df9a1a44b0bdb1d0ff",
-    "url": "./static/js/2.b46db9cb.chunk.js"
+    "revision": "91d03245c00fa891276f",
+    "url": "./static/js/2.64f53572.chunk.js"
   },
   {
     "url": "./src/assets/images/global/aion-site-card-logo.jpeg.3c8476a324a9969fbe6fd227878d52a1"
@@ -85,6 +85,9 @@ self.__precacheManifest = [
     "url": "./src/assets/images/desktop/screenshots/aion-site.jpeg.74143b18611766a67c6d26c3703cb36e"
   },
   {
+    "url": "./src/assets/images/desktop/screenshots/anime-lunchbox-site.jpg.dfca52429bd046647fc2d2e2397ce6e5"
+  },
+  {
     "url": "./src/assets/images/desktop/screenshots/bns-forums-site.jpeg.9117527a4830f9e6a41803f9150b36b1"
   },
   {
@@ -104,6 +107,9 @@ self.__precacheManifest = [
   },
   {
     "url": "./src/assets/images/desktop/screenshots/ncsoft-site.jpeg.bc88e90e7643e843c3afc5cf053f9ce0"
+  },
+  {
+    "url": "./src/assets/images/desktop/screenshots/pokedex-site.jpeg.1c85fca1d653b15322d68fc393bd5c4e"
   },
   {
     "url": "./src/assets/images/mobile/screenshots/aion-forums-site.jpeg.94fdb0baa72d918ae62ff95fcd23215b"
@@ -142,6 +148,12 @@ self.__precacheManifest = [
     "url": "./src/assets/images/mobile/screenshots/ncsoft-site.jpeg.a7c6c82e7779f88ac3f8de7f88bd2885"
   },
   {
+    "url": "./src/assets/images/mobile/screenshots/pokedex-site.jpeg.1c85fca1d653b15322d68fc393bd5c4e"
+  },
+  {
+    "url": "./src/assets/anime-lunchbox-site.jpg.dfca52429bd046647fc2d2e2397ce6e5"
+  },
+  {
     "revision": "d5a58c849f8a0d8401f4da211d64106c",
     "url": "./resume.d5a58c84.pdf"
   },
@@ -150,7 +162,7 @@ self.__precacheManifest = [
     "url": "./logo.5d5d9eef.svg"
   },
   {
-    "revision": "c9d57efb9802feab43c84fc25747ec98",
+    "revision": "601c22b1c765e810f36ae66c8ce99cd7",
     "url": "./index.html"
   }
 ];
