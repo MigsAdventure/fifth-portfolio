@@ -5,8 +5,10 @@
   @include super-center($position: fixed);
   position: fixed;
   z-index: 999;
-  > .loader-icon {
+  color: white;
+  .inner-loader {
     @include super-center($position: fixed);
+    width: 300px;
   }
   // covers full screen with a bg color
   &.full-bg {
@@ -22,7 +24,7 @@
     font-size: 50px;
     animation: spin infinite;
     animation-duration: 1s;
-    @include super-center($position: fixed);
+    //@include super-center($position: fixed);
     display: inline-block;
     margin: auto;
   }

@@ -193,8 +193,8 @@
     "description": "Simple Goku Hangman game that has a large array words with one free hint."
   },
   {
-    "name": "PokedexGo",
-    "url": "https://migsadventure.github.io/pokedexgo/",
+    "name": "Pokedex GO",
+    "url": "https://migsadventure.github.io/PokedexGo/",
     "type": "personal",
     "year": ["2016"],
     "tech": "jQuery",

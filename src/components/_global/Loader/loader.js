@@ -6,14 +6,20 @@ import classnames from 'classnames';
 const Loader = ({
   isVisible,
   icon,
-  fullBG
+  fullBG,
+  text
 }) => {
   return (
     isVisible &&
     <div className={classnames('loader', {'full-bg': fullBG})}>
-      {
-       icon ? <img className='loader-icon' src={require(`../../../${icon}`)} alt="loader-icon" /> : <i className="fas fa-circle-notch"></i>
-      }
+      <div className='inner-loader'>
+        {
+          icon ? <img className='loader-icon' src={require(`../../../${icon}`)} alt="loader-icon" /> : <i className="fas fa-circle-notch"></i>
+        }
+        {
+          text && <h2>{text}</h2>
+        }
+      </div>
     </div>
     );
 };

@@ -16,7 +16,7 @@ class App extends Component {
     }
   }
   
-  componentDidUpdate() {
+  componentDidMount() {
     if (!this.state.loaded) {
       setTimeout(() => {
         this.setState({
