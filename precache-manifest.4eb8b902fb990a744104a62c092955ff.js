@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "a3acee0415a25f77e9ab",
+    "revision": "084a59b553a05b28e2ab",
     "url": ".//main.c24c6f60.chunk.css"
   },
   {
-    "revision": "a3acee0415a25f77e9ab",
-    "url": "./static/js/main.a55efda3.chunk.js"
+    "revision": "084a59b553a05b28e2ab",
+    "url": "./static/js/main.6ea10d5b.chunk.js"
   },
   {
     "revision": "8c97409f0ee389fe75da",
     "url": "./static/js/runtime~main.d653cc00.js"
   },
   {
-    "revision": "91d03245c00fa891276f",
-    "url": "./static/js/2.64f53572.chunk.js"
+    "revision": "5023f2be4a55cf63f93f",
+    "url": "./static/js/2.594a03b8.chunk.js"
   },
   {
     "url": "./src/assets/images/global/aion-site-card-logo.jpeg.3c8476a324a9969fbe6fd227878d52a1"
@@ -40,10 +40,16 @@ self.__precacheManifest = [
     "url": "./src/assets/images/global/bns-esports-site-card-logo.jpeg.3d5ed5f7d6b73ed7b7c08b6f6f38177e"
   },
   {
+    "url": "./src/assets/images/global/bns-forums-site-card-logo.jpeg.8d33587b228fbef93d3588741d4c227d"
+  },
+  {
     "url": "./src/assets/images/global/bns-site-card-logo.jpeg.41e362b86c67941b154d0013b8f13ee7"
   },
   {
     "url": "./src/assets/images/global/hangman-site-card-logo.jpeg.7b08befaef8fd8563b26deacc6a9c9df"
+  },
+  {
+    "url": "./src/assets/images/global/launcher-signup-site-card-logo.jpeg.47bb92804046cac2a260ec022f4543fe"
   },
   {
     "url": "./src/assets/images/global/lineage2-forums-site-card-logo.jpeg.bae9f75b82dec7a6f51dd849d108306d"
@@ -76,7 +82,7 @@ self.__precacheManifest = [
     "url": "./src/assets/images/desktop/screenshots/aion-legacy-site.jpeg.b608853db6b4858792413650fe964d76"
   },
   {
-    "url": "./src/assets/images/desktop/screenshots/aion-legions-forums-site.jpeg.1eeb0ce03538fcc540d3c1bc4274e3bb"
+    "url": "./src/assets/images/desktop/screenshots/aion-legions-forums-site.jpeg.90af13bd8259b586fdef4866d415d58d"
   },
   {
     "url": "./src/assets/images/desktop/screenshots/aion-legions-site.jpeg.38ef3823004eee52725a059f4a680ab6"
@@ -85,13 +91,19 @@ self.__precacheManifest = [
     "url": "./src/assets/images/desktop/screenshots/aion-site.jpeg.74143b18611766a67c6d26c3703cb36e"
   },
   {
-    "url": "./src/assets/images/desktop/screenshots/anime-lunchbox-site.jpg.dfca52429bd046647fc2d2e2397ce6e5"
+    "url": "./src/assets/images/desktop/screenshots/anime-lunchbox-site.jpeg.dfca52429bd046647fc2d2e2397ce6e5"
+  },
+  {
+    "url": "./src/assets/images/desktop/screenshots/bns-esports-site.jpeg.2a74068cc7a56ddddd64804dd2742e68"
   },
   {
     "url": "./src/assets/images/desktop/screenshots/bns-forums-site.jpeg.9117527a4830f9e6a41803f9150b36b1"
   },
   {
     "url": "./src/assets/images/desktop/screenshots/bns-site.jpeg.9e3efb58e818230c0e5d984276ab1a1d"
+  },
+  {
+    "url": "./src/assets/images/desktop/screenshots/hangman-site.jpeg.ae7d2747f36bfe9737c131787e2d37d5"
   },
   {
     "url": "./src/assets/images/desktop/screenshots/launcher-signup-site.jpeg.f8f9b183779180eec2036c9f3c140982"
@@ -118,6 +130,9 @@ self.__precacheManifest = [
     "url": "./src/assets/images/mobile/screenshots/aion-legacy-site.jpeg.2fd6ed1cdfd5eb60d98cd1fac207f77e"
   },
   {
+    "url": "./src/assets/images/mobile/screenshots/aion-legions-forums-site.jpeg.90af13bd8259b586fdef4866d415d58d"
+  },
+  {
     "url": "./src/assets/images/mobile/screenshots/aion-legions-forums.jpeg.f8cfcf535d61025571729e63e60d68ad"
   },
   {
@@ -127,10 +142,19 @@ self.__precacheManifest = [
     "url": "./src/assets/images/mobile/screenshots/aion-site.jpeg.cb72ee3773570c1c52faa7d007757835"
   },
   {
+    "url": "./src/assets/images/mobile/screenshots/anime-lunchbox-site.jpeg.dfca52429bd046647fc2d2e2397ce6e5"
+  },
+  {
+    "url": "./src/assets/images/mobile/screenshots/bns-esports-site.jpeg.2a74068cc7a56ddddd64804dd2742e68"
+  },
+  {
     "url": "./src/assets/images/mobile/screenshots/bns-forums-site.jpeg.fdf3c77a47e652c99336525c8dc1fd32"
   },
   {
     "url": "./src/assets/images/mobile/screenshots/bns-site.jpeg.13230ed1b3df0b9ec03185ec777dc21a"
+  },
+  {
+    "url": "./src/assets/images/mobile/screenshots/hangman-site.jpeg.ae7d2747f36bfe9737c131787e2d37d5"
   },
   {
     "url": "./src/assets/images/mobile/screenshots/launcher-signup-site.jpeg.db784dab72eca69010a9f526b7cf7702"
@@ -151,9 +175,6 @@ self.__precacheManifest = [
     "url": "./src/assets/images/mobile/screenshots/pokedex-site.jpeg.1c85fca1d653b15322d68fc393bd5c4e"
   },
   {
-    "url": "./src/assets/anime-lunchbox-site.jpg.dfca52429bd046647fc2d2e2397ce6e5"
-  },
-  {
     "revision": "d5a58c849f8a0d8401f4da211d64106c",
     "url": "./resume.d5a58c84.pdf"
   },
@@ -162,7 +183,7 @@ self.__precacheManifest = [
     "url": "./logo.5d5d9eef.svg"
   },
   {
-    "revision": "601c22b1c765e810f36ae66c8ce99cd7",
+    "revision": "59e95413fbacdbecc96848db7939c52c",
     "url": "./index.html"
   }
 ];
