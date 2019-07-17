@@ -95,7 +95,7 @@
     "name": "Blade and Soul Esports",
     "url": "https://www.esports.bladeandsoul.com",
     "type": "ncsoft",
-    "year": ["2018", "2017"],
+    "year": ["2019","2018", "2017"],
     "tech": "React, Scss, NPM, GraphQL, Internal CMS",
     "api": ["internal"],
     "id": "bns-esports",
@@ -154,7 +154,7 @@
     "name": "Aion Legions Forums",
     "url": "https://forums.aionlegionsofwar.com",
     "type": "ncsoft",
-    "year": ["2018", "2019"],
+    "year": ["2019", "2018"],
     "tech": "Scss, IPBoard, PHP, Compass, NPM",
     "api": ["internal"],
     "id": "aion-legions-forums",
@@ -194,7 +194,7 @@
   },
   {
     "name": "Pokedex GO",
-    "url": "https://migsadventure.github.io/PokedexGo/",
+    "url": "https://migsadventure.github.io/PokedexGO/",
     "type": "personal",
     "year": ["2016"],
     "tech": "jQuery",
@@ -204,6 +204,6 @@
       "Sole Developer",
       "Designed and Implemented project"
     ],
-    "description": "Inspired by the PokemonGO game. Listen to the original pokemon sounds, search pokemon, and use the CP calculator."
+    "description": "Inspired by the Pokemon GO game. Listen to pokemon sounds, search pokemon, and use the CP calculator."
   }
 ]

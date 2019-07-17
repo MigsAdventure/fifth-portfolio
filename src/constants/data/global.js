@@ -7,7 +7,6 @@ const projects_filter = {
   2018: "2018",
   2017: "2017",
   2016: "2016",
-  2015: "2015",
   };
 
 const projects = {
