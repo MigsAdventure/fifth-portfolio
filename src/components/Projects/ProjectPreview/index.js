@@ -6,6 +6,7 @@ import Button from "../../_global/Button";
 import { projects } from "../../../constants/data/global";
 import {isMobile} from "../../../utils/screen";
 
+
 const ProjectPreview = ({content, previewOpen, isMobile, lang}) => {
   const {id, url, tech, responsibilities, description, name} = content;
   const {btn, headers} = projects;

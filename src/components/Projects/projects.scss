@@ -37,25 +37,21 @@
       height: auto;
       position: absolute;
       bottom: -30px;
+      overflow: auto;
+      scroll-behavior: smooth;
+      &::-webkit-scrollbar {
+        display: none;
+      }
       .project-cards {
-        overflow-x: scroll;
-        overflow-y: hidden;
         white-space: nowrap;
-        scroll-snap-type: mandatory;
-        scroll-snap-points-y: repeat(300px);
-        scroll-snap-type: x mandatory;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        &::-webkit-scrollbar {
-          display: none;
-        }
-        scroll-behavior: smooth;
+        width: fit-content;
+        min-width: 1200px;
+        overflow: hidden;
         .project-card {
           width: 270px;
           height: auto;
           display: inline-block;
           white-space: normal;
-          scroll-snap-align: start;
           &.active {
               bottom: 10px;
               width: 280px;
@@ -75,5 +71,14 @@
     .title {
       margin-left: 30px;
     }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

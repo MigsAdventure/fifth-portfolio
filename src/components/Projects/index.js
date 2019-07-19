@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 import {withRouter} from 'react-router-dom';
 import ProjectCard from "./ProjectCard";
 import _projects from '../../constants/data/projects.json';
 import ProjectsFilter from "./ProjectsFilter";
 import './projects.scss';
 import ProjectPreview from "./ProjectPreview";
-import { isMobile } from "../../utils/screen";
+import {isMobile} from "../../utils/screen";
 import classnames from 'classnames';
-import { scrollTo } from "../../utils/dom";
+import {scrollTo} from "../../utils/dom";
+import ScrollAnimation from "react-animate-on-scroll";
 
 class Projects extends Component {
   constructor(props) {
@@ -16,12 +18,34 @@ class Projects extends Component {
       current_filter: '2019',
       preview_open: -1,
       selected_project: null,
-      mobile_view: isMobile()
+      mobile_view: isMobile(),
+      scrollLeftPos: 0
     };
+    this.scrollContainerRef = React.createRef();
     this.renderProjects = this.renderProjects.bind(this);
     this.handleFilterChange = this.handleFilterChange.bind(this);
     this.checkIfMobile = this.checkIfMobile.bind(this);
+    this.centerActiveItem = this.centerActiveItem.bind(this);
   }
+  
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    const scrollContainer = ReactDOM.findDOMNode(this.scrollContainerRef);
+    if (scrollContainer && (prevState.scrollLeftPos !== this.state.scrollLeftPos)) {
+      scrollContainer.scrollLeft += this.state.scrollLeftPos;
+    }
+  }
+  
+  centerActiveItem(container, item) {
+    if (!item) {
+      return;
+    }
+    const scrollContainer = container.getBoundingClientRect();
+    const activeItem = item.getBoundingClientRect();
+    this.setState({
+        scrollLeftPos: activeItem.left - scrollContainer.left - (scrollContainer.width / 2) + (activeItem.width / 2)
+    });
+  }
+  
   
   checkIfMobile() {
     this.setState({
@@ -43,19 +67,22 @@ class Projects extends Component {
     const selected_project_id = (selected_project && selected_project.id && preview_open) || -1;
     let renderProjects = _projects.map((item, i) => {
       let renderPreview = window.innerWidth <= 768 && selected_project_id && (
-        <ProjectPreview key={i} lang={lang} previewOpen={preview_open} content={{...item, 'number': i}} isMobile={mobile_view} />);
+        <ProjectPreview key={i} lang={lang} previewOpen={preview_open} content={{...item, 'number': i}}
+                        isMobile={mobile_view}/>);
       if (item.year.includes(current_filter) || current_filter === item.type) {
-        return ([<ProjectCard key={i} content={{...item, 'number': i}} previewOpen={preview_open} selectedProjectCB={this.handleSelectedProject}/>,
+        return ([<ProjectCard key={i} content={{...item, 'number': i}} previewOpen={preview_open}
+                              selectedProjectCB={this.handleSelectedProject}/>,
           renderPreview
         ]);
       } else if (current_filter === 'all') {
-        return ([<ProjectCard  key={i}  content={{...item, 'number': i}} previewOpen={preview_open} selectedProjectCB={this.handleSelectedProject}/>,
+        return ([<ProjectCard key={i} content={{...item, 'number': i}} previewOpen={preview_open}
+                              selectedProjectCB={this.handleSelectedProject}/>,
           renderPreview
         ]);
       }
       return null;
     });
-      return renderProjects
+    return renderProjects
   }
   
   handleFilterChange = (new_filter) => {
@@ -66,19 +93,17 @@ class Projects extends Component {
   };
   
   handleSelectedProject = (element, new_selected_project) => {
-   const {preview_open, mobile_view} = this.state;
-   const currElement = element.target;
-    
+    const {preview_open, mobile_view} = this.state;
+    const currElement = element.target;
+    const container = ReactDOM.findDOMNode(this.scrollContainerRef);
     this.setState({
       selected_project: new_selected_project,
       preview_open: preview_open === new_selected_project.id ? -1 : new_selected_project.id
-    },function() {
-      // this.state.selected_project && preview_open === -1 && !mobile_view &&
-      //   setTimeout(function() {
-      //     currElement && currElement.scrollIntoView({block: "end"});
-      //   }, 400);
-      
-      
+    }, () => {
+      this.state.selected_project && !mobile_view &&
+      setTimeout(() => {
+        this.centerActiveItem(container, currElement);
+      }, preview_open === -1 ? 400 : 100);
     });
     
     if (!this.state.mobile_view) {
@@ -89,14 +114,15 @@ class Projects extends Component {
   
   render() {
     const {current_filter, selected_project, preview_open, mobile_view} = this.state;
-    const { lang } = this.props;
+    const {lang} = this.props;
     return (
       <main id='projects' className={classnames('projects main-section', {'mobile': mobile_view})}>
-        <div className={classnames('projects-bg', 'section-bg', {'mobile': mobile_view, 'desktop': preview_open !== -1})} />
+        <div
+          className={classnames('projects-bg', 'section-bg', {'mobile': mobile_view, 'desktop': preview_open !== -1})}/>
         <section className='project-preview-desktop-wrapper'>
           {
             !mobile_view && selected_project &&
-            <ProjectPreview lang={lang} previewOpen={preview_open} content={selected_project} />
+            <ProjectPreview lang={lang} previewOpen={preview_open} content={selected_project}/>
           }
         </section>
         {
@@ -105,12 +131,16 @@ class Projects extends Component {
             <h1 className="title">Projects</h1>
           </section>
         }
-        <section className={classnames('projects-wrapper', {'scroll-projects': preview_open !== -1 && !mobile_view})}>
+        <section
+          id='projects-wrapper'
+          className={classnames('projects-wrapper', {'scroll-projects': preview_open !== -1 && !mobile_view})}
+          ref={(ref) => (this.scrollContainerRef = ref)}
+        >
           {
             (mobile_view || (preview_open === -1)) &&
             <ProjectsFilter currentFilter={current_filter} changeFilterCB={this.handleFilterChange}/>
           }
-          <div className="project-cards">
+          <div id={'project-cards'} className="project-cards">
             {this.renderProjects()}
           </div>
         </section>
