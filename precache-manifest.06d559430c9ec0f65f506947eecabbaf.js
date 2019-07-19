@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "9d9776728456b78b6fe8",
-    "url": ".//main.4b8dc7e8.chunk.css"
+    "revision": "c7390029d91a0a59d677",
+    "url": ".//main.b1cf0240.chunk.css"
   },
   {
-    "revision": "9d9776728456b78b6fe8",
-    "url": "./static/js/main.ba569aff.chunk.js"
+    "revision": "c7390029d91a0a59d677",
+    "url": "./static/js/main.5918fd6c.chunk.js"
   },
   {
     "revision": "8c97409f0ee389fe75da",
     "url": "./static/js/runtime~main.d653cc00.js"
   },
   {
-    "revision": "5023f2be4a55cf63f93f",
-    "url": "./static/js/2.594a03b8.chunk.js"
+    "revision": "d48783e69e9cb19909fc",
+    "url": "./static/js/2.6937511c.chunk.js"
   },
   {
     "url": "./src/assets/images/global/aion-site-card-logo.jpeg.3c8476a324a9969fbe6fd227878d52a1"
@@ -124,57 +124,6 @@ self.__precacheManifest = [
     "url": "./src/assets/images/desktop/screenshots/pokedex-site.jpeg.1c85fca1d653b15322d68fc393bd5c4e"
   },
   {
-    "url": "./src/assets/images/mobile/screenshots/aion-forums-site.jpeg.94fdb0baa72d918ae62ff95fcd23215b"
-  },
-  {
-    "url": "./src/assets/images/mobile/screenshots/aion-legacy-site.jpeg.2fd6ed1cdfd5eb60d98cd1fac207f77e"
-  },
-  {
-    "url": "./src/assets/images/mobile/screenshots/aion-legions-forums-site.jpeg.90af13bd8259b586fdef4866d415d58d"
-  },
-  {
-    "url": "./src/assets/images/mobile/screenshots/aion-legions-forums.jpeg.f8cfcf535d61025571729e63e60d68ad"
-  },
-  {
-    "url": "./src/assets/images/mobile/screenshots/aion-legions-site.jpeg.a32e4d57efafd93672c0135e7a453053"
-  },
-  {
-    "url": "./src/assets/images/mobile/screenshots/aion-site.jpeg.cb72ee3773570c1c52faa7d007757835"
-  },
-  {
-    "url": "./src/assets/images/mobile/screenshots/anime-lunchbox-site.jpeg.dfca52429bd046647fc2d2e2397ce6e5"
-  },
-  {
-    "url": "./src/assets/images/mobile/screenshots/bns-esports-site.jpeg.2a74068cc7a56ddddd64804dd2742e68"
-  },
-  {
-    "url": "./src/assets/images/mobile/screenshots/bns-forums-site.jpeg.fdf3c77a47e652c99336525c8dc1fd32"
-  },
-  {
-    "url": "./src/assets/images/mobile/screenshots/bns-site.jpeg.13230ed1b3df0b9ec03185ec777dc21a"
-  },
-  {
-    "url": "./src/assets/images/mobile/screenshots/hangman-site.jpeg.ae7d2747f36bfe9737c131787e2d37d5"
-  },
-  {
-    "url": "./src/assets/images/mobile/screenshots/launcher-signup-site.jpeg.db784dab72eca69010a9f526b7cf7702"
-  },
-  {
-    "url": "./src/assets/images/mobile/screenshots/lineage2-forums-site.jpeg.349f9dfe20535a02b1bb206c73655081"
-  },
-  {
-    "url": "./src/assets/images/mobile/screenshots/lineage2-legacy-site.jpeg.132d89bd5902c3f2727d022d163fb772"
-  },
-  {
-    "url": "./src/assets/images/mobile/screenshots/lineage2-site.jpeg.72445e7093bf9ff859f02ff9e6171bc6"
-  },
-  {
-    "url": "./src/assets/images/mobile/screenshots/ncsoft-site.jpeg.a7c6c82e7779f88ac3f8de7f88bd2885"
-  },
-  {
-    "url": "./src/assets/images/mobile/screenshots/pokedex-site.jpeg.1c85fca1d653b15322d68fc393bd5c4e"
-  },
-  {
     "revision": "d5a58c849f8a0d8401f4da211d64106c",
     "url": "./resume.d5a58c84.pdf"
   },
@@ -183,7 +132,7 @@ self.__precacheManifest = [
     "url": "./logo.5d5d9eef.svg"
   },
   {
-    "revision": "a6760b46956ed6469e550691e7a1fae2",
+    "revision": "53171e5b1859463372b09efba66857c0",
     "url": "./index.html"
   }
 ];
