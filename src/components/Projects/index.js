@@ -67,7 +67,7 @@ class Projects extends Component {
     const selected_project_id = (selected_project && selected_project.id && preview_open) || -1;
     let renderProjects = _projects.map((item, i) => {
       let renderPreview = window.innerWidth <= 768 && selected_project_id && (
-        <ProjectPreview key={i} lang={lang} previewOpen={preview_open} content={{...item, 'number': i}}
+        <ProjectPreview key={Math.random()} lang={lang} previewOpen={preview_open} content={{...item, 'number': i}}
                         isMobile={mobile_view}/>);
       if (item.year.includes(current_filter) || current_filter === item.type) {
         return ([<ProjectCard key={i} content={{...item, 'number': i}} previewOpen={preview_open}
