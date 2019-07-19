@@ -24,7 +24,9 @@ const ProjectPreview = ({content, previewOpen, isMobile, lang}) => {
      >
        <div
          className='project-preview-image'
-         style={{backgroundImage: `url(${importImage(`${screenSize}/screenshots/${id}-site.jpeg`)})`}}
+         style={{
+           backgroundImage: `url(${importImage(`${screenSize}/screenshots/${id}-site.jpeg`)})`,
+         }}
        />
       <section className='project-info'>
         <div className="header">
