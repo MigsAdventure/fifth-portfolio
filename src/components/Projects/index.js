@@ -43,13 +43,13 @@ class Projects extends Component {
     const selected_project_id = (selected_project && selected_project.id && preview_open) || -1;
     let renderProjects = _projects.map((item, i) => {
       let renderPreview = window.innerWidth <= 768 && selected_project_id && (
-        <ProjectPreview lang={lang} previewOpen={preview_open} content={{...item, 'number': i}} isMobile={mobile_view} />);
+        <ProjectPreview key={i} lang={lang} previewOpen={preview_open} content={{...item, 'number': i}} isMobile={mobile_view} />);
       if (item.year.includes(current_filter) || current_filter === item.type) {
-        return ([<ProjectCard content={{...item, 'number': i}} previewOpen={preview_open} selectedProjectCB={this.handleSelectedProject}/>,
+        return ([<ProjectCard key={i} content={{...item, 'number': i}} previewOpen={preview_open} selectedProjectCB={this.handleSelectedProject}/>,
           renderPreview
         ]);
       } else if (current_filter === 'all') {
-        return ([<ProjectCard content={{...item, 'number': i}} previewOpen={preview_open} selectedProjectCB={this.handleSelectedProject}/>,
+        return ([<ProjectCard  key={i}  content={{...item, 'number': i}} previewOpen={preview_open} selectedProjectCB={this.handleSelectedProject}/>,
           renderPreview
         ]);
       }
@@ -73,10 +73,12 @@ class Projects extends Component {
       selected_project: new_selected_project,
       preview_open: preview_open === new_selected_project.id ? -1 : new_selected_project.id
     },function() {
-      this.state.selected_project && preview_open === -1 && !mobile_view &&
-        setTimeout(function() {
-          currElement && currElement.scrollIntoView({block: "end"});
-        }, 300);
+      // this.state.selected_project && preview_open === -1 && !mobile_view &&
+      //   setTimeout(function() {
+      //     currElement && currElement.scrollIntoView({block: "end"});
+      //   }, 400);
+      
+      
     });
     
     if (!this.state.mobile_view) {
