@@ -58,7 +58,27 @@ class Projects extends Component {
   
   componentDidMount() {
     window.addEventListener('resize', this.checkIfMobile);
+    
+    
+    const checkKeycode = (event) => {
+      event.preventDefault();
+      let keyDownEvent = event || window.event,
+        keycode = (keyDownEvent.which) ? keyDownEvent.which : keyDownEvent.keyCode;
+      switch (keycode) {
+        case 37: // left key
+          this.handleArrowScroll('left');
+          break;
+        case 39: // right key
+          this.handleArrowScroll('right');
+          break;
+        default:
+          return; // exit for other keys
+      }
+    };
+    
+    document.onkeydown = checkKeycode;
   }
+  
   
   componentWillUnmount() {
     window.removeEventListener('resize', this.checkIfMobile)
@@ -125,10 +145,10 @@ class Projects extends Component {
   
   handleArrowScroll(direction) {
     const current_id = document.getElementById(this.state.active_id);
-    if (direction === 'right' && current_id.nextElementSibling) {
+    if (direction === 'right' && current_id && current_id.nextElementSibling) {
       current_id.nextElementSibling.click();
     }
-    if (direction === 'left' && current_id.previousSibling) {
+    if (direction === 'left' && current_id && current_id.previousSibling) {
       current_id.previousSibling.click();
     }
   }
@@ -166,14 +186,16 @@ class Projects extends Component {
             <ProjectsFilter currentFilter={current_filter} changeFilterCB={this.handleFilterChange}/>
           }
           {
-          preview_open !== -1 && !mobile_view && <div className='arrow arrow-left' onClick={(e) => this.handleArrowScroll('left')}>
-            <i className="fas fa-chevron-left"></i>
-          </div>
+            preview_open !== -1 && !mobile_view &&
+            <div className='arrow arrow-left' onClick={(e) => this.handleArrowScroll('left')}>
+              <i className="fas fa-chevron-left"></i>
+            </div>
           }
           {
-          preview_open !== -1 && !mobile_view && <div className='arrow arrow-right' onClick={(e) => this.handleArrowScroll('right')}>
-            <i className="fas fa-chevron-right"></i>
-          </div>
+            preview_open !== -1 && !mobile_view &&
+            <div className='arrow arrow-right' onClick={(e) => this.handleArrowScroll('right')}>
+              <i className="fas fa-chevron-right"></i>
+            </div>
           }
           <div
             className='inner-projects-wrapper'
