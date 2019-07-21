@@ -26,6 +26,7 @@ class Projects extends Component {
     this.handleFilterChange = this.handleFilterChange.bind(this);
     this.checkIfMobile = this.checkIfMobile.bind(this);
     this.centerActiveItem = this.centerActiveItem.bind(this);
+    this.handleClosePreview = this.handleClosePreview.bind(this);
   }
   
   componentDidUpdate(prevProps, prevState, snapshot) {
@@ -112,6 +113,12 @@ class Projects extends Component {
     }
   };
   
+  handleClosePreview() {
+    this.setState({
+      preview_open : -1
+    });
+  }
+  
   render() {
     const {current_filter, selected_project, preview_open, mobile_view} = this.state;
     const {lang} = this.props;
@@ -122,7 +129,7 @@ class Projects extends Component {
         <section className='project-preview-desktop-wrapper'>
           {
             !mobile_view && selected_project &&
-            <ProjectPreview lang={lang} previewOpen={preview_open} content={selected_project}/>
+            <ProjectPreview lang={lang} previewOpen={preview_open} content={selected_project} closeCB={this.handleClosePreview}/>
           }
         </section>
         {

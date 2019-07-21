@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './popup-box.scss';
+import CloseWindow from "../CloseWindow";
 
 const PopupBox = ({
   isVisible,
@@ -11,12 +12,7 @@ const PopupBox = ({
     isVisible &&
     <div className="popup-box">
       <div className='inner-wrapper'>
-        <div
-          className='window-close'
-          onClick={(e) => closeCB(e)}
-        >
-          <i className="fas fa-times" aria-hidden="true"></i>
-        </div>
+        <CloseWindow onClick={closeCB}/>
         <div className='text-wrapper'>
           <h1>{text}</h1>
         </div>

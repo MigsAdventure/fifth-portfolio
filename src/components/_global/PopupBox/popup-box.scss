@@ -16,13 +16,5 @@
    .text-wrapper {
      @include super-center();
    }
-   .window-close {
-     float: right;
-     margin-top: 20px;
-     margin-right: 20px;
-     .fas {
-       font-size: 30px;
-     }
-   }
  }
 }

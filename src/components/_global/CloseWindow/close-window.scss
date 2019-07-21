@@ -1,0 +1,13 @@
+@import '../../../styles/partials/_settings';
+@import '../../../styles/partials/_mixins';
+
+   .window-close {
+     position: relative;
+     z-index: 9999;
+     float: right;
+     margin-top: 20px;
+     margin-right: 20px;
+     .fas {
+       font-size: 30px;
+     }
+   }

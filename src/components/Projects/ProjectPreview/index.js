@@ -5,9 +5,10 @@ import './project-preview.scss';
 import Button from "../../_global/Button";
 import { projects } from "../../../constants/data/global";
 import {isMobile} from "../../../utils/screen";
+import CloseWindow from "../../_global/CloseWindow";
 
 
-const ProjectPreview = ({content, previewOpen, isMobile, lang}) => {
+const ProjectPreview = ({content, previewOpen, isMobile, lang, closeCB}) => {
   const {id, url, tech, responsibilities, description, name} = content;
   const {btn, headers} = projects;
   const screenSize = isMobile ? 'mobile' : 'desktop';
@@ -29,6 +30,7 @@ const ProjectPreview = ({content, previewOpen, isMobile, lang}) => {
          }}
        />
       <section className='project-info'>
+        <CloseWindow onClick={(e) => closeCB (e)} />
         <div className="header">
           <h1>{name}</h1>
         </div>
