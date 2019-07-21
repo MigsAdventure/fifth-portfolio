@@ -15,7 +15,7 @@ class Contact extends Component {
       message: '',
       form_valid: false,
       is_loading: false,
-      form_success: '',
+      form_response: {},
       show_popup_box: false
     };
     this.submitForm = this.submitForm.bind(this);
@@ -27,7 +27,8 @@ class Contact extends Component {
   
   submitForm(e) {
     e.preventDefault();
-    const { name, email, message, form_valid } = this.state;
+    const formElement = e.target;
+    const {name, email, message, form_valid} = this.state;
     const data = {
       name,
       email,
@@ -35,14 +36,21 @@ class Contact extends Component {
     };
     const emailStatus = (myData) => {
       return this.setState({
-        form_success: myData,
-        is_loading: false,
-        name: '',
-        email: '',
-        message: '',
-        form_valid: false,
-        show_popup_box: true
-      })
+          form_response: myData,
+          is_loading: false,
+          show_popup_box: true
+        }, () => {
+          if (this.state.form_response.success) {
+            this.setState({
+              name: '',
+              email: '',
+              message: '',
+              form_valid: false,
+            });
+            formElement.reset();
+          }
+        }
+      )
     };
     if (form_valid) {
       this.setState({is_loading: true});
@@ -55,7 +63,7 @@ class Contact extends Component {
     return regExp.test(email);
   }
   
-  validateInputs (e) {
+  validateInputs(e) {
     const currentInput = e.target;
     this.setState({
       [currentInput.name]: currentInput.value,
@@ -71,21 +79,21 @@ class Contact extends Component {
     return !!(name !== "" && email !== "" && message !== "" && this.validateEmail(email));
   }
   
-  closePopupBox () {
+  closePopupBox() {
     this.setState({
       show_popup_box: false
     });
   }
   
   render() {
-    const {name, email, message, form_valid, is_loading, form_success, show_popup_box} = this.state;
+    const {name, email, message, form_valid, is_loading, form_response, show_popup_box} = this.state;
     return (
       <main className="contact main-section">
-        <div className="contact-bg section-bg" />
+        <div className="contact-bg section-bg"/>
         <PopupBox
           closeCB={this.closePopupBox}
           isVisible={show_popup_box}
-          text={form_success && form_success === 'success' ? `Thanks ${name}, your email was sent!`: `Sorry ${name}, There was an error. Please try again!`}
+          text={form_response && form_response.success ? `Thanks ${form_response.name}, your email was sent!` : `Sorry ${form_response.name}, There was an error. Please try again!`}
         />
         <section className="contact-header">
           <div>
@@ -95,7 +103,7 @@ class Contact extends Component {
           </div>
         </section>
         <section className="contact-form-wrapper">
-          <Loader isVisible={is_loading} />
+          <Loader isVisible={is_loading}/>
           <form onChange={this.validateInputs} onSubmit={this.submitForm}>
             <div className="input-wrapper">
               <label htmlFor="name">Name</label>
