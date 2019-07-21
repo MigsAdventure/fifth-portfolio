@@ -4,11 +4,8 @@
   position: relative;
   padding: 30px 0;
   text-align: center;
-  min-height: 300px;
+  min-height: calc(100vh - 80px);
   background-color: rgba(0,0,0,.1);
-  @media (min-width: $small-desktop-width) {
-    min-height: 94vh;
-  }
   .contact-bg {
     background-image: url('../../assets/images/global/magic-mountains.jpg');
     opacity: 0.2;

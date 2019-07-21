@@ -1,0 +1,28 @@
+@import '../../../styles/partials/_settings';
+@import '../../../styles/partials/_mixins';
+
+.popup-box {
+  @include super-center($position: fixed);
+  z-index: 9999;
+  background-color: rgba(0,0,0,.5);
+  width: 100%;
+  height: 100%;
+ .inner-wrapper {
+   @include super-center($position: relative);
+   color: white;
+   background-color: black;
+   width: 100%;
+   height: 100%;
+   .text-wrapper {
+     @include super-center();
+   }
+   .window-close {
+     float: right;
+     margin-top: 20px;
+     margin-right: 20px;
+     .fas {
+       font-size: 30px;
+     }
+   }
+ }
+}

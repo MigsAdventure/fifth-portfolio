@@ -4,6 +4,7 @@ import './contact.scss';
 import {sendEmail} from "../../Api/contact";
 import classnames from 'classnames';
 import Loader from "../_global/Loader";
+import PopupBox from "../_global/PopupBox";
 
 class Contact extends Component {
   constructor(props) {
@@ -14,12 +15,14 @@ class Contact extends Component {
       message: '',
       form_valid: false,
       is_loading: false,
-      form_success: ''
+      form_success: '',
+      show_popup_box: false
     };
     this.submitForm = this.submitForm.bind(this);
     this.validateForm = this.validateForm.bind(this);
     this.validateEmail = this.validateEmail.bind(this);
     this.validateInputs = this.validateInputs.bind(this);
+    this.closePopupBox = this.closePopupBox.bind(this);
   }
   
   submitForm(e) {
@@ -37,7 +40,8 @@ class Contact extends Component {
         name: '',
         email: '',
         message: '',
-        form_valid: false
+        form_valid: false,
+        show_popup_box: true
       })
     };
     if (form_valid) {
@@ -67,15 +71,22 @@ class Contact extends Component {
     return !!(name !== "" && email !== "" && message !== "" && this.validateEmail(email));
   }
   
+  closePopupBox () {
+    this.setState({
+      show_popup_box: false
+    });
+  }
+  
   render() {
-    const {name, email, message, form_valid, is_loading, form_success} = this.state;
+    const {name, email, message, form_valid, is_loading, form_success, show_popup_box} = this.state;
     return (
       <main className="contact main-section">
         <div className="contact-bg section-bg" />
-        {
-          [form_success && form_success === 'success' &&  alert('It works!!!'),
-          form_success && form_success === 'error' &&  alert('Sorry! There was an error')]
-        }
+        <PopupBox
+          closeCB={this.closePopupBox}
+          isVisible={show_popup_box}
+          text={form_success && form_success === 'success' ? `Thanks ${name}, your email was sent!`: `Sorry ${name}, There was an error. Please try again!`}
+        />
         <section className="contact-header">
           <div>
             <h1>
