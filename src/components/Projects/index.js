@@ -61,7 +61,6 @@ class Projects extends Component {
     
     
     const checkKeycode = (event) => {
-      event.preventDefault();
       let keyDownEvent = event || window.event,
         keycode = (keyDownEvent.which) ? keyDownEvent.which : keyDownEvent.keyCode;
       switch (keycode) {
@@ -74,6 +73,7 @@ class Projects extends Component {
         default:
           return; // exit for other keys
       }
+      event.preventDefault();
     };
     
     document.onkeydown = checkKeycode;
