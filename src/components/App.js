@@ -22,7 +22,7 @@ class App extends Component {
         this.setState({
           loaded: true
         })
-      }, 3000);
+      }, 2500);
     }
   }
   

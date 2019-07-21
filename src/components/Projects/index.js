@@ -17,9 +17,11 @@ class Projects extends Component {
     this.state = {
       current_filter: '2019',
       preview_open: -1,
+      selected_project_data: null,
       selected_project: null,
+      active_id: '',
       mobile_view: isMobile(),
-      scrollLeftPos: 0
+      scrollLeftPos: 0,
     };
     this.scrollContainerRef = React.createRef();
     this.renderProjects = this.renderProjects.bind(this);
@@ -27,6 +29,7 @@ class Projects extends Component {
     this.checkIfMobile = this.checkIfMobile.bind(this);
     this.centerActiveItem = this.centerActiveItem.bind(this);
     this.handleClosePreview = this.handleClosePreview.bind(this);
+    this.handleArrowScroll = this.handleArrowScroll.bind(this);
   }
   
   componentDidUpdate(prevProps, prevState, snapshot) {
@@ -43,10 +46,9 @@ class Projects extends Component {
     const scrollContainer = container.getBoundingClientRect();
     const activeItem = item.getBoundingClientRect();
     this.setState({
-        scrollLeftPos: activeItem.left - scrollContainer.left - (scrollContainer.width / 2) + (activeItem.width / 2)
+      scrollLeftPos: activeItem.left - scrollContainer.left - (scrollContainer.width / 2) + (activeItem.width / 2)
     });
   }
-  
   
   checkIfMobile() {
     this.setState({
@@ -63,9 +65,9 @@ class Projects extends Component {
   }
   
   renderProjects() {
-    const {current_filter, preview_open, selected_project, mobile_view} = this.state;
+    const {current_filter, preview_open, selected_project_data, mobile_view} = this.state;
     const {lang} = this.props;
-    const selected_project_id = (selected_project && selected_project.id && preview_open) || -1;
+    const selected_project_id = (selected_project_data && selected_project_data.id && preview_open) || -1;
     let renderProjects = _projects.map((item, i) => {
       let renderPreview = window.innerWidth <= 768 && selected_project_id && (
         <ProjectPreview key={Math.random()} lang={lang} previewOpen={preview_open} content={{...item, 'number': i}}
@@ -94,14 +96,16 @@ class Projects extends Component {
   };
   
   handleSelectedProject = (element, new_selected_project) => {
+    element.preventDefault();
     const {preview_open, mobile_view} = this.state;
     const currElement = element.target;
     const container = ReactDOM.findDOMNode(this.scrollContainerRef);
     this.setState({
-      selected_project: new_selected_project,
+      selected_project_data: new_selected_project,
+      active_id: element.target.id,
       preview_open: preview_open === new_selected_project.id ? -1 : new_selected_project.id
     }, () => {
-      this.state.selected_project && !mobile_view &&
+      this.state.selected_project_data && !mobile_view &&
       setTimeout(() => {
         this.centerActiveItem(container, currElement);
       }, preview_open === -1 ? 400 : 100);
@@ -115,23 +119,38 @@ class Projects extends Component {
   
   handleClosePreview() {
     this.setState({
-      preview_open : -1
+      preview_open: -1
     });
   }
   
+  handleArrowScroll(direction) {
+    const current_id = document.getElementById(this.state.active_id);
+    if (direction === 'right' && current_id.nextElementSibling) {
+      current_id.nextElementSibling.click();
+    }
+    if (direction === 'left' && current_id.previousSibling) {
+      current_id.previousSibling.click();
+    }
+  }
+  
   render() {
-    const {current_filter, selected_project, preview_open, mobile_view} = this.state;
+    const {current_filter, selected_project_data, preview_open, mobile_view} = this.state;
     const {lang} = this.props;
     return (
       <main id='projects' className={classnames('projects main-section', {'mobile': mobile_view})}>
         <div
           className={classnames('projects-bg', 'section-bg', {'mobile': mobile_view, 'desktop': preview_open !== -1})}/>
-        <section className='project-preview-desktop-wrapper'>
-          {
-            !mobile_view && selected_project &&
-            <ProjectPreview lang={lang} previewOpen={preview_open} content={selected_project} closeCB={this.handleClosePreview}/>
-          }
-        </section>
+        {
+          !mobile_view && selected_project_data &&
+          <section className='project-preview-desktop-wrapper'>
+            <ProjectPreview
+              lang={lang}
+              previewOpen={preview_open}
+              content={selected_project_data}
+              closeCB={this.handleClosePreview}
+            />
+          </section>
+        }
         {
           (mobile_view || (preview_open === -1)) &&
           <section className="header">
@@ -141,14 +160,28 @@ class Projects extends Component {
         <section
           id='projects-wrapper'
           className={classnames('projects-wrapper', {'scroll-projects': preview_open !== -1 && !mobile_view})}
-          ref={(ref) => (this.scrollContainerRef = ref)}
         >
           {
             (mobile_view || (preview_open === -1)) &&
             <ProjectsFilter currentFilter={current_filter} changeFilterCB={this.handleFilterChange}/>
           }
-          <div id={'project-cards'} className="project-cards">
-            {this.renderProjects()}
+          {
+          preview_open !== -1 && !mobile_view && <div className='arrow arrow-left' onClick={(e) => this.handleArrowScroll('left')}>
+            <i className="fas fa-chevron-left"></i>
+          </div>
+          }
+          {
+          preview_open !== -1 && !mobile_view && <div className='arrow arrow-right' onClick={(e) => this.handleArrowScroll('right')}>
+            <i className="fas fa-chevron-right"></i>
+          </div>
+          }
+          <div
+            className='inner-projects-wrapper'
+            ref={(ref) => (this.scrollContainerRef = ref)}
+          >
+            <div id={'project-cards'} className="project-cards">
+              {this.renderProjects()}
+            </div>
           </div>
         </section>
       </main>

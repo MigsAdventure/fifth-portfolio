@@ -30,7 +30,9 @@ const ProjectPreview = ({content, previewOpen, isMobile, lang, closeCB}) => {
          }}
        />
       <section className='project-info'>
-        <CloseWindow onClick={(e) => closeCB (e)} />
+        {
+          !isMobile && <CloseWindow onClick={(e) => closeCB (e)} />
+        }
         <div className="header">
           <h1>{name}</h1>
         </div>

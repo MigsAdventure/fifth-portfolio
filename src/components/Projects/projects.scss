@@ -32,31 +32,54 @@
     z-index: 1;
     background-size: cover;
     background-attachment: fixed;
+    .arrow {
+      position: absolute;
+      z-index: 2;
+      cursor: pointer;
+      font-size: 130px;
+      color: rgba(255,255,255,0.7);
+      top: 50%;
+      transform: translateY(-50%);
+      text-outline: black 1px;
+      &:hover {
+        color: white;
+      }
+      &.arrow-left {
+        left: 30px;
+      }
+      &.arrow-right {
+        right: 30px;
+      }
+    }
     &.scroll-projects {
       width: 100%;
       height: auto;
       position: absolute;
       bottom: -30px;
-      overflow: auto;
-      scroll-behavior: smooth;
+      overflow: hidden;
       &::-webkit-scrollbar {
         display: none;
       }
-      .project-cards {
-        white-space: nowrap;
-        width: fit-content;
-        min-width: 1200px;
-        overflow: hidden;
-        .project-card {
-          width: 270px;
-          height: auto;
-          display: inline-block;
-          white-space: normal;
-          &.active {
+      .inner-projects-wrapper {
+        overflow: auto;
+        scroll-behavior: smooth;
+        .project-cards {
+          position: relative;
+          white-space: nowrap;
+          width: fit-content;
+          min-width: 1200px;
+          overflow: hidden;
+          .project-card {
+            width: 270px;
+            height: auto;
+            display: inline-block;
+            white-space: normal;
+            &.active {
               bottom: 10px;
               width: 280px;
               height: 240px;
               border: solid 2px yellow;
+            }
           }
         }
       }

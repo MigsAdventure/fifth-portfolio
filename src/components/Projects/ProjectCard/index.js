@@ -16,6 +16,7 @@ const ProjectCard = ({content, selectedProjectCB, previewOpen}) => {
   return (
     <main
       key={content.number}
+      id={content.id}
       onClick={(e) => selectedProjectCB(e, content)}
       className={classnames('project-card',  {'active': previewOpen === id}, {'inactive': previewOpen !== id && previewOpen !== -1})}
       style={{backgroundImage: `url(${importImage( `${id}-site-card-logo.jpeg`)})`}}

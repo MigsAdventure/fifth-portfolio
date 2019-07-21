@@ -21,6 +21,9 @@ $global-path: $image-path + 'global/';
   max-width: 500px;
   background-position: center;
   transition: all 0.2s;
+  div, section, h1 {
+    pointer-events: none;
+  }
   &.inactive {
     filter: sepia(65%);
   }
