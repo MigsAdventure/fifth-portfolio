@@ -63,6 +63,9 @@
         &::-webkit-scrollbar {
           display: none;
         }
+        &::-moz-viewport-scroll {
+          display: none;
+        }
         .project-cards {
           position: relative;
           white-space: nowrap;
