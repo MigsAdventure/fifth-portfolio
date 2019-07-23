@@ -57,12 +57,12 @@
       position: absolute;
       bottom: -30px;
       overflow: hidden;
-      &::-webkit-scrollbar {
-        display: none;
-      }
       .inner-projects-wrapper {
         overflow: auto;
         scroll-behavior: smooth;
+        &::-webkit-scrollbar {
+          display: none;
+        }
         .project-cards {
           position: relative;
           white-space: nowrap;
