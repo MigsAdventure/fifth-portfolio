@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "d26b5301afbe28f9d181",
+    "revision": "7a2973251529061f5a20",
     "url": ".//main.e86da6e6.chunk.css"
   },
   {
-    "revision": "d26b5301afbe28f9d181",
-    "url": "./static/js/main.77fdc593.chunk.js"
+    "revision": "7a2973251529061f5a20",
+    "url": "./static/js/main.de1bdbdc.chunk.js"
   },
   {
     "revision": "8c97409f0ee389fe75da",
@@ -124,15 +124,19 @@ self.__precacheManifest = [
     "url": "./src/assets/images/desktop/screenshots/pokedex-site.jpeg.1c85fca1d653b15322d68fc393bd5c4e"
   },
   {
-    "revision": "d5a58c849f8a0d8401f4da211d64106c",
-    "url": "./resume.d5a58c84.pdf"
+    "revision": "baaa97ccd5415ae62057876227720de4",
+    "url": "./resume.baaa97cc.docx"
+  },
+  {
+    "revision": "02aba7d6ffd2a150208b00a134cae232",
+    "url": "./resume.02aba7d6.pdf"
   },
   {
     "revision": "5d5d9eefa31e5e13a6610d9fa7a283bb",
     "url": "./logo.5d5d9eef.svg"
   },
   {
-    "revision": "7f6aaf9a01da1d48e459fbfc99a3e471",
+    "revision": "71f58c4c5ec713eed59ef6fe47a37196",
     "url": "./index.html"
   }
 ];
