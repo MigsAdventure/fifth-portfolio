@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'react-app-polyfill/ie11';
+import 'core-js/features/array/includes';
 import { BrowserRouter, HashRouter, Route, Redirect, Switch, StaticRouter } from 'react-router-dom';
 import App from './components/App';
 import NotFound from './components/NotFound';
