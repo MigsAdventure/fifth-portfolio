@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "8f6ab7aeadfb20ddc65b",
+    "revision": "226f6aa75c8533622b52",
     "url": ".//main.93e80ec9.chunk.css"
   },
   {
-    "revision": "8f6ab7aeadfb20ddc65b",
-    "url": "./static/js/main.775fd3b9.chunk.js"
+    "revision": "226f6aa75c8533622b52",
+    "url": "./static/js/main.e582fabf.chunk.js"
   },
   {
     "revision": "8c97409f0ee389fe75da",
@@ -67,7 +67,7 @@ self.__precacheManifest = [
     "url": "./src/assets/images/global/pokedex-site-card-logo.jpeg.d5eddd889731f3d1b51e62f74effb44d"
   },
   {
-    "url": "./src/assets/images/global/subi2.gif.5266de56d48fac2692f166c5604b1d32"
+    "url": "./src/assets/images/global/subi2.gif.61a165f15aed98e37de5a0815cb78f7d"
   },
   {
     "url": "./src/assets/images/mobile/speedway-night.jpeg.37aabb61638e52d0bca50d2b4609f22b"
@@ -136,7 +136,7 @@ self.__precacheManifest = [
     "url": "./logo.5d5d9eef.svg"
   },
   {
-    "revision": "45343e28bec2a660e2e714b7a1a0ebae",
+    "revision": "97a9d6d4517b046613728ec1b8e60296",
     "url": "./index.html"
   }
 ];

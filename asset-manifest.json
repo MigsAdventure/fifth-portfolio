@@ -1,7 +1,7 @@
 {
   "main.css": ".//main.93e80ec9.chunk.css",
-  "main.js": "./static/js/main.775fd3b9.chunk.js",
-  "main.js.map": "./static/js/main.775fd3b9.chunk.js.map",
+  "main.js": "./static/js/main.e582fabf.chunk.js",
+  "main.js.map": "./static/js/main.e582fabf.chunk.js.map",
   "runtime~main.js": "./static/js/runtime~main.d653cc00.js",
   "runtime~main.js.map": "./static/js/runtime~main.d653cc00.js.map",
   "static/js/2.77f18176.chunk.js": "./static/js/2.77f18176.chunk.js",
@@ -9,7 +9,7 @@
   "/main.93e80ec9.chunk.css.map": ".//main.93e80ec9.chunk.css.map",
   "index.html": "./index.html",
   "logo.svg": "./logo.5d5d9eef.svg",
-  "precache-manifest.9181609dc6ed83274c6fecc71de7b0af.js": "./precache-manifest.9181609dc6ed83274c6fecc71de7b0af.js",
+  "precache-manifest.2fac97c0e7c3efaeeb7ebb7c05f29624.js": "./precache-manifest.2fac97c0e7c3efaeeb7ebb7c05f29624.js",
   "resume.pdf": "./resume.02aba7d6.pdf",
   "resume.docx": "./resume.baaa97cc.docx",
   "service-worker.js": "./service-worker.js",
@@ -47,6 +47,6 @@
   "src/assets/images/global/contact.scss": "./src/assets/images/global/magic-mountains.jpg.e77dca5d0c7ef696bb2c5975ed8d2a60",
   "src/assets/images/global/project-card.scss": "./src/assets/images/global/ncsoft-site-card-logo.jpeg.8f13b7f0d6c782dc42ee43b07882425d",
   "src/assets/images/global/pokedex-site-card-logo.jpeg": "./src/assets/images/global/pokedex-site-card-logo.jpeg.d5eddd889731f3d1b51e62f74effb44d",
-  "src/assets/images/global/subi2.gif": "./src/assets/images/global/subi2.gif.5266de56d48fac2692f166c5604b1d32",
+  "src/assets/images/global/subi2.gif": "./src/assets/images/global/subi2.gif.61a165f15aed98e37de5a0815cb78f7d",
   "src/assets/images/mobile/speedway-night.jpeg": "./src/assets/images/mobile/speedway-night.jpeg.37aabb61638e52d0bca50d2b4609f22b"
 }
