@@ -541,8 +541,25 @@ module.exports = function(webpackEnv) {
         new MiniCssExtractPlugin({
           // Options similar to the same options in webpackOptions.output
           // both options are optional
-          filename: '/[name].[contenthash:8].css',
-          chunkFilename: '/[name].[contenthash:8].chunk.css',
+  
+  
+          path: isEnvProduction ? paths.appBuild : undefined,
+          // Add /* filename */ comments to generated require()s in the output.
+          pathinfo: isEnvDevelopment,
+          // There will be one main bundle, and one file per asynchronous chunk.
+          // In development, it does not produce real files.
+          filename: 'static/css//[name].[contenthash:8].css',
+          // There are also additional JS chunk files if you use code splitting.
+          chunkFilename: 'static/css//[name].[contenthash:8].chunk.css',
+          // We inferred the "public path" (such as / or /my-project) from homepage.
+          // We use "/" in development.
+          publicPath: publicPath,
+          
+          
+          
+          // path: '/static/css/',
+          // filename: '/[name].[contenthash:8].css',
+          // chunkFilename: '/[name].[contenthash:8].chunk.css',
         }),
       // Generate a manifest file which contains a mapping of all asset filenames
       // to their corresponding output file so that tools can pick it up without
