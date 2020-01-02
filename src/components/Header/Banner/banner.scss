@@ -3,7 +3,7 @@
 .banner {
   position: relative;
   .banner-image {
-    background-image: url('https://cdn.migsadventure.com.s3-us-west-1.amazonaws.com/portfolio/images/mobile/m-sequoia-mig.jpg');
+    background-image: url('https://cdn.migsadventure.com/portfolio/images/mobile/m-sequoia-mig.jpg');
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -11,7 +11,7 @@
     min-width: 100%;
     background-position: right;
     @media (min-width: $small-desktop-width) {
-      background-image: url('https://cdn.migsadventure.com.s3-us-west-1.amazonaws.com/portfolio/images/desktop/sequoia-mig.jpg');
+      background-image: url('https://cdn.migsadventure.com/portfolio/images/desktop/sequoia-mig.jpg');
     }
   }
   .banner-text {
