@@ -557,7 +557,7 @@ module.exports = function(webpackEnv) {
           
           
           
-          // path: '/static/css/',
+          // path: 'static/css/',
           // filename: '/[name].[contenthash:8].css',
           // chunkFilename: '/[name].[contenthash:8].chunk.css',
         }),
