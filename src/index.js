@@ -8,7 +8,7 @@ import NotFound from './components/NotFound';
 import * as serviceWorker from './serviceWorker';
 
 const userRedirect = () => {
-  return window.location.pathname.match(/(\/)$/);
+  return window.location.pathname.match(/(\/|index.html)$/);
 };
 
 const Index = () => (
