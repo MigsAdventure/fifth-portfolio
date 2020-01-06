@@ -12,7 +12,7 @@ const userRedirect = () => {
 };
 
 const Index = () => (
-  <HashRouter basename="/">
+  <BrowserRouter basename="/">
     {
       userRedirect() && <Redirect to="/en"/>
     }
@@ -20,7 +20,7 @@ const Index = () => (
       <Route exact path={`/:lang(en|es|jp|kr)`}  component={App} />
       <Route exact path='*' component={NotFound} />
     </Switch>
-  </HashRouter>
+  </BrowserRouter>
 );
 
 ReactDOM.render(<Index />, document.getElementById('app'));
