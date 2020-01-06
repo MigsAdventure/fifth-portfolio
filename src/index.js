@@ -12,18 +12,20 @@ const userRedirect = () => {
 };
 
 const userLang = () => {
-  const rebuildLangs = {
+  const languages = {
+    en: "en",
+    es: "es",
     ja: "jp",
     ko: "kr"
   };
-  const language = (window.navigator.userLanguage && window.navigator.userLanguage.slice(0, 2)) || (window.navigator.language && window.navigator.language.slice(0, 2));
-  return rebuildLangs[language] ?  rebuildLangs[language] : language;
+  const currLang = (window.navigator.userLanguage && window.navigator.userLanguage.slice(0, 2)) || (window.navigator.language && window.navigator.language.slice(0, 2));
+  return languages[currLang] ?  languages[currLang] : "en";
 };
 
 const Index = () => (
   <BrowserRouter basename="/">
     {
-      userRedirect() && <Redirect to={userLang() || "/en"}/>
+      userRedirect() && <Redirect to={userLang()}/>
     }
     <Switch>
       <Route exact path={`/:lang(en|es|jp|kr)`}  component={App} />
