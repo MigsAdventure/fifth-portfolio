@@ -27,7 +27,6 @@ class App extends Component {
   }
   
   render() {
-    console.log('IT WORKS!!!!');
     // defaults lang to en if there is no lang match
     const langRegex = /en\b|kr\b|jp\b|es\b/;
     const params_lang = this.props.match.params.lang;

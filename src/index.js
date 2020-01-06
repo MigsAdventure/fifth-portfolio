@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'react-app-polyfill/ie11';
 import 'core-js/features/array/includes';
-import { BrowserRouter, HashRouter, Route, Redirect, Switch, StaticRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 import App from './components/App';
 import NotFound from './components/NotFound';
 import * as serviceWorker from './serviceWorker';
@@ -11,10 +11,19 @@ const userRedirect = () => {
   return window.location.pathname.match(/(\/|index.html)$/);
 };
 
+const userLang = () => {
+  const rebuildLangs = {
+    ja: "jp",
+    ko: "kr"
+  };
+  const language = (window.navigator.userLanguage && window.navigator.userLanguage.slice(0, 2)) || (window.navigator.language && window.navigator.language.slice(0, 2));
+  return rebuildLangs[language] ?  rebuildLangs[language] : language;
+};
+
 const Index = () => (
   <BrowserRouter basename="/">
     {
-      userRedirect() && <Redirect to="/en"/>
+      userRedirect() && <Redirect to={userLang() || "/en"}/>
     }
     <Switch>
       <Route exact path={`/:lang(en|es|jp|kr)`}  component={App} />
