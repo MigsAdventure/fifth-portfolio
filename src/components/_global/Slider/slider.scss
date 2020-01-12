@@ -1,0 +1,28 @@
+@import '../../../styles/partials/_settings';
+@import '../../../styles/partials/_mixins';
+
+.slider {
+  .inner {
+    .chat-box {
+
+    }
+    .image {
+      position: fixed;
+      left: -100%;
+      animation: slide-right;
+      animation-duration: 2s;
+      animation-delay: 3s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+//animation
+@keyframes slide-right {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
