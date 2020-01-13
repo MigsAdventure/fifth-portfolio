@@ -1,3 +1,7 @@
+const emoji = {
+  firstVisit: ["Hello and welcome!", "It looks like it's your first time here.", "This site is utilizing:", "React, SASS, AWS S3, CloudFront, Route53, and CodePipeline"],
+  visited: ["Welcome back!", "This site is utilizing:", "React, SASS, AWS S3, CloudFront, Route53, and CodePipeline", "Thanks for visiting again and have a great day!"]
+};
 
 const projects_filter = {
   all: "All Projects",
@@ -66,6 +70,7 @@ export {
   projects_filter,
   projects,
   contact_form,
-  footer
+  footer,
+  emoji
 }
 

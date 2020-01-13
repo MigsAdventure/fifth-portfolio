@@ -13,9 +13,7 @@ $extra-small-mobile-width: 375px;
 $tablet-only: "(min-width: #{$mobile-width}) and (max-width: #{$tablet-width})";
 
 /*Colors*/
-
-
-
+$white-50: rgba(255,255,255,0.5);
 
 /*Fonts*/
 $FontAwesome: "Font Awesome 5 Pro";
@@ -23,6 +21,7 @@ $FontAwesomeBrands: "Font Awesome 5 Brands";
 $Bungee: 'Bungee Inline', cursive;
 $PressStart2P: 'Press Start 2P', cursive;
 $Saira: 'Saira', sans-serif;
+$Orbitron: 'Orbitron', sans-serif;
 
 /* components */
 

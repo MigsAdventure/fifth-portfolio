@@ -15,13 +15,6 @@
     }
   }
   .banner-text {
-    h1 {
-      font-size: 58px;
-    }
-    h3 {
-      font-size: 40px;
-    }
-    color: white;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -29,5 +22,15 @@
     left: 0;
     right: 0;
     text-align: center;
+    h1, h3 {
+      font-family: $Orbitron;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 58px;
+    }
+    h3 {
+      font-size: 40px;
+    }
   }
 }
