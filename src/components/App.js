@@ -37,7 +37,6 @@ class App extends Component {
     const langRegex = /en\b|kr\b|jp\b|es\b/;
     const params_lang = this.props.match.params.lang;
     const lang = (params_lang && params_lang.match(langRegex) && params_lang) || 'en';
-    console.log('cookie is here: ', getCookie('visited'));
     return (
       <div className="App">
         <Loader icon={'assets/images/global/subi2.gif'} fullBG={true} isVisible={!this.state.loaded} />

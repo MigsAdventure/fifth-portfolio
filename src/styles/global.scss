@@ -7,13 +7,14 @@
 
 //prevents bounce effect on entire window
 html {
-  //overflow: hidden;
+  overflow: hidden;
+  height: 100%;
 }
-html,body, #app {
+body, #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
-  height: auto;
+  height: 100%;
   min-height: 100%;
   max-width: 100%;
   position: relative;
@@ -26,6 +27,7 @@ html,body, #app {
 }
 body {
   overflow-x: hidden;
+  overflow-y: auto;
   background-color: black;
   color: black;
   margin: auto;
