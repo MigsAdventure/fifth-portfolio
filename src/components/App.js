@@ -39,10 +39,14 @@ class App extends Component {
     const lang = (params_lang && params_lang.match(langRegex) && params_lang) || 'en';
     return (
       <div className="App">
-        <Loader icon={'assets/images/global/subi2.gif'} fullBG={true} isVisible={!this.state.loaded} />
+        <Loader
+          icon={'assets/images/global/subi2.gif'}
+          fullBG={true}
+          isVisible={!this.state.loaded} />
         <Slider
           image={'assets/images/global/hi-bitmoji.png'}
           text={getCookie('visited') ? emoji.visited[lang] : emoji.firstVisit[lang]}
+          charsPerLine={emoji.charsPerLine[lang]}
         />
         <Header lang={lang}/>
         <About lang={lang}/>

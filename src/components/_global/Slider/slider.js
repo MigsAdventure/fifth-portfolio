@@ -18,7 +18,7 @@ class Slider extends Component {
   }
   
   render() {
-    const { image, text } = this.props;
+    const { image, text, charsPerLine } = this.props;
     const { isVisible } = this.state;
     return (
         isVisible && <div className='slider' onClick={this.closeSlider}>
@@ -31,16 +31,18 @@ class Slider extends Component {
                 return [<p key={i} className='text'>{item}</p>]
               })
             }
+            {/*  /!*TODO Refactor this section*!/*/}
             <div className="hidden">
-              {/*TODO Refactor this section*/}
-              <p>&nbsp;</p>
-              <p>&nbsp;</p>
-              <p>&nbsp;</p>
-              <p>&nbsp;</p>
-              <p>&nbsp;</p>
-              <p>&nbsp;</p>
-              <p>&nbsp;</p>
-              <p>&nbsp;</p>
+              {
+                text.map((item, i) => {
+                  const numLines = Math.ceil(item.length / charsPerLine);
+                  let renderItems = [];
+                  for (let x = 1; x <= numLines; x++) {
+                    renderItems.push(<p key={Math.random()}>&nbsp;</p>)
+                  }
+                  return renderItems;
+                })
+              }
             </div>
           </div>
         </div>
@@ -50,11 +52,11 @@ class Slider extends Component {
 }
 
 Slider.defaultProps = {
-  text: 'Hi There!',
+  text: ['Hi there!'],
 };
 
 Slider.propTypes = {
-  text: PropTypes.string,
+  text: PropTypes.array,
 };
 
 export default Slider;
