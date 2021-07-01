@@ -28,7 +28,7 @@ class App extends Component {
         }, () => {
           setCookie('visited', true);
         })
-      }, 2500);
+      }, 2200);
     }
   }
   
@@ -42,17 +42,23 @@ class App extends Component {
         <Loader
           icon={'assets/images/global/subi2.gif'}
           fullBG={true}
-          isVisible={!this.state.loaded} />
-        <Slider
-          image={'assets/images/global/hi-bitmoji.png'}
-          text={getCookie('visited') ? emoji.visited[lang] : emoji.firstVisit[lang]}
-          charsPerLine={emoji.charsPerLine[lang]}
+          isVisible={!this.state.loaded}
         />
-        <Header lang={lang}/>
-        <About lang={lang}/>
-        <Projects lang={lang}/>
-        <Contact lang={lang}/>
-        <Footer lang={lang}/>
+        {
+          this.state.loaded && [
+            <Slider
+              key={1}
+              image={'assets/images/global/hi-bitmoji.png'}
+              text={getCookie('visited') ? emoji.visited[lang] : emoji.firstVisit[lang]}
+              charsPerLine={emoji.charsPerLine[lang]}
+            />,
+            <Header key={2} lang={lang}/>,
+            <About key={3} lang={lang}/>,
+            <Projects key={4} lang={lang}/>,
+            <Contact key={5} lang={lang}/>,
+            <Footer key={6} lang={lang}/>
+          ]
+        }
       </div>
     );
   }
