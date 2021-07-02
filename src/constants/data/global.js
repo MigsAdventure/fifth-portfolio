@@ -22,7 +22,10 @@ const emoji = {
 const projects_filter = {
   all: "All Projects",
   ncsoft: "NcSoft",
+  estsoft: "EstSoft",
   personal: "Personal",
+  2021: "2021",
+  2020: "2020",
   2019: "2019",
   2018: "2018",
   2017: "2017",

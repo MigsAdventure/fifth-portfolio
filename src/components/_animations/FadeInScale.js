@@ -21,7 +21,13 @@ const FadeInScale = ({children, ...props}) => {
           key={[index]}
           className="trails-animation"
           style={{
-            ...rest
+            ...rest,
+            transform: progress.interpolate(
+              [0, 1],
+              ["scale(3)", "scale(1)"],
+              [`translateX(${props.xAxis && props.xAxis.start})`, `translateX(${props.xAxis && props.xAxis.end})`],
+              [`translateY(${props.yAxis && props.yAxis.start})`, `translateY(${props.yAxis && props.yAxis.end})`],
+            )
           }}
         >
           {items[index]}

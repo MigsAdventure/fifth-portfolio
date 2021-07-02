@@ -1,5 +1,54 @@
 [
   {
+    "name": "PSO2:New Genesis",
+    "url": "https://ngs.pso2.com",
+    "type": "estsoft",
+    "year": ["2021"],
+    "tech": "Javascript, Scss, .NET Core, C#, Internal CMS, WebPack, NPM, Azure, AWS, Redis",
+    "api": null,
+    "id": "pso2-ngs",
+    "responsibilities": [
+      "Content Updates",
+      "Bug Fixes",
+      "Frontend",
+      "AWS Services"
+    ],
+    "description": "The official site for PSO2:New Genesis."
+  },
+  {
+    "name": "Phantasy Star Online 2",
+    "url": "https://pso2.com",
+    "type": "estsoft",
+    "year": ["2021", "2020"],
+    "tech": "Javascript, Scss, .NET Core, C#, Internal CMS, WebPack, NPM, Azure, AWS, Redis",
+    "api": null,
+    "id": "pso2",
+    "responsibilities": [
+      "Content Updates",
+      "Bug Fixes",
+      "Frontend",
+      "AWS Services"
+    ],
+    "description": "The official site for Phantasy Star Online 2."
+  },
+  {
+    "name": "Phantasy Star Online 2 Forums",
+    "url": "https://forum.pso2.com",
+    "type": "estsoft",
+    "year": ["2021", "2020"],
+    "tech": "Javascript, Scss, NODEBB, Node.js, NPM, AWS, Mongo",
+    "api": null,
+    "id": "pso2-forums",
+    "responsibilities": [
+      "Content Updates",
+      "Bug Fixes",
+      "Frontend",
+      "Backend",
+      "AWS Services"
+    ],
+    "description": "The official site for Phantasy Star Online 2 Forums."
+  },
+  {
     "name": "Lineage II",
     "url": "https://www.lineage2.com",
     "type": "ncsoft",

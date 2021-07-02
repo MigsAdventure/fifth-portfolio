@@ -34,6 +34,7 @@
     }
   }
   &:hover {
+    border: solid 1px $pale-grey;
     .nav-filter-items {
       max-height: 500px;
       transition: max-height 0.25s ease-in;

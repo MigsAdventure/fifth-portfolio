@@ -6,7 +6,7 @@ import Button from "../../_global/Button";
 import { projects } from "../../../constants/data/global";
 import {isMobile} from "../../../utils/screen";
 import CloseWindow from "../../_global/CloseWindow";
-
+import FadeInScale from "../../_animations/FadeInScale";
 
 const ProjectPreview = ({content, previewOpen, isMobile, lang, closeCB}) => {
   const {id, url, tech, responsibilities, description, name} = content;
@@ -23,12 +23,12 @@ const ProjectPreview = ({content, previewOpen, isMobile, lang, closeCB}) => {
      <main
        className={classnames('project-preview', {'preview-open': previewOpen === id}, {'scroll-projects-active': previewOpen !== -1 && !isMobile})}
      >
-       <div
-         className='project-preview-image'
-         style={{
-           backgroundImage: `url(${importImage(`${screenSize}/screenshots/${id}-site.jpeg`)})`,
-         }}
-       />
+         <div
+           className='project-preview-image'
+           style={{
+             backgroundImage: `url(${importImage(`${screenSize}/screenshots/${id}-site.jpeg`)})`,
+           }}
+         />
       <section className='project-info'>
         {
           !isMobile && <CloseWindow onClick={(e) => closeCB (e)} />

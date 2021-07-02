@@ -15,7 +15,7 @@ class Projects extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      current_filter: '2019',
+      current_filter: '2021',
       preview_open: -1,
       selected_project_data: null,
       selected_project: null,
