@@ -2,7 +2,6 @@ import React from "react";
 import {animated as a, useTrail, useSpring} from "react-spring";
 import {withRouter} from "react-router-dom";
 
-
 const FadeInScale = ({children, ...props}) => {
   const items = React.Children.toArray(children);
   const { progress } = useSpring({ progress: props.opacity && props.opacity.end || 1});
