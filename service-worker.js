@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/fifth-portfolio/en/precache-manifest.df83388827952d9a2610887a06d564ed.js"
+  "www.migsadventure.com/precache-manifest.ed724b68eba7d41b305e426be76d4a8c.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/fifth-portfolio/en/index.html", {
+workbox.routing.registerNavigationRoute("www.migsadventure.com/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
