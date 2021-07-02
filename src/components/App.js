@@ -11,7 +11,6 @@ import Footer from '../components/Footer';
 import About from "./About";
 import Loader from "./_global/Loader";
 import Slider from "./_global/Slider";
-import FadeInScale from "./_animations/FadeInScale";
 
 class App extends Component {
   constructor(props) {
