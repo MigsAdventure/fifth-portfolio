@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "4e53ed9d83aa4f444cc5",
-    "url": ".//main.2633b3c5.chunk.css"
+    "revision": "abd7948019f5e382b809",
+    "url": "./main.e24be618.chunk.css"
   },
   {
-    "revision": "4e53ed9d83aa4f444cc5",
-    "url": "./static/js/main.239acfae.chunk.js"
+    "revision": "abd7948019f5e382b809",
+    "url": "./static/js/main.1768080d.chunk.js"
   },
   {
     "revision": "8c97409f0ee389fe75da",
     "url": "./static/js/runtime~main.d653cc00.js"
   },
   {
-    "revision": "cf2d11271b64b2f4561d",
-    "url": "./static/js/2.77f18176.chunk.js"
+    "revision": "b19583fe5727cbaeb731",
+    "url": "./static/js/2.68d59513.chunk.js"
   },
   {
     "url": "./src/assets/images/global/aion-site-card-logo.jpeg.794fa4397d16599290d9a0288b31ea09"
@@ -49,6 +49,9 @@ self.__precacheManifest = [
     "url": "./src/assets/images/global/hangman-site-card-logo.jpeg.52f0ef71759d4f818b1dc51d8ed19e1b"
   },
   {
+    "url": "./src/assets/images/global/hi-bitmoji.png.fce690c7e0e216e50f98270e12901198"
+  },
+  {
     "url": "./src/assets/images/global/launcher-signup-site-card-logo.jpeg.11d9ea34de1a01e8a17758c0bd316e31"
   },
   {
@@ -67,13 +70,22 @@ self.__precacheManifest = [
     "url": "./src/assets/images/global/pokedex-site-card-logo.jpeg.c40e1bf7b478c64b9fdc1a44b44abe1a"
   },
   {
+    "url": "./src/assets/images/global/pso2-forums-site-card-logo.jpeg.b51f4058907aaacc3b0a29b6079e9057"
+  },
+  {
+    "url": "./src/assets/images/global/pso2-ngs-site-card-logo.jpeg.09c46cd459326bacd428be4079154990"
+  },
+  {
+    "url": "./src/assets/images/global/pso2-site-card-logo.jpeg.2e6363a46eea2d8e40d38304b507cee8"
+  },
+  {
     "url": "./src/assets/images/global/subi2.gif.61a165f15aed98e37de5a0815cb78f7d"
   },
   {
-    "url": "./src/assets/images/mobile/speedway-night.jpeg.7ca8c48ec10832e7abfd621d365e2c84"
+    "url": "./src/assets/images/desktop/speedway-night.jpeg.97fd95c25e9255a31c78208fe3d28688"
   },
   {
-    "url": "./src/assets/images/desktop/speedway-night.jpeg.97fd95c25e9255a31c78208fe3d28688"
+    "url": "./src/assets/images/mobile/speedway-night.jpeg.7ca8c48ec10832e7abfd621d365e2c84"
   },
   {
     "url": "./src/assets/images/desktop/screenshots/aion-forums-site.jpeg.00c62378f8667bb6216fc8799a97a658"
@@ -124,19 +136,28 @@ self.__precacheManifest = [
     "url": "./src/assets/images/desktop/screenshots/pokedex-site.jpeg.8dee60723529bb1e1886455bb84ae16f"
   },
   {
+    "url": "./src/assets/images/desktop/screenshots/pso2-forums-site.jpeg.86afdb0527bf4b8296e9b8b103fa1cad"
+  },
+  {
+    "url": "./src/assets/images/desktop/screenshots/pso2-ngs-site.jpeg.fb51175e21a75786a2754b27cd81ff31"
+  },
+  {
+    "url": "./src/assets/images/desktop/screenshots/pso2-site.jpeg.9b9b2fc8e693d44655c00503573090a6"
+  },
+  {
     "revision": "baaa97ccd5415ae62057876227720de4",
     "url": "./resume.baaa97cc.docx"
   },
   {
-    "revision": "02aba7d6ffd2a150208b00a134cae232",
-    "url": "./resume.02aba7d6.pdf"
+    "revision": "82a1e3f774f6e79a2c6bfc6b9bdbdad8",
+    "url": "./resume.82a1e3f7.pdf"
   },
   {
     "revision": "5d5d9eefa31e5e13a6610d9fa7a283bb",
     "url": "./logo.5d5d9eef.svg"
   },
   {
-    "revision": "4c3d8bd3cb3b5a39b296b1d889d6473e",
+    "revision": "9c72b39dcca577f40e75b008116cf01c",
     "url": "./index.html"
   }
 ];
