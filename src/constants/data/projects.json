@@ -158,6 +158,34 @@
     "description": "The official site for Blade and Soul eSports."
   },
   {
+    "name": "Aion Legions Forums",
+    "url": "https://forums.aionlegionsofwar.com",
+    "type": "ncsoft",
+    "year": ["2019", "2018"],
+    "tech": "Scss, IPBoard, PHP, Compass, NPM",
+    "api": ["internal"],
+    "id": "aion-legions-forums",
+    "responsibilities":  [
+      "Main Developer",
+      "Implemented front-end structure for development"
+    ],
+    "description": "The official forums for the Aion: Legions of War Mobile Game."
+  },
+  {
+    "name": "Lineage II Forums",
+    "url": "https://forums.lineage2.com",
+    "type": "ncsoft",
+    "year": ["2018"],
+    "tech": "Scss, IPBoard, PHP, Compass, NPM",
+    "api": ["internal"],
+    "id": "lineage2-forums",
+    "responsibilities":  [
+      "Main Developer",
+      "Implemented Design and front-end structure"
+    ],
+    "description": "The official forums for the Lineage II PC Game."
+  },
+  {
     "name": "Blade and Soul Forums",
     "url": "https://forums.bladeandsoul.com",
     "type": "ncsoft",
@@ -184,34 +212,6 @@
       "Implemented Design and front-end structure"
     ],
     "description": "The official forums for the Aion PC Game."
-  },
-  {
-    "name": "Lineage II Forums",
-    "url": "https://forums.lineage2.com",
-    "type": "ncsoft",
-    "year": ["2018"],
-    "tech": "Scss, IPBoard, PHP, Compass, NPM",
-    "api": ["internal"],
-    "id": "lineage2-forums",
-    "responsibilities":  [
-      "Main Developer",
-      "Implemented Design and front-end structure"
-    ],
-    "description": "The official forums for the Lineage II PC Game."
-  },
-  {
-    "name": "Aion Legions Forums",
-    "url": "https://forums.aionlegionsofwar.com",
-    "type": "ncsoft",
-    "year": ["2019", "2018"],
-    "tech": "Scss, IPBoard, PHP, Compass, NPM",
-    "api": ["internal"],
-    "id": "aion-legions-forums",
-    "responsibilities":  [
-      "Main Developer",
-      "Implemented front-end structure for development"
-    ],
-    "description": "The official forums for the Aion: Legions of War Mobile Game."
   },
   {
     "name": "Anime LunchBox",

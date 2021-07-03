@@ -5,6 +5,7 @@ import {sendEmail} from "../../Api/contact";
 import classnames from 'classnames';
 import Loader from "../_global/Loader";
 import PopupBox from "../_global/PopupBox";
+import SpringScale from "../_animations/SpringScale";
 
 class Contact extends Component {
   constructor(props) {
@@ -102,6 +103,7 @@ class Contact extends Component {
             </h1>
           </div>
         </section>
+        <SpringScale trackScreen={true} reAnimate={true} duration={500} animateMargin={"-20px"}>
         <section className="contact-form-wrapper">
           <Loader isVisible={is_loading}/>
           <form onChange={this.validateInputs} onSubmit={this.submitForm}>
@@ -120,6 +122,7 @@ class Contact extends Component {
             <button className='submit-btn' disabled={!form_valid} type="submit">Send Message!</button>
           </form>
         </section>
+        </SpringScale>
       </main>
     );
   }

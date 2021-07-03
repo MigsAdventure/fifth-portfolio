@@ -54,6 +54,8 @@
       "Webpack",
       "NPM",
       "Git",
+      "C#",
+      ".Net Core",
       "PHP",
       "Magento",
       "MySQL",
@@ -68,6 +70,7 @@
       "IPBoard",
       "ZenDesk",
       "AWS",
+      "Azure",
       "Heroku",
       "FireBase"
     ]

@@ -9,7 +9,7 @@
     opacity: 0.2;
   }
   .inner-wrapper {
-    max-width: 1200px;
+    max-width: 1320px;
     padding: 20px;
     margin: auto;
     min-height: 520px;
@@ -23,7 +23,7 @@
     .about-me, .skills {
       text-align: left;
       width: 100%;
-      max-width: 500px;
+      max-width: 550px;
       display: inline-block;
       @media(min-width: $tablet-width) {
         width: 49%;
@@ -38,11 +38,22 @@
         }
       }
       &.skills {
+        max-width: 600px;
         @media(min-width: $tablet-width) {
           float: right;
         }
         .skills-list {
           padding: 0;
+          .item {
+            display: inline-block;
+            min-width: 150px;
+            padding: 20px;
+            text-align: center;
+            text-shadow:  0px 0px 1px black,
+                          0px 0px 2px white,
+                          0px 0px 3px black,
+                          0px 0px 5px black;
+          }
           .slideIn {
             display: inline-block;
             animation: slideIn 3s forwards;

@@ -6,7 +6,7 @@ import Button from "../../_global/Button";
 import { projects } from "../../../constants/data/global";
 import {isMobile} from "../../../utils/screen";
 import CloseWindow from "../../_global/CloseWindow";
-import FadeInScale from "../../_animations/FadeInScale";
+import SpringScale from "../../_animations/SpringScale";
 
 const ProjectPreview = ({content, previewOpen, isMobile, lang, closeCB}) => {
   const {id, url, tech, responsibilities, description, name} = content;

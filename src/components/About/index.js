@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import './about.scss';
-
-import ScrollAnimation from 'react-animate-on-scroll';
 import _about from '../../constants/data/about.json';
-import classnames from "classnames";
+import {generateRandomColor} from  "../../utils/general";
 
 const About = ({lang}) => {
   const {about, skills} = _about;
@@ -26,9 +24,7 @@ const About = ({lang}) => {
           <div className='skills-list'>
             {
               skills.technologies.map((item, i) =>
-                <ScrollAnimation offset={0} key={i} animateIn="slideIn" animateOnce={true}>
-                  <div>{item}</div>
-                </ScrollAnimation>
+                  <div key={i} className={"item"} style={{backgroundColor: generateRandomColor()}}>{item}</div>
               )
             }
           </div>

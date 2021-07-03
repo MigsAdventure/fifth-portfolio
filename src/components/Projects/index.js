@@ -9,7 +9,6 @@ import ProjectPreview from "./ProjectPreview";
 import {isMobile} from "../../utils/screen";
 import classnames from 'classnames';
 import {scrollTo} from "../../utils/dom";
-import ScrollAnimation from "react-animate-on-scroll";
 
 class Projects extends Component {
   constructor(props) {
