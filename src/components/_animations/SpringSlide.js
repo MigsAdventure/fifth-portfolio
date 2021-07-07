@@ -20,7 +20,7 @@ const SpringSlide = ({children, ...props}) => {
     // items = props.reAnimate && !onScreen ? React.Children.toArray(children) : []
     if (!onScreen && list.length >= 1) {
       !onScreen && console.log('remove was triggered')
-      !onScreen && setList(list => list.filter((x, i) => i < list.length - 1));
+      window.innerWidth >= 768 && !onScreen && setList(list => list.filter((x, i) => i < list.length - 1));
       // !onScreen && (items = []);
     } else {
       list.length < 1 && onScreen && setList(React.Children.toArray(children));
