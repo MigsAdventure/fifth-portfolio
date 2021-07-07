@@ -103,7 +103,7 @@ class Contact extends Component {
             </h1>
           </div>
         </section>
-        <SpringScale trackScreen={true} reAnimate={true} duration={500}>
+        <SpringScale trackScreen={true} reAnimate={true} duration={500} animateMargin={"-175px"}>
         <section className="contact-form-wrapper">
           <Loader isVisible={is_loading}/>
           <form onChange={this.validateInputs} onSubmit={this.submitForm}>

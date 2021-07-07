@@ -10,7 +10,7 @@ const SpringSlide = ({children, ...props}) => {
   // Call the hook passing in ref and root margin
   // In this case it would only be considered onScreen if more ...
   // ... than 200px of element is visible.
-  const onScreen = elementInView(((props.trackScreen && ref) || null), props.animateMargin || "-200px");
+  const onScreen = elementInView(((props.trackScreen && ref) || ref), props.animateMargin || "-200px");
   // let items = [];
   // items.length < 1 && onScreen && (items=React.Children.toArray(children));
   if (onScreen) {

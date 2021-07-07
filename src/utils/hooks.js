@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 // Hooks
 const elementInView = (ref, rootMargin = "0px") => {
   if (!ref) {
@@ -22,11 +22,23 @@ const elementInView = (ref, rootMargin = "0px") => {
     }
     return () => {
       observer.unobserve(ref.current);
+      console.log('UNOUNTING');
     };
   }, []); // Empty array ensures that effect is only run on mount and unmount
   return isIntersecting;
 };
 
+const useIsMounted = (ref) => {
+  useEffect(() => {
+    if (ref && ref.current) {
+    console.log('MOUNTED')
+  } else {
+    console.log('UNMOUNTED')
+  }
+  }, [])
+}
+
 export {
-  elementInView
+  elementInView,
+  useIsMounted
 }

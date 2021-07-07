@@ -21,7 +21,7 @@ const About = ({lang}) => {
           }
         </section>
         </SpringSlide>
-        <SpringSlide reAnimate={true}  trackScreen={true}  direction={"left"} animateMargin={"0% 0px -30% 0px"}>
+        <SpringSlide reAnimate={true}  trackScreen={true} direction={"left"} animateMargin={"0% 0px -30% 0px"}>
         <section className='skills'>
           <h1>{skills.title[lang]}</h1>
           {
