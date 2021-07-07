@@ -14,7 +14,7 @@ const Loader = ({
     isVisible &&
     <div className={classnames('loader', {'full-bg': fullBG})}>
       <div className='inner-loader'>
-        <SpringScale scale={{start: 3, end: 0.1}} duration={2300}>
+        <SpringScale scale={{start: 3, end: 0.1}} duration={2000}>
         {
           icon ? <img className='loader-icon' src={require(`../../../${icon}`)} alt="loader-icon" /> : <i className="fas fa-circle-notch"></i>
         }

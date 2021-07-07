@@ -36,43 +36,49 @@
         "kr" : "I've worked with many different technologies over the last few years. Below is a list of technologies I've used over the years."
       }
     ],
-    "technologies": [
-      "JavaScript",
-      "CSS3",
-      "HTML",
-      "Node.js",
-      "React.js",
-      "Storybook.js",
-      "Gatsby",
-      "Babel",
-      "GraphQL",
-      "REST",
-      "MongoDB",
-      "Sass",
-      "Redux",
-      "Flux",
-      "Webpack",
-      "NPM",
-      "Git",
-      "C#",
-      ".Net Core",
-      "PHP",
-      "Magento",
-      "MySQL",
-      "Mocha",
-      "Chai",
-      "Grunt",
-      "Bash",
-      "jQuery",
-      "ES6",
-      "Express",
-      "Jekyll",
-      "IPBoard",
-      "ZenDesk",
-      "AWS",
-      "Azure",
-      "Heroku",
-      "FireBase"
-    ]
+    "technologies": {
+      "slide1": [
+              "JavaScript",
+              "CSS3",
+              "HTML",
+              "Node.js",
+              "React.js",
+              "Storybook.js",
+              "Gatsby",
+              "Babel",
+              "GraphQL",
+              "REST",
+              "MongoDB",
+              "Sass"
+      ],
+      "slide2": [
+              "Redux",
+              "Flux",
+              "Webpack",
+              "NPM",
+              "Git",
+              "C#",
+              ".Net Core",
+              "PHP",
+              "Magento",
+              "MySQL",
+              "Mocha",
+              "Chai"
+      ],
+      "slide3":  [
+              "Grunt",
+              "Bash",
+              "jQuery",
+              "ES6",
+              "Express",
+              "Jekyll",
+              "IPBoard",
+              "ZenDesk",
+              "AWS",
+              "Azure",
+              "Heroku",
+              "FireBase"
+      ]
+    }
   }
 }

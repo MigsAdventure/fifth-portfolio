@@ -17,10 +17,10 @@ const SpringScale = ({children, ...props}) => {
     height: 100,
     x: 0,
     opacity: 1,
-    reset: props.reAnimate && onScreen,
+    reverse: props.reAnimate && !onScreen,
     from: {opacity: props.opacity && props.opacity.start || 0, x: 0, height: 90, scale: props.scale && props.scale.start || 0},
-    enter: {opacity: (props.reAnimate && onScreen ? 0 : 0) || 0},
-    leave: {opacity: 0}
+    enter: {opacity: (props.reAnimate && onScreen ? 1 : 0) || 1},
+    leave: {opacity: 0},
   });
   return (
     <div ref={ref}>

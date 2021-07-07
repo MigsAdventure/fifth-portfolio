@@ -3,6 +3,9 @@ import {withRouter} from 'react-router-dom';
 import './about.scss';
 import _about from '../../constants/data/about.json';
 import {generateRandomColor} from  "../../utils/general";
+import SpringSlide from "../_animations/SpringSlide";
+import SpringScale from "../_animations/SpringScale";
+import GsapStagger from "../_animations/GsapStagger";
 
 const About = ({lang}) => {
   const {about, skills} = _about;
@@ -10,25 +13,25 @@ const About = ({lang}) => {
     <main className="about main-section">
       <div className='about-bg section-bg'/>
       <div className="inner-wrapper">
+        <SpringSlide reAnimate={true} trackScreen={true} animateMargin={"20% 0px -20% 0px"}>
         <section className='about-me'>
           <h1>{about.title[lang]}</h1>
           {
             about.paragraphs.map((item, i) => <p key={i}>{item[lang]}</p>)
           }
         </section>
+        </SpringSlide>
+        <SpringSlide reAnimate={true}  trackScreen={true}  direction={"left"} animateMargin={"0% 0px -30% 0px"}>
         <section className='skills'>
           <h1>{skills.title[lang]}</h1>
           {
             skills.paragraphs.map((item, i) => <p key={i}>{item[lang]}</p>)
           }
           <div className='skills-list'>
-            {
-              skills.technologies.map((item, i) =>
-                  <div key={i} className={"item"} style={{backgroundColor: generateRandomColor()}}>{item}</div>
-              )
-            }
+            <GsapStagger items={skills.technologies} />
           </div>
         </section>
+        </SpringSlide>
       </div>
     </main>
   );
