@@ -11,7 +11,7 @@ const ProjectCard = ({content, selectedProjectCB, previewOpen}) => {
       return require( '../../../assets/images/global/' + `aion-site-card-logo.jpeg`);
     }
   };
-  const {name, url, type, year, tech, api, id, number} = content;
+  const {name, type, year, id} = content;
   const project_years = year.length > 1 ? year[year.length - 1] + '-' + year[0] : year;
   return (
     <main

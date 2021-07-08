@@ -22,9 +22,7 @@ const GsapStagger = ({children, ...props}) => {
   
   useEffect(() => {
     // clean up controller
-      console.log('USE EFFECt ON!!!');
       if (play) {
-        console.log("playing started");
         timeline.play();
         setTimeout(() => {
           //prevent setting state when unmounted
@@ -36,7 +34,6 @@ const GsapStagger = ({children, ...props}) => {
           }
         }, 3500);
       } else {
-        console.log("playing is false");
         timeline.reverse();
         setTimeout(() => {
           //prevent setting state when unmounted

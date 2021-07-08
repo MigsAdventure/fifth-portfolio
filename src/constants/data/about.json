@@ -8,10 +8,10 @@
     },
     "paragraphs": [
       {
-        "en" : "I grew up fixing computers and found my passion for programming while attending college. I'm currently living in Irvine, CA and working as a Web Engineer at the video game company NCSOFT. The work I do include building web applications, internal tools, npm packages, and bug fixing. Most of my free time is spent in coffee shops learning more about web development and recently mobile app development.",
-        "es" : "I grew up fixing computers and found my passion for programming while attending college. I'm currently living in Irvine, CA and working as a Web Engineer at the video game company NCSOFT. The work I do include building web applications, internal tools, npm packages, and bug fixing. Most of my free time is spent in coffee shops learning more about web development and recently mobile app development.",
-        "jp" : "I grew up fixing computers and found my passion for programming while attending college. I'm currently living in Irvine, CA and working as a Web Engineer at the video game company NCSOFT. The work I do include building web applications, internal tools, npm packages, and bug fixing. Most of my free time is spent in coffee shops learning more about web development and recently mobile app development.",
-        "kr" : "I grew up fixing computers and found my passion for programming while attending college. I'm currently living in Irvine, CA and working as a Web Engineer at the video game company NCSOFT. The work I do include building web applications, internal tools, npm packages, and bug fixing. Most of my free time is spent in coffee shops learning more about web development and recently mobile app development."
+        "en" : "I've always had a passion for computers. My main hobby growing up was fixing and building them. I later discovered my passion for programming while in college. The work I do consists of building web applications, internal tools, npm packages, and maintenance for our existing products. Most of my free time is spent in coffee shops learning more about web development and recently mobile app development.",
+        "es" : "I've always had a passion for computers. My main hobby growing up was fixing and building them. I later discovered my passion for programming while in college. The work I do consists of building web applications, internal tools, npm packages, and maintenance for our existing products. Most of my free time is spent in coffee shops learning more about web development and recently mobile app development.",
+        "jp" : "I've always had a passion for computers. My main hobby growing up was fixing and building them. I later discovered my passion for programming while in college. The work I do consists of building web applications, internal tools, npm packages, and maintenance for our existing products. Most of my free time is spent in coffee shops learning more about web development and recently mobile app development.",
+        "kr" : "I've always had a passion for computers. My main hobby growing up was fixing and building them. I later discovered my passion for programming while in college. The work I do consists of building web applications, internal tools, npm packages, and maintenance for our existing products. Most of my free time is spent in coffee shops learning more about web development and recently mobile app development."
       },
       {
         "en" : "When I'm not coding, you'll find me hiking, exploring a new city, at a brewery, gaming, biking or skating.",
@@ -30,10 +30,10 @@
     },
     "paragraphs": [
       {
-        "en" : "I've worked with many different technologies over the last few years. Below is a list of technologies I've used over the years.",
-        "es" : "I've worked with many different technologies over the last few years. Below is a list of technologies I've used over the years.",
-        "jp" : "I've worked with many different technologies over the last few years. Below is a list of technologies I've used over the years.",
-        "kr" : "I've worked with many different technologies over the last few years. Below is a list of technologies I've used over the years."
+        "en" : "I've worked with many different technologies over the last few years. Below is a list of technologies I'm familiar with.",
+        "es" : "I've worked with many different technologies over the last few years. Below is a list of technologies I'm familiar with.",
+        "jp" : "I've worked with many different technologies over the last few years. Below is a list of technologies I'm familiar with.",
+        "kr" : "I've worked with many different technologies over the last few years. Below is a list of technologies I'm familiar with."
       }
     ],
     "technologies": {
