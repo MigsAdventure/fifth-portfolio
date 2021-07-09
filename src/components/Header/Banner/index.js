@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { useTrail, animated as a } from "react-spring";
 import './banner.scss';
-
 import SpringScale from '../../_animations/SpringScale';
 
 const Banner = ({content, lang}) => {
   return (
     <main className="banner">
-      <SpringScale scale={{start: 2.5, end: 1}} duration={3500} blur={{start: '15px', end: '0'}}>
+      <SpringScale finalTransition={{filter: 'blur(0)'}}  updateImage={true} changeElOnEnd={true}  classNames={'banner-image loaded-image'} scale={{start: 2.5, end: 1}} duration={3500} blur={{start: '15px', end: '0'}}>
         <div className="banner-image"></div>
       </SpringScale>
       <div className="banner-text">
