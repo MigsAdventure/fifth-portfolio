@@ -9,6 +9,7 @@ import GsapStagger from "../_animations/GsapStagger";
 
 const About = ({lang}) => {
   console.log('about loaded');
+  console.log('testing for cloudfront lambda invalidation');
   const {about, skills} = _about;
   return (
     <main className="about main-section">
