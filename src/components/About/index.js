@@ -8,6 +8,7 @@ import SpringScale from "../_animations/SpringScale";
 import GsapStagger from "../_animations/GsapStagger";
 
 const About = ({lang}) => {
+  console.log('about loaded');
   const {about, skills} = _about;
   return (
     <main className="about main-section">
