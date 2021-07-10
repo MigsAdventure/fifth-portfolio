@@ -72,6 +72,9 @@
           width: fit-content;
           min-width: 1200px;
           overflow: hidden;
+          @media(min-width: $tablet-width) {
+            padding: 0 100px;
+          }
           .project-card {
             width: 270px;
             height: auto;

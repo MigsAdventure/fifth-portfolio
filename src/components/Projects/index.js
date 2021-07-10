@@ -9,6 +9,7 @@ import ProjectPreview from "./ProjectPreview";
 import {isMobile} from "../../utils/screen";
 import classnames from 'classnames';
 import {scrollTo} from "../../utils/dom";
+import SpringSlide from "../_animations/SpringSlide";
 
 class Projects extends Component {
   constructor(props) {
@@ -89,14 +90,9 @@ class Projects extends Component {
     const selected_project_id = (selected_project_data && selected_project_data.id && preview_open) || -1;
     let renderProjects = _projects.map((item, i) => {
       let renderPreview = window.innerWidth <= 768 && selected_project_id && (
-        <ProjectPreview key={Math.random()} lang={lang} previewOpen={preview_open} content={{...item, 'number': i}}
+        <ProjectPreview key={i} lang={lang} previewOpen={preview_open} content={{...item, 'number': i}}
                         isMobile={mobile_view}/>);
-      if (item.year.includes(current_filter) || current_filter === item.type) {
-        return ([<ProjectCard key={i} content={{...item, 'number': i}} previewOpen={preview_open}
-                              selectedProjectCB={this.handleSelectedProject}/>,
-          renderPreview
-        ]);
-      } else if (current_filter === 'all') {
+      if (item.year.includes(current_filter) || current_filter === item.type || current_filter === 'all') {
         return ([<ProjectCard key={i} content={{...item, 'number': i}} previewOpen={preview_open}
                               selectedProjectCB={this.handleSelectedProject}/>,
           renderPreview
@@ -104,7 +100,7 @@ class Projects extends Component {
       }
       return null;
     });
-    return renderProjects
+    return renderProjects;
   }
   
   handleFilterChange = (new_filter) => {

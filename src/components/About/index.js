@@ -13,7 +13,7 @@ const About = ({lang}) => {
     <main className="about main-section">
       <div className='about-bg section-bg'/>
       <div className="inner-wrapper">
-        <SpringSlide reAnimate={true} trackScreen={true} animateMargin={"20% 0px -20% 0px"}>
+        <SpringSlide componentStyle={false} reAnimate={true} trackScreen={true} animateMargin={"20% 0px -20% 0px"}>
         <section className='about-me'>
           <h1>{about.title[lang]}</h1>
           {
@@ -21,7 +21,7 @@ const About = ({lang}) => {
           }
         </section>
         </SpringSlide>
-        <SpringSlide reAnimate={true}  trackScreen={true} direction={"left"} animateMargin={"0% 0px -30% 0px"}>
+        <SpringSlide componentStyle={false} reAnimate={true}  trackScreen={true} direction={"left"} animateMargin={"0% 0px -30% 0px"}>
         <section className='skills'>
           <h1>{skills.title[lang]}</h1>
           {

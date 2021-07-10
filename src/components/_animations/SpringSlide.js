@@ -1,11 +1,40 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import {animated as a, useTransition, useSpring, useTrail} from "react-spring";
 import {elementInView} from "../../utils/hooks";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+   ${
+      ({ componentstyle }) => componentstyle !== 'false' && `
+        //add styles
+        display: flex;
+        height: 200px;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: evenly-spaced;
+        align-items: flex-start;
+    `}
+`;
+
+const InnerWrapper  = styled(a.div)`
+   ${
+    ({ componentstyle }) => componentstyle !== 'false' && `
+      //add styles
+      display: inline-flex;
+      height: 100%;
+      width: 100%;
+      min-width: 200px;
+      @media(min-width: 480px) {
+        width: 31%;
+      }
+      @media(min-width: 1024) {
+      }
+  `}
+`;
 
 const SpringSlide = ({children, ...props}) => {
   // Ref for the element that we want to detect whether on screen
   const [list, setList] = useState([]);
-  
   const ref = useRef();
   // Call the hook passing in ref and root margin
   // In this case it would only be considered onScreen if more ...
@@ -16,13 +45,22 @@ const SpringSlide = ({children, ...props}) => {
   if (onScreen) {
     !props.reAnimate && list.length < 1 && onScreen && setList(React.Children.toArray(children));
   }
+  
+  useEffect(() => {
+    if(props.reRender){
+      window.innerWidth >= 768 && setList([]);
+      list.length < 1 && onScreen && setList(React.Children.toArray(children));
+    }
+  }, [props.reRender])
+  
   if(props.reAnimate) {
     // items = props.reAnimate && !onScreen ? React.Children.toArray(children) : []
     if (!onScreen && list.length >= 1) {
       !onScreen && console.log('remove was triggered')
       window.innerWidth >= 768 && !onScreen && setList(list => list.filter((x, i) => i < list.length - 1));
       // !onScreen && (items = []);
-    } else {
+    }
+    else {
       list.length < 1 && onScreen && setList(React.Children.toArray(children));
     }
   }
@@ -76,18 +114,24 @@ const SpringSlide = ({children, ...props}) => {
     keys: list.map((item, index) => index)
   });
   return (
-    <div ref={ref}>
+    <Wrapper className={`spring-slide-wrapper ${props.classNames}`} componentstyle={props.componentStyle} ref={ref}>
       {transition((styles, item) => (
-        <a.div
-          className="trails-animation"
+        <InnerWrapper
+          className={`spring-slide-inner`}
           style={styles}
+          componentstyle={props.componentStyle.toString()}
         >
           {item}
-        </a.div>
+        </InnerWrapper>
       ))}
-    </div>
+    </Wrapper>
   )
 }
 
-export default SpringSlide;
+// Set default props
+SpringSlide.defaultProps = {
+  classNames: '',
+  componentStyle: true
+}
 
+export default SpringSlide;
