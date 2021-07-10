@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
    ${
-      ({ componentstyle }) => componentstyle !== 'false' && `
+      ({ componentstyle }) => componentstyle === 'true' && `
         //add styles
         display: flex;
         height: 200px;
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 
 const InnerWrapper  = styled(a.div)`
    ${
-    ({ componentstyle }) => componentstyle !== 'false' && `
+    ({ componentstyle }) => componentstyle === 'true' && `
       //add styles
       display: inline-flex;
       height: 100%;
