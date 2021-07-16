@@ -2,14 +2,10 @@ import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import './about.scss';
 import _about from '../../constants/data/about.json';
-import {generateRandomColor} from  "../../utils/general";
 import SpringSlide from "../_animations/SpringSlide";
-import SpringScale from "../_animations/SpringScale";
 import GsapStagger from "../_animations/GsapStagger";
 
 const About = ({lang}) => {
-  console.log('about loaded');
-  console.log('testing for cloudfront lambda invalidation');
   const {about, skills} = _about;
   return (
     <main className="about main-section">
