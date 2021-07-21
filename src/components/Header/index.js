@@ -1,11 +1,11 @@
 import React from 'react';
 import Banner from "./Banner";
 
-const Header = ({lang}) => {
+const Header = ({context}) => {
   return (
     <main className="header">
       <section>
-          <Banner lang={lang} />
+          <Banner context={context} />
       </section>
     </main>
   );

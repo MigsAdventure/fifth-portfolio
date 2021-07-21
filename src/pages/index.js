@@ -14,7 +14,6 @@ import Contact from "../components/Contact";
 
 class IndexPage extends Component {
   constructor(props) {
-    console.log('PROPS!!: ', props.pageContext);
     super(props);
     this.state = {
       loaded: false
@@ -34,7 +33,6 @@ class IndexPage extends Component {
   }
   
   render() {
-    console.log('this.props.pageContext: ', this.props.pageContext);
     return (
       <div className="App">
         <Loader
@@ -51,11 +49,11 @@ class IndexPage extends Component {
               text={getCookie('visited') ? emoji.visited['en'] : emoji.firstVisit['en']}
               charsPerLine={emoji.charsPerLine['en']}
             />,
-            <Header key={2} lang={this.props.pageContext.locale}/>,
-            <About key={3} lang={this.props.pageContext.locale}/>,
-            <Projects key={4} lang={this.props.pageContext.locale}/>,
-            <Contact key={5} lang={this.props.pageContext.locale}/>,
-            <Footer key={6} lang={this.props.pageContext.locale}/>
+            <Header key={2} context={this.props.pageContext}/>,
+            // <About key={3} context={this.props.pageContext}/>,
+            // <Projects key={4} context={this.props.pageContext}/>,
+            // <Contact key={5} context={this.props.pageContext}/>,
+            // <Footer key={6} context={this.props.pageContext}/>
           ]
         }
       </div>

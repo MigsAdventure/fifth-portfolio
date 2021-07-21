@@ -3,7 +3,7 @@ import './banner.scss';
 import SpringScale from '../../_animations/SpringScale';
 import { useStaticQuery, graphql } from "gatsby";
 
-export default function Banner() {
+export default function Banner({context}) {
   // const lang = 'ko';
   // const data = useStaticQuery(graphql`
   //     query MyQuery {
@@ -23,7 +23,8 @@ export default function Banner() {
       </SpringScale>
       <div className="banner-text">
         <SpringScale>
-          <h1>test</h1>
+          <h1>{context.Title}</h1>
+          <h1>{context.SubTitle}</h1>
         </SpringScale>
       </div>
     </main>
