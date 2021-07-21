@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
-import {animated as a, useTransition, useSpring, useTrail} from "react-spring";
-import {elementInView} from "../../utils/hooks";
+import {animated as a, useTransition} from "react-spring";
+import {useElementInView} from "../../utils/hooks";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -39,7 +39,7 @@ const SpringSlide = ({children, ...props}) => {
   // Call the hook passing in ref and root margin
   // In this case it would only be considered onScreen if more ...
   // ... than 200px of element is visible.
-  const onScreen = elementInView(((props.trackScreen && ref) || ref), props.animateMargin || "-200px");
+  const onScreen = useElementInView(((props.trackScreen && ref) || ref), props.animateMargin || "-200px");
   // let items = [];
   // items.length < 1 && onScreen && (items=React.Children.toArray(children));
   if (onScreen) {

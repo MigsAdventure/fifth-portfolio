@@ -1,5 +1,4 @@
 import React from 'react';
-import {withRouter} from 'react-router-dom';
 import './projects-filter.scss';
 import {projects_filter} from '../../../constants/data/global';
 import classnames from 'classnames';
@@ -32,4 +31,4 @@ const ProjectsFilter = ({currentFilter, changeFilterCB}) => {
   )
 };
 
-export default withRouter(ProjectsFilter);
+export default ProjectsFilter;

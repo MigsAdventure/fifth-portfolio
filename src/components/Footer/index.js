@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import React from 'react';
 import { footer } from '../../constants/data/global.js';
 import './footer.scss'
 
@@ -20,4 +19,4 @@ const Footer = ({lang}) => {
   );
 };
 
-export default withRouter(Footer);
+export default Footer;

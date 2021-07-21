@@ -17,13 +17,20 @@ class Slider extends Component {
     })
   }
   
+  
+  
   render() {
-    const { image, text, charsPerLine } = this.props;
+    const { image, text, charsPerLine, gatsby } = this.props;
     const { isVisible } = this.state;
     return (
-        isVisible && <div className='slider' onClick={this.closeSlider}>
+        isVisible && <a className='slider' onClick={this.closeSlider}>
         <div className='inner'>
-          <img className='image' src={require(`../../../${image}`)} alt="Slider" />
+          {
+            gatsby ?
+            <img className='image' src={`${image}`} alt="Slider" />
+            :
+            <img className='image' src={require(`${image}`)} alt="Slider" />
+          }
           <div className='chat-box'>
             <div className='close'><i className='fa fa-times' aria-hidden="true"/></div>
             {
@@ -46,7 +53,7 @@ class Slider extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </a>
     );
   }
 }

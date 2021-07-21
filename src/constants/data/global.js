@@ -6,7 +6,7 @@ const emoji = {
     kr: ["안녕하세요. 환영합니다!", "여기서 처음 방문한 것 같습니다.", "이 사이트는 활용하고 있습니다.", "React, SASS, AWS S3, CloudFront, Route53, 및 CodePipeline"]
   },
   visited: {
-    en: ["Welcome back!", "This site is utilizing:", "React, SASS, AWS S3, CloudFront, Route53, and CodePipeline", "Thanks for visiting again and have a great day!"],
+    en: ["Hello and welcome!", "It looks like it's your first time here.", "This site is utilizing:", "React, SASS, AWS S3, CloudFront, Route53, and CodePipeline"],
     es: ["¡Dar una buena acogida!", "Este sitio está utilizando:", "React, SASS, AWS S3, CloudFront, Route53, y CodePipeline", "¡Gracias por visitarnos nuevamente y que tenga un gran día!"],
     jp: ["お帰りなさい", "このサイトは利用しています：", "反応する、SASS、AWS S3、クラウドフロント、ルート53、および パイプライン", "再び訪問していただき、ありがとうございました！"],
     kr: ["다시 오신 것을 환영합니다!", "이 사이트는 활용하고 있습니다.", "React, SASS, AWS S3, CloudFront, Route53, 및 CodePipeline", "다시 방문해 주셔서 감사합니다. 좋은 하루 보내세요!"]

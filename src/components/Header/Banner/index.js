@@ -1,10 +1,17 @@
-import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
-import { useTrail, animated as a } from "react-spring";
+import React from 'react';
 import './banner.scss';
 import SpringScale from '../../_animations/SpringScale';
+import { useStaticQuery, graphql } from "gatsby";
 
-const Banner = ({content, lang}) => {
+export default function Banner() {
+  const data = useStaticQuery(graphql`
+      query {
+          bitmojis (locale: "all") {
+              title
+          }
+      }
+  `)
+  console.log(data);
   return (
     <main className="banner">
       <SpringScale finalTransition={{filter: 'blur(0)'}}  updateImage={true} changeElOnEnd={true}  classNames={'banner-image loaded-image'} scale={{start: 2.5, end: 1}} duration={3500} blur={{start: '15px', end: '0'}}>
@@ -12,12 +19,9 @@ const Banner = ({content, lang}) => {
       </SpringScale>
       <div className="banner-text">
         <SpringScale>
-          <h1>{content.text.headline[lang]}</h1>
-          <h3>{content.text.sub_headline[lang]}</h3>
+          <h1>test</h1>
         </SpringScale>
       </div>
     </main>
   );
-};
-
-export default withRouter(Banner);
+}

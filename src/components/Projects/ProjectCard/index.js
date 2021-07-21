@@ -1,18 +1,20 @@
 import React from 'react';
-import {withRouter} from 'react-router-dom';
 import './project-card.scss';
 import classnames from 'classnames';
 
 const ProjectCard = ({content, selectedProjectCB, previewOpen}) => {
   const importImage = (path) => {
     try {
-      return require('../../../assets/images/global/' + path);
+      console.log("path: ", path)
+      return '/static/' + path;
     } catch (err) {
-      return require( '../../../assets/images/global/' + `aion-site-card-logo.jpeg`);
+      console.log("err: ", err)
+      return  '/static/' + `aion-site-card-logo.jpeg`;
     }
   };
   const {name, type, year, id} = content;
   const project_years = year.length > 1 ? year[year.length - 1] + '-' + year[0] : year;
+  console.log("id: ", id)
   return (
     <main
       key={content.number}
@@ -34,4 +36,4 @@ const ProjectCard = ({content, selectedProjectCB, previewOpen}) => {
   );
 };
 
-export default withRouter(ProjectCard);
+export default ProjectCard;

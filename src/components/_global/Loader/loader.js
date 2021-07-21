@@ -16,7 +16,7 @@ const Loader = ({
       <div className='inner-loader'>
         <SpringScale scale={{start: 3, end: 0.1}} duration={2000}>
         {
-          icon ? <img className='loader-icon' src={require(`../../../${icon}`)} alt="loader-icon" /> : <i className="fas fa-circle-notch"></i>
+          icon ? <img className='loader-icon' src={`${icon}`} alt="loader-icon" /> : <i className="fas fa-circle-notch"></i>
         }
         {
           text && <h2>{text}</h2>

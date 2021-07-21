@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import {withRouter} from 'react-router-dom';
 import ProjectCard from "./ProjectCard";
 import _projects from '../../constants/data/projects.json';
 import ProjectsFilter from "./ProjectsFilter";
@@ -9,10 +8,12 @@ import ProjectPreview from "./ProjectPreview";
 import {isMobile} from "../../utils/screen";
 import classnames from 'classnames';
 import {scrollTo} from "../../utils/dom";
-import SpringSlide from "../_animations/SpringSlide";
+import { StaticQuery, graphql } from "gatsby";
 
-class Projects extends Component {
+
+class MyProjects extends Component {
   constructor(props) {
+    console.log("props: ", props)
     super(props);
     this.state = {
       current_filter: '2021',
@@ -149,6 +150,7 @@ class Projects extends Component {
   }
   
   render() {
+    console.log("this.props: ", this.props)
     const {current_filter, selected_project_data, preview_open, mobile_view} = this.state;
     const {lang} = this.props;
     return (
@@ -204,6 +206,24 @@ class Projects extends Component {
       </main>
     );
   }
+};
+
+export default function Projects(props) {
+  return (
+    <StaticQuery
+      query={graphql`
+        query {
+          allImageSharp {
+              nodes {
+                  fluid {
+                      src
+                  }
+              }
+          }
+        }
+      `}
+      render={data => <MyProjects data={data} {...props} />}
+    />
+  )
 }
 
-export default withRouter(Projects);

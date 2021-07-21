@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import classnames from 'classnames';
 import './project-preview.scss';
 import Button from "../../_global/Button";
@@ -68,4 +67,4 @@ const ProjectPreview = ({content, previewOpen, isMobile, lang, closeCB}) => {
   );
 };
 
-export default withRouter(ProjectPreview);
+export default ProjectPreview;

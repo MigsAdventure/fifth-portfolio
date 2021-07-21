@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import {animated as a, useTrail, useSpring} from "react-spring";
-import {elementInView} from "../../utils/hooks";
-import SpringImagePieces from "./SpringImagePieces";
+import {useElementInView} from "../../utils/hooks";
 
 const SpringScale = ({children, ...props}) => {
   // Ref for the element that we want to detect whether on screen
@@ -10,7 +9,7 @@ const SpringScale = ({children, ...props}) => {
   // In this case it would only be considered onScreen if more ...
   // ... than 200px of element is visible.
   
-  const onScreen = elementInView(((props.trackScreen && ref) || null), props.animateMargin || "-200px");
+  const onScreen = useElementInView(((props.trackScreen && ref) || null), props.animateMargin || "-200px");
   const items = React.Children.toArray(children);
   const trail = useTrail(children.length || 1, {
     config: { mass: 1000, tension: 2000, friction: 2000, duration: props.duration || 2000 },

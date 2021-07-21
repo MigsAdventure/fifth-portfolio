@@ -1,5 +1,4 @@
-import React, {Component} from 'react';
-import {withRouter} from 'react-router-dom';
+import React from 'react';
 import './about.scss';
 import _about from '../../constants/data/about.json';
 import SpringSlide from "../_animations/SpringSlide";
@@ -35,4 +34,4 @@ const About = ({lang}) => {
   );
 };
 
-export default withRouter(About);
+export default About;

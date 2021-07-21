@@ -1,5 +1,4 @@
 @import '../../styles/partials/settings';
-
 .about {
   text-align: center;
   position: relative;
@@ -38,6 +37,7 @@
       width: 100%;
       max-width: 550px;
       display: inline-block;
+      color: white;
       @media(min-width: $tablet-width) {
         //width: 49%;
       }

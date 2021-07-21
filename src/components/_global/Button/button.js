@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link } from 'gatsby';
 import classnames from 'classnames';
 import './button.scss';
 
@@ -12,7 +12,7 @@ const Button = ({
   url,
   isActive,
   callback,
-  arrow, 
+  arrow,
   externalNewTab
 }) => {
   let content = null;

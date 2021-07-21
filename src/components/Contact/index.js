@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {withRouter} from 'react-router-dom';
 import './contact.scss';
 import {sendEmail} from "../../Api/contact";
 import classnames from 'classnames';
@@ -128,4 +127,4 @@ class Contact extends Component {
   }
 }
 
-export default withRouter(Contact);
+export default Contact;

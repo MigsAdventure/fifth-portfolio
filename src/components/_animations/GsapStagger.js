@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect, useMemo } from "react";
-import {elementInView, useIsMounted} from "../../utils/hooks";
 import gsap from "gsap";
 import { generateRandomColor } from "../../utils/general";
 
