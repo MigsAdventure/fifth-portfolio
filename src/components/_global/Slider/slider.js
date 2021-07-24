@@ -22,6 +22,9 @@ class Slider extends Component {
   render() {
     const { image, text, charsPerLine, gatsby } = this.props;
     const { isVisible } = this.state;
+    
+    const textArr = text.split("\n");
+    console.log('textArr: ', textArr);
     return (
         isVisible && <a className='slider' onClick={this.closeSlider}>
         <div className='inner'>
@@ -34,21 +37,24 @@ class Slider extends Component {
           <div className='chat-box'>
             <div className='close'><i className='fa fa-times' aria-hidden="true"/></div>
             {
-              text.map((item, i) => {
+              // (() => {
+              //   return [<p key={1} className='text'>{text}</p>]
+              // })()
+              textArr.map((item, i) => {
                 return [<p key={i} className='text'>{item}</p>]
               })
             }
             {/*  /!*TODO Refactor this section*!/*/}
             <div className="hidden">
               {
-                text.map((item, i) => {
-                  const numLines = Math.ceil(item.length / charsPerLine);
+                (() => {
+                  const numLines = Math.ceil(text.length / charsPerLine);
                   let renderItems = [];
                   for (let x = 1; x <= numLines; x++) {
                     renderItems.push(<p key={Math.random()}>&nbsp;</p>)
                   }
                   return renderItems;
-                })
+                })()
               }
             </div>
           </div>

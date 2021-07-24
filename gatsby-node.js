@@ -7,38 +7,41 @@
 const path = require("path");
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
-  
-  const languageQuery = await graphql(`
-query MyQuery {
-  allStrapiBitmoji {
-    edges {
-      node {
-        id
-        visited
-        locale
-        firstVisit
-        charsPerLine
-        localizations {
-          locale
+  const { createPage, createRedirect } = actions;
+  createRedirect({
+    fromPath: '/',
+    isPermanent: true,
+    redirectInBrowser: true,
+    toPath: '/en'
+  });
+  const homeQuery = await graphql(`
+    query homeQuery {
+      allStrapiHeader {
+        edges {
+          node {
+            Title
+            Subtitle
+            locale
+          }
         }
       }
     }
-  }
-}
-
   `);
   
   // Template to create dynamic pages from.
-  const productsTemplate = path.resolve(`src/pages/index.js`);
-  
-  languageQuery.data.allStrapiBitmoji.edges.forEach(
-    ({ node: {visited, localizations, locale} }) =>
+  const languageTemplate = path.resolve(`src/pages/index.js`);
+  homeQuery.data.allStrapiHeader.edges.forEach(
+    ({ node: {Title, Subtitle, locale} }) =>
     {
       return createPage({
         path: `/${locale}`,
-        component: productsTemplate,
-        context: { locale, visited, localizations, current_locale_single: locale }
+        component: languageTemplate,
+        context: {
+          intLocale: locale,
+          locale,
+          Title,
+          Subtitle
+        }
       })
     }
   );

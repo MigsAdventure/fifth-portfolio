@@ -11,10 +11,12 @@ import Header from "../components/Header";
 import About from "../components/About";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
+import { graphql } from 'gatsby';
 
 class IndexPage extends Component {
   constructor(props) {
     super(props);
+    console.log('props: ', props);
     this.state = {
       loaded: false
     }
@@ -35,6 +37,7 @@ class IndexPage extends Component {
   render() {
     return (
       <div className="App">
+        <Seo title="Migs Home Page" />
         <Loader
           icon={subiIcon}
           fullBG={true}
@@ -46,7 +49,7 @@ class IndexPage extends Component {
               gatsby={true}
               key={1}
               image={emojiImage}
-              text={getCookie('visited') ? emoji.visited['en'] : emoji.firstVisit['en']}
+              text={getCookie('visited') ? this.props.data.strapiBitmoji.firstVisit : this.props.data.strapiBitmoji.visited}
               charsPerLine={emoji.charsPerLine['en']}
             />,
             <Header key={2} context={this.props.pageContext}/>,
@@ -62,3 +65,11 @@ class IndexPage extends Component {
 }
 
 export default IndexPage
+
+export const query = graphql`
+  query HomePageQuery($locale: String) {
+    strapiBitmoji(locale: {eq: $locale}) {
+      id
+      firstVisit
+    }
+  }`;
