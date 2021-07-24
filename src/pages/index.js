@@ -49,8 +49,8 @@ class IndexPage extends Component {
               gatsby={true}
               key={1}
               image={emojiImage}
-              text={getCookie('visited') ? this.props.data.strapiBitmoji.firstVisit : this.props.data.strapiBitmoji.visited}
-              charsPerLine={emoji.charsPerLine['en']}
+              text={getCookie('visited') ? this.props.data.strapiBitmoji.visited : this.props.data.strapiBitmoji.firstVisit}
+              charsPerLine={this.props.data.strapiBitmoji.charsPerLine}
             />,
             <Header key={2} context={this.props.pageContext}/>,
             // <About key={3} context={this.props.pageContext}/>,
@@ -71,5 +71,7 @@ export const query = graphql`
     strapiBitmoji(locale: {eq: $locale}) {
       id
       firstVisit
+      visited
+      charsPerLine
     }
   }`;

@@ -22,8 +22,7 @@ class Slider extends Component {
   render() {
     const { image, text, charsPerLine, gatsby } = this.props;
     const { isVisible } = this.state;
-    
-    const textArr = text.split("\n");
+    const textArr = text.split("\n") ? text.split("\n") : [text];
     console.log('textArr: ', textArr);
     return (
         isVisible && <a className='slider' onClick={this.closeSlider}>
@@ -37,9 +36,6 @@ class Slider extends Component {
           <div className='chat-box'>
             <div className='close'><i className='fa fa-times' aria-hidden="true"/></div>
             {
-              // (() => {
-              //   return [<p key={1} className='text'>{text}</p>]
-              // })()
               textArr.map((item, i) => {
                 return [<p key={i} className='text'>{item}</p>]
               })
@@ -48,9 +44,11 @@ class Slider extends Component {
             <div className="hidden">
               {
                 (() => {
+                  console.log('text: ', text);
+                  console.log('text.length: ', text.length / charsPerLine);
                   const numLines = Math.ceil(text.length / charsPerLine);
                   let renderItems = [];
-                  for (let x = 1; x <= numLines; x++) {
+                  for (let x = 0; x <= numLines; x++) {
                     renderItems.push(<p key={Math.random()}>&nbsp;</p>)
                   }
                   return renderItems;
@@ -65,7 +63,7 @@ class Slider extends Component {
 }
 
 Slider.defaultProps = {
-  text: ['Hi there!'],
+  text: 'Hi there!',
 };
 
 Slider.propTypes = {
