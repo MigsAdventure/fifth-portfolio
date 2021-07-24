@@ -23,7 +23,6 @@ class Slider extends Component {
     const { image, text, charsPerLine, gatsby } = this.props;
     const { isVisible } = this.state;
     const textArr = text.split("\n") ? text.split("\n") : [text];
-    console.log('textArr: ', textArr);
     return (
         isVisible && <a className='slider' onClick={this.closeSlider}>
         <div className='inner'>
@@ -44,8 +43,6 @@ class Slider extends Component {
             <div className="hidden">
               {
                 (() => {
-                  console.log('text: ', text);
-                  console.log('text.length: ', text.length / charsPerLine);
                   const numLines = Math.ceil(text.length / charsPerLine);
                   let renderItems = [];
                   for (let x = 0; x <= numLines; x++) {
@@ -67,7 +64,7 @@ Slider.defaultProps = {
 };
 
 Slider.propTypes = {
-  text: PropTypes.array,
+  text: PropTypes.string,
 };
 
 export default Slider;
