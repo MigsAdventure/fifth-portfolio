@@ -1,10 +1,10 @@
 const siteUrl = `https://migsadventure.com`;
   module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Mig's Portfolio`,
+    description: `Mig's 5th portfolio`,
+    author: `migsadventure`,
+    siteUrl: `https://migsadventure.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -47,6 +47,10 @@ const siteUrl = `https://migsadventure.com`;
           },
           {
             name: `category`,
+            api: { qs: { _locale: `all` } }
+          },
+          {
+            name: `page`,
             api: { qs: { _locale: `all` } }
           },
         ],
